@@ -2,93 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About us – Fit and Food Tamil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fit & Food Tamil — About Us</title>
   <link rel="stylesheet" href="../Static/About.css">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="../Static/BestSeller.css"
+  <link rel="icon" href="../Assets/About/fit and foo logo.avif" type="image/x-icon">
+  
 </head>
 <body>
-
-  <!-- Top green bar -->
+  <!-- Top Info Bar -->
   <div class="top-bar">
     FSSAI Licensed: 12422012002821 | NABL Approved Lab Tested Products | Quality & Safety Assured
   </div>
 
   <!-- Header -->
-  <header class="header">
-    <div class="logo">
-      <img src="https://www.fitandfoodtamil.com/cdn/shop/files/fit_food_logo.png" alt="Fit & Food Tamil">
-    </div>
-    <div class="search-box">
-      <input type="text" placeholder="Search...">
-      <button>🔍</button>
-    </div>
-    <div class="icons">
-      <span>👤</span>
-      <span>🛒</span>
+  <header class="site-header">
+    
+     <div class="header-inner">
+      <img src="../Assets/BestSeller/fit and foo logo.avif" alt="logo" class="logo" />
+      <div class="search-wrap">
+        <input class="search" placeholder="Search..." />
+        <button class="search-btn">🔍</button>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="#">Our Collections ▼</a>
+        <a href="/pages/about-us" class="active">About Us</a>
+        <a href="/pages/contact-us">Contact Us</a>
+      </nav>
+      <div class="header-icons">
+        <span class="icon">👤</span>
+        <span class="icon">🛒</span>
+      </div>
     </div>
   </header>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <a href="#">Home</a>
-    <div class="dropdown">
-      <a href="#">Our Collections ▾</a>
-      <div class="dropdown-content">
-        <a href="#">Best Sellers</a>
-        <a href="#">Skin Care</a>
-        <a href="#">Hair Care</a>
-      </div>
-    </div>
-    <a href="#">About Us</a>
-    <a href="#">Contact Us</a>
-  </nav>
-
-  <!-- About Us Section -->
-  <section class="about">
-    <h2>About us</h2>
+  <!-- Main Content -->
+  <main class="content">
+    <h1>About us</h1>
     <p>Fit and Food Tamil is a homegrown sustainable herbal products company, founded by Abdul Karim Razaak in 2021, that provides high-quality food products, skin and hair care products that enriches our skin, hair, mind and body.</p>
     <p>We’re dedicated to bringing joy and hope to continue doing so for years to come. However, we offer more than just high-quality, delicious herbal products.</p>
     <p>We are a leading herbal store in Madurai, working with a dedicated team to provide the finest food products to our growing community.</p>
 
-    <h3>OUR VISION</h3>
+    <h2>OUR VISION</h2>
     <p>To be a vehicle for global awareness by creating a holistic, sustainable business model that inspires, promotes, and supports true wellness, respect for all beings, and Mother Nature.</p>
 
-    <h3>OUR MISSION</h3>
+    <h2>OUR MISSION</h2>
     <p>To be a truthful and innovative global leader in providing genuine products and solutions for conscious, healthy living.</p>
 
-    <h3>OUR VALUES</h3>
+    <h2>OUR VALUES</h2>
     <p>Service to all, total integrity, absolute commitment to quality, respect and devotion to Mother Nature, and no compromise on being who we are.</p>
 
-    <h3>OUR COMMITMENT</h3>
+    <h2>OUR COMMITMENT</h2>
     <p>To deliver genuine products at affordable prices to our consumers. To introduce a unique and successful business model that is committed to service and integrity, and benefits all.</p>
-  </section>
+
+    <a href="#" class="back-to-top">Back to the top ↑</a>
+  </main>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-left">
-      <img src="https://www.fitandfoodtamil.com/cdn/shop/files/fit_food_logo.png" alt="Logo">
-      <p>
-        TNHB Colony,<br>
-        Villapuram Housing Board,<br>
-        Madurai 625011.<br>
-        +91 9363599986 <br>
-        FSSAI: 12422012002821
-      </p>
+  <footer class="site-footer">
+    <div class="footer-block address">
+      <div class="logo-footer">FIT & FOOD TAMIL</div>
+      <p>TNHB Colony,<br>Villapuram Housing Board,<br>Madurai 625011.<br><a href="tel:+919363599986">+91 9363599986</a><br>FSSAI: 12422012002821</p>
     </div>
-    <div class="footer-links">
-      <a href="#">Home</a>
+    <div class="footer-block links">
+      <a href="/">Home</a>
       <a href="#">Our Collections</a>
-      <a href="#">About Us</a>
-      <a href="#">Contact Us</a>
+      <a href="/pages/about-us">About Us</a>
+      <a href="/pages/contact-us">Contact Us</a>
     </div>
-    <div class="footer-links">
+    <div class="footer-block policies">
       <a href="#">Privacy Policy</a>
       <a href="#">Shipping Policy</a>
       <a href="#">Return & Refund Policy</a>
       <a href="#">Terms & Conditions</a>
     </div>
+    <div class="footer-block social">
+      <a aria-label="YouTube" href="#"><span class="social-icon">▶</span></a>
+      <a aria-label="Instagram" href="#"><span class="social-icon">📷</span></a>
+      <div class="currency-select">
+        <label for="currency">Country (₹):</label>
+        <select id="currency">
+          <option>India (INR ₹)</option>
+        </select>
+      </div>
+      <p>Copyright © 2025 fitandfoodtamil</p>
+      <p>Powered by Ekommerce360</p>
+    </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
