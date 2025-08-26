@@ -5,36 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fit & Food Tamil — About Us</title>
   <link rel="stylesheet" href="../Static/About.css">
-  <link rel="stylesheet" href="../Static/BestSeller.css"
   <link rel="icon" href="../Assets/About/fit and foo logo.avif" type="image/x-icon">
   
 </head>
 <body>
-  <!-- Top Info Bar -->
-  <div class="top-bar">
+   <div class="top-bar">
     FSSAI Licensed: 12422012002821 | NABL Approved Lab Tested Products | Quality & Safety Assured
   </div>
-
   <!-- Header -->
-  <header class="site-header">
-    
-     <div class="header-inner">
-      <img src="../Assets/BestSeller/fit and foo logo.avif" alt="logo" class="logo" />
-      <div class="search-wrap">
-        <input class="search" placeholder="Search..." />
-        <button class="search-btn">🔍</button>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <nav class="nav-links">
-        <a href="/">Home</a>
-        <a href="#">Our Collections ▼</a>
-        <a href="/pages/about-us" class="active">About Us</a>
-        <a href="/pages/contact-us">Contact Us</a>
-      </nav>
-      <div class="header-icons">
-        <span class="icon">👤</span>
-        <span class="icon">🛒</span>
-      </div>
+<header class="site-header">
+  <!-- Top Green Bar -->
+
+
+  <!-- Main Header -->
+  <div class="header-inner">
+    <!-- Logo -->
+    <img src="../Assets/BestSeller/fit and foo logo.avif" alt="logo" class="logo" />
+
+    <!-- Search Bar -->
+    <div class="search-wrap">
+      <input type="text" class="search" placeholder="Search..." />
+      <button class="search-btn" aria-label="Search">🔍</button>
     </div>
+
+    <!-- Icons -->
+    <div class="header-icons">
+      <span class="icon">👤</span>
+      <span class="icon">🛒</span>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+
+  <!-- Navigation Links -->
+  <nav class="nav-links">
+    <a href="/" class="active">Home</a>
+    <a href="#">Our Collections ▼</a>
+    <a href="/pages/about-us">About Us</a>
+    <a href="/pages/contact-us">Contact Us</a>
+  </nav>
+</header>
+
   </header>
 
   <!-- Main Content -->
@@ -60,37 +72,69 @@
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-block address">
-      <div class="logo-footer">FIT & FOOD TAMIL</div>
-      <p>TNHB Colony,<br>Villapuram Housing Board,<br>Madurai 625011.<br><a href="tel:+919363599986">+91 9363599986</a><br>FSSAI: 12422012002821</p>
+<footer class="site-footer" id="footer">
+  <!-- Back to Top -->
+  <div class="back-to-top">
+    <a href=".top-bar">Back to the top ↑</a>
+  </div>
+
+  <!-- Footer Content -->
+  <div class="footer-container">
+    <!-- Left Column -->
+    <div class="footer-left">
+      <img src="../Assets/BestSeller/fit and foo logo.avif" alt="Fit and Food Tamil Logo" class="footer-logo">
+      <h4>Fit and Food Tamil</h4>
+      <p>
+        TNHB Colony, <br>
+        Villapuram Housing Board, <br>
+        Madurai 625011. <br>
+        <a href="tel:+919363599986" class="footer-phone">+91 9363599986</a>
+      </p>
+      <p>FSSAI: 12422012002821</p>
     </div>
-    <div class="footer-block links">
-      <a href="/">Home</a>
-      <a href="#">Our Collections</a>
-      <a href="/pages/about-us">About Us</a>
-      <a href="/pages/contact-us">Contact Us</a>
+
+    <!-- Middle Column -->
+    <div class="footer-middle">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#">Our Collections</a></li>
+        <li><a href="/pages/about-us">About Us</a></li>
+        <li><a href="/pages/contact-us">Contact Us</a></li>
+      </ul>
     </div>
-    <div class="footer-block policies">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Shipping Policy</a>
-      <a href="#">Return & Refund Policy</a>
-      <a href="#">Terms & Conditions</a>
+
+    <!-- Right Column -->
+    <div class="footer-right">
+      <h4>Policies</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Return & Refund Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
     </div>
-    <div class="footer-block social">
-      <a aria-label="YouTube" href="#"><span class="social-icon">▶</span></a>
-      <a aria-label="Instagram" href="#"><span class="social-icon">📷</span></a>
-      <div class="currency-select">
-        <label for="currency">Country (₹):</label>
-        <select id="currency">
-          <option>India (INR ₹)</option>
-        </select>
-      </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <div class="social-icons">
+      <a href="#" aria-label="YouTube">▶</a>
+      <a href="#" aria-label="Instagram">📷</a>
+    </div>
+
+    <div class="currency">
+      <select>
+        <option>India (INR ₹)</option>
+      </select>
+    </div>
+
+    <div class="copyright">
       <p>Copyright © 2025 fitandfoodtamil</p>
       <p>Powered by Ekommerce360</p>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
