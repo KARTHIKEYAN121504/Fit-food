@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Best Sellers — Fit and Food Tamil (Replica)</title>
+  <style>
+    /* ====== Reset & base ====== */
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter, Arial, sans-serif;color:#1f1f1f;background:#f5f5f5}
+    a{color:inherit;text-decoration:none}
+
+    /* Top green announcement */
+    .top-strip{background:#3aa027;color:#fff;padding:8px 16px;text-align:center;font-size:15px}
+
+    /* Header */
+    header{background:#fff;border-bottom:1px solid #eee}
+    .header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:20px;padding:18px}
+    .logo{  width: 150px; height: 106px;}
+    .search-wrap{flex:1;display:flex}
+    .search{flex:1;border:2px solid #e7b34a;border-radius:4px 0 0 4px;padding:10px 14px}
+    .search-btn{background:#e7b34a;border:none;padding:10px 16px;border-radius:0 4px 4px 0;cursor:pointer}
+    .icons{display:flex;gap:16px;align-items:center}
+
+    /* Nav */
+    nav{background:#fff}
+    .nav-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;padding:18px 16px;gap:30px}
+    .nav-inner a{color:#333;font-weight:500}
+
+    /* Breadcrumb */
+    .breadcrumb{max-width:1200px;margin:30px auto 10px;padding:0 16px;color:#666}
+
+    /* Title area */
+    .title-wrap{max-width:1200px;margin:10px auto;padding:20px 16px;text-align:center}
+    .title-wrap h1{font-size:32px;margin-top:10px}
+
+    /* Filter row */
+    .filters{max-width:1200px;margin:20px auto;padding:0 16px;display:flex;justify-content:space-between;align-items:center;color:#666}
+    .filters .left{display:flex;gap:8px;align-items:center}
+    .filters select{padding:8px;border:1px solid #ddd;border-radius:4px}
+
+    /* Products grid */
+    .grid{max-width:1200px;margin:24px auto;padding:0 16px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+    .card{background:#fff;border-radius:6px;padding:18px;text-align:center;box-shadow:0 1px 0 rgba(0,0,0,0.03);display:flex;flex-direction:column;align-items:center;min-height:420px}
+    .card img.product{width:220px;height:220px;object-fit:contain;background:transparent}
+    .card h3{margin:14px 0 8px;font-size:18px;color:#333}
+    .stars{color:#0bb33b;margin-bottom:8px}
+    .price{color:#333;margin-bottom:16px;font-weight:600}
+    .btn{background:#359b0d;color:#fff;padding:12px 22px;border-radius:6px;border:none;cursor:pointer}
+
+    /* Footer */
+    footer{background:#eeb94d;color:#111;padding:40px 16px;margin-top:40px}
+    .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+    .footer-inner h4{margin-bottom:14px}
+    .footer-inner p, .footer-inner a{color:#111}
+
+    /* WhatsApp sticky */
+    .whats{position:fixed;right:18px;bottom:18px;background:#25D366;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,0.2);z-index:200}
+    .whats img{width:36px;height:36px}
+
+    /* Back to top small*/
+    .backtop{text-align:center;padding:10px;color:#111}
+
+    /* ====== Responsive ====== */
+    @media (max-width:1100px){
+      .grid{grid-template-columns:repeat(3,1fr)}
+      .logo{width:120px}
+    }
+    @media (max-width:800px){
+      .nav-inner{gap:12px;padding:10px}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .card{min-height:360px;padding:14px}
+      .search{padding:8px}
+      .search-btn{padding:8px}
+    }
+    @media (max-width:480px){
+      .header-inner{padding:12px}
+      .logo{width:100px}
+      .search{display:none}
+      .grid{grid-template-columns:1fr}
+      .footer-inner{grid-template-columns:1fr}
+      .icons{gap:8px}
+      .card img.product{width:180px;height:180px}
+    }
+  </style>
+</head>
+<body>
+  <div class="top-strip">FSSAI Licensed: 12422012002821 | NABL Approved Lab Tested Products | Quality & Safety Assured</div>
+
+  <header>
+    <div class="header-inner">
+      <img src="assets/fit and foo logo.avif" alt="logo" class="logo" />
+      <div class="search-wrap">
+        <input class="search" placeholder="Search..." />
+        <button class="search-btn">🔍</button>
+      </div>
+      <div class="icons">
+        <div title="Account">👤</div>
+        <div title="Cart">🛒</div>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="#">Home</a>
+      <a href="#">Our Collections ▾</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">Home / <strong>Best Sellers</strong></div>
+
+  <div class="title-wrap">
+    <h1>Best Sellers</h1>
+  </div>
+
+  <div class="filters">
+    <div class="left">
+      <span>Availability:</span>
+      <select>
+        <option>All</option>
+        <option>In stock</option>
+      </select>
+    </div>
+    <div class="right">
+      <span>Sort by:</span>
+      <select>
+        <option>Best selling</option>
+        <option>Price: Low to High</option>
+      </select>
+    </div>
+  </div>
+
+  <main>
+    <div class="grid" id="productGrid">
+      <!-- 6 product cards replicated -->
+      <div class="card">
+        <img class="product" src="images/product1.jpg" alt="ABC Malt Powder"/>
+        <h3>ABC Malt Powder</h3>
+        <div class="stars">★★★★★ <small style="color:#666">254 reviews</small></div>
+        <div class="price">From Rs. <strong>365.00</strong></div>
+        <button class="btn">Show options</button>
+      </div>
+
+      <div class="card">
+        <img class="product" src="images/product2.jpg" alt="Karuppu Kavuni Kanji Mix"/>
+        <h3>Karuppu Kavuni Kanji Mix</h3>
+        <div class="stars">★★★★★ <small style="color:#666">219 reviews</small></div>
+        <div class="price">From Rs. <strong>360.00</strong></div>
+        <button class="btn">Show options</button>
+      </div>
+
+      <div class="card">
+        <img class="product" src="images/product3.jpg" alt="Biotin Powder"/>
+        <h3>Biotin Powder</h3>
+        <div class="stars">★★★★★ <small style="color:#666">152 reviews</small></div>
+        <div class="price">From Rs. <strong>299.00</strong></div>
+        <button class="btn">Show options</button>
+      </div>
+
+      <div class="card">
+        <img class="product" src="images/product4.jpg" alt="Nalungu Maavu"/>
+        <h3>Nalungu Maavu</h3>
+        <div class="stars">★★★★★ <small style="color:#666">39 reviews</small></div>
+        <div class="price">From Rs. <strong>350.00</strong></div>
+        <button class="btn">Show options</button>
+      </div>
+
+      <div class="card">
+        <img class="product" src="images/product5.jpg" alt="Sprouted Ragi Choco Malt"/>
+        <h3>Sprouted Ragi Choco Malt</h3>
+        <div class="stars">★★★★★ <small style="color:#666">4 reviews</small></div>
+        <div class="price">From Rs. <strong>249.00</strong></div>
+        <button class="btn">Show options</button>
+      </div>
+
+      <div class="card">
+        <img class="product" src="images/product6.jpg" alt="Curry Leaves Powder"/>
+        <h3>Curry Leaves Powder</h3>
+        <div class="stars">★★★★★ <small style="color:#666">5 reviews</small></div>
+        <div class="price">From Rs. <strong>220.00</strong></div>
+        <button class="btn">Show options</button>
+      </div>
+
+    </div>
+  </main>
+
+  <div class="backtop">Back to the top ▲</div>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <img src="images/logo.png" alt="logo" style="width:120px;margin-bottom:12px"/>
+        <p><strong>Fit and Food Tamil</strong><br>
+        TNHB Colony,<br>
+        Villapuram Housing Board,<br>
+        Madurai 625011.<br>
+        +91 9363599986</p>
+        <p>FSSAI: 12422012002821</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <p><a href="#">Home</a><br>
+        <a href="#">Our Collections</a><br>
+        <a href="#">About Us</a><br>
+        <a href="#">Contact Us</a></p>
+      </div>
+      <div>
+        <h4>Policies</h4>
+        <p><a href="#">Privacy Policy</a><br>
+        <a href="#">Shipping Policy</a><br>
+        <a href="#">Return & Refund Policy</a><br>
+        <a href="#">Terms & Conditions</a></p>
+      </div>
+    </div>
+    <div style="max-width:1200px;margin:28px auto 0;padding:0 16px;color:#111">Copyright © 2025 fitandfoodtamil<br>Powered by Ekommerce360</div>
+  </footer>
+
+  <a class="whats" href="https://wa.me/919363599986" target="_blank" title="WhatsApp">
+    <img src="assets\whatsapp image.png" alt="whats" />
+  </a>
+
+  <script>
+    // small JS to show simple interactivity
+    document.querySelectorAll('.btn').forEach(b=>b.addEventListener('click',()=>alert('Show options clicked')));
+    document.querySelector('.backtop').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  </script>
+</body>
+</html>
