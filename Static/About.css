@@ -15,6 +15,13 @@ a { text-decoration: none; color: inherit; }
   display: flex; align-items: center; justify-content: space-between;
   padding: 10px 20px;
 }
+    header{background:#fff;border-bottom:1px solid #eee}
+    .header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:20px;padding:18px}
+    .logo{  width: 150px; height: 106px;}
+    .search-wrap{flex:1;display:flex}
+    .search{flex:1;border:2px solid #e7b34a;border-radius:4px 0 0 4px;padding:10px 14px}
+    .search-btn{background:#e7b34a;border:none;padding:10px 16px;border-radius:0 4px 4px 0;cursor:pointer}
+    .icons{display:flex;gap:16px;align-items:center}
 .logo { font-size: 1.2rem; font-weight: bold; }
 .nav-toggle { display: none; font-size: 1.4rem; background: none; border: none; cursor: pointer; }
 .nav-links { display: flex; gap: 20px; }
@@ -22,7 +29,7 @@ a { text-decoration: none; color: inherit; }
 .nav-links a.active::after {
   content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px; background-color: #000;
 }
-.header-icons { display: flex; gap: 12px; }
+
 
 /* Main Content */
 .content { max-width: 800px; margin: 30px auto; padding: 0 20px; }
