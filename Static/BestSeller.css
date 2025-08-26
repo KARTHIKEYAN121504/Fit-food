@@ -1,77 +1,105 @@
-    /* ====== Reset & base ====== */
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Inter, Arial, sans-serif;color:#1f1f1f;background:#f5f5f5}
-    a{color:inherit;text-decoration:none}
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Inter, Arial, sans-serif; color:#1f1f1f; background:#f5f5f5; }
+a { color: inherit; text-decoration: none; }
 
-    /* Top green announcement */
-    .top-strip{background:#3aa027;color:#fff;padding:8px 16px;text-align:center;font-size:15px}
+/* Top strip */
+.top-strip { background:#3aa027; color:#fff; padding:8px 16px; text-align:center; font-size:15px; }
 
-    /* Header */
-    header{background:#fff;border-bottom:1px solid #eee}
-    .header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:20px;padding:18px}
-    .logo{  width: 150px; height: 106px;}
-    .search-wrap{flex:1;display:flex}
-    .search{flex:1;border:2px solid #e7b34a;border-radius:4px 0 0 4px;padding:10px 14px}
-    .search-btn{background:#e7b34a;border:none;padding:10px 16px;border-radius:0 4px 4px 0;cursor:pointer}
-    .icons{display:flex;gap:16px;align-items:center}
+/* Header */
+header { background:#fff; border-bottom:1px solid #eee; }
+.header-inner { max-width:1200px; margin:0 auto; display:flex; align-items:center; gap:20px; padding:18px; }
+.logo { width:150px; height:106px; }
+.search-wrap { flex:1; display:flex; }
+.search { flex:1; border:2px solid #e7b34a; border-radius:4px 0 0 4px; padding:10px 14px; }
+.search-btn { background:#e7b34a; border:none; padding:10px 16px; border-radius:0 4px 4px 0; cursor:pointer; }
+.icons { display:flex; gap:16px; align-items:center; }
 
-    /* Nav */
-    nav{background:#fff}
-    .nav-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;padding:18px 16px;gap:30px}
-    .nav-inner a{color:#333;font-weight:500}
+/* Nav */
+nav { background:#fff; }
+.nav-inner { max-width:1200px; margin:0 auto; display:flex; justify-content:center; padding:18px 16px; gap:30px; }
+.nav-inner a { color:#333; font-weight:500; }
 
-    /* Breadcrumb */
-    .breadcrumb{max-width:1200px;margin:30px auto 10px;padding:0 16px;color:#666}
+/* Breadcrumb */
+.breadcrumb { max-width:1200px; margin:30px auto 10px; padding:0 16px; color:#666; }
 
-    /* Title area */
-    .title-wrap{max-width:1200px;margin:10px auto;padding:20px 16px;text-align:center}
-    .title-wrap h1{font-size:32px;margin-top:10px}
+/* Title */
+.title-wrap { max-width:1200px; margin:10px auto; padding:20px 16px; text-align:center; }
+.title-wrap h1 { font-size:32px; margin-top:10px; }
 
-    /* Filter row */
-    .filters{max-width:1200px;margin:20px auto;padding:0 16px;display:flex;justify-content:space-between;align-items:center;color:#666}
-    .filters .left{display:flex;gap:8px;align-items:center}
-    .filters select{padding:8px;border:1px solid #ddd;border-radius:4px}
+/* Filters */
+.filters { max-width:1200px; margin:20px auto; padding:0 16px; display:flex; justify-content:space-between; align-items:center; color:#666; }
+.filters .left { display:flex; gap:8px; align-items:center; }
+.filters select { padding:8px; border:1px solid #ddd; border-radius:4px; }
 
-    /* Products grid */
-    .grid{max-width:1200px;margin:24px auto;padding:0 16px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-    .card{background:#fff;border-radius:6px;padding:18px;text-align:center;box-shadow:0 1px 0 rgba(0,0,0,0.03);display:flex;flex-direction:column;align-items:center;min-height:420px}
-    .card img.product{width:220px;height:220px;object-fit:contain;background:transparent}
-    .card h3{margin:14px 0 8px;font-size:18px;color:#333}
-    .stars{color:#0bb33b;margin-bottom:8px}
-    .price{color:#333;margin-bottom:16px;font-weight:600}
-    .btn{background:#359b0d;color:#fff;padding:12px 22px;border-radius:6px;border:none;cursor:pointer}
+/* Product Grid */
+.grid { max-width:1200px; margin:24px auto; padding:0 16px; display:grid; grid-template-columns:repeat(4,1fr); gap:28px; }
+.card { background:#fff; border-radius:6px; padding:18px; text-align:center; box-shadow:0 1px 0 rgba(0,0,0,0.03); display:flex; flex-direction:column; align-items:center; min-height:420px; }
+.card img.product { width:220px; height:220px; object-fit:contain; background:transparent; }
+.card h3 { margin:14px 0 8px; font-size:18px; color:#333; }
+.stars { color:#0bb33b; margin-bottom:8px; }
+.price { color:#333; margin-bottom:16px; font-weight:600; }
+.btn { background:#359b0d; color:#fff; padding:12px 22px; border-radius:6px; border:none; cursor:pointer; }
 
-    /* Footer */
-    footer{background:#eeb94d;color:#111;padding:40px 16px;margin-top:40px}
-    .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
-    .footer-inner h4{margin-bottom:14px}
-    .footer-inner p, .footer-inner a{color:#111}
+/* Back to top */
+.backtop {
+  text-align: center;
+  padding: 14px;
+  background: #eeb94d;  /* same as footer */
+  color: #111;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.backtop:hover {
+  text-decoration: underline;
+  color: #000;
+}
 
-    /* WhatsApp sticky */
-    .whats{position:fixed;right:18px;bottom:18px;background:#25D366;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,0.2);z-index:200}
-    .whats img{width:36px;height:36px}
+/* Footer */
+footer { background:#eeb94d; color:#111; padding:40px 16px 20px; margin-top:0; font-size:15px; }
+.footer-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; }
+.footer-logo { width:120px; margin-bottom:12px; }
+.footer-col a { color:#111; display:inline-block; margin-bottom:8px; }
+.footer-col p { margin-bottom:12px; line-height:1.6; }
 
-    /* Back to top small*/
-    .backtop{text-align:center;padding:10px;color:#111}
+/* Footer bottom */
+.footer-bottom {
+  max-width:1200px;
+  margin:28px auto 0;
+  padding:20px 16px 0;
+  border-top:1px solid rgba(0,0,0,0.1);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#111;
+  font-size:14px;
+}
 
-    /* ====== Responsive ====== */
-    @media (max-width:1100px){
-      .grid{grid-template-columns:repeat(3,1fr)}
-      .logo{width:120px}
-    }
-    @media (max-width:800px){
-      .nav-inner{gap:12px;padding:10px}
-      .grid{grid-template-columns:repeat(2,1fr)}
-      .card{min-height:360px;padding:14px}
-      .search{padding:8px}
-      .search-btn{padding:8px}
-    }
-    @media (max-width:480px){
-      .header-inner{padding:12px}
-      .logo{width:100px}
-      .search{display:none}
-      .grid{grid-template-columns:1fr}
-      .footer-inner{grid-template-columns:1fr}
-      .icons{gap:8px}
-      .card img.product{width:180px;height:180px}
-    }
+/* WhatsApp sticky */
+.whats { position:fixed; right:18px; bottom:18px; background:#25D366; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(0,0,0,0.2); z-index:200; }
+.whats img { width:36px; height:36px; }
+
+/* Responsive */
+@media (max-width:1100px){
+  .grid { grid-template-columns:repeat(3,1fr); }
+  .logo { width:120px; }
+}
+@media (max-width:800px){
+  .nav-inner { gap:12px; padding:10px; }
+  .grid { grid-template-columns:repeat(2,1fr); }
+  .card { min-height:360px; padding:14px; }
+  .search { padding:8px; }
+  .search-btn { padding:8px; }
+}
+@media (max-width:480px){
+  .header-inner { padding:12px; }
+  .logo { width:100px; }
+  .search { display:none; }
+  .grid { grid-template-columns:1fr; }
+  .footer-inner { grid-template-columns:1fr; text-align:center; }
+  .icons { gap:8px; }
+  .card img.product { width:180px; height:180px; }
+  .footer-bottom { flex-direction:column; gap:10px; text-align:center; }
+}
