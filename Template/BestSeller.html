@@ -80,54 +80,99 @@
   <div class="title-wrap">
     <h1>Best Sellers</h1>
   </div>
+  <div class="filter-bar">
+  <div class="availability">
+    <label for="availability">Availability:</label>
+    <select id="availability">
+      <option>All</option>
+      <option>In Stock</option>
+      <option>Out of Stock</option>
+    </select>
+  </div>
 
-  <!-- Product Grid -->
-  <main>
-    <div class="grid">
-      <div class="card">
-        <img class="product" src="../Assets/BestSeller/Abc malt powder.jpg" alt="ABC Malt Powder"/>
-        <h3>ABC Malt Powder</h3>
-        <div class="stars">★★★★★ <small>254 reviews</small></div>
-        <div class="price">From Rs. <strong>365.00</strong></div>
-        <button class="btn">Show options</button>
+  <div class="sort-by">
+    <label for="sort">Sort by:</label>
+    <select id="sort">
+      <option>Best selling</option>
+      <option>Price, low to high</option>
+      <option>Price, high to low</option>
+      <option>Newest</option>
+    </select>
+  </div>
+</div>
+
+
+<main>
+  <div class="grid">
+
+    <div class="card">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/BestSeller/Abc malt powder.jpg" alt="ABC Malt Powder"/>
+        <img class="product hover-img" src="..\Assets\BestSeller\abc2.jpg" alt="ABC Malt Powder Benefits"/>
       </div>
-      <div class="card">
-        <img class="product" src="../Assets/BestSeller/karuppu.jpg" alt="Karuppu Kavuni Kanji Mix"/>
-        <h3>Karuppu Kavuni Kanji Mix</h3>
-        <div class="stars">★★★★★ <small>219 reviews</small></div>
-        <div class="price">From Rs. <strong>360.00</strong></div>
-        <button class="btn">Show options</button>
-      </div>
-      <div class="card">
-        <img class="product" src="../Assets/BestSeller/Biotin.jpg" alt="Biotin Powder"/>
-        <h3>Biotin Powder</h3>
-        <div class="stars">★★★★★ <small>152 reviews</small></div>
-        <div class="price">From Rs. <strong>299.00</strong></div>
-        <button class="btn">Show options</button>
-      </div>
-      <div class="card">
-        <img class="product" src="../Assets/BestSeller/Nalungu.jpg" alt="Nalungu Maavu"/>
-        <h3>Nalungu Maavu</h3>
-        <div class="stars">★★★★★ <small>39 reviews</small></div>
-        <div class="price">From Rs. <strong>350.00</strong></div>
-        <button class="btn">Show options</button>
-      </div>
-      <div class="card">
-        <img class="product" src="../Assets/BestSeller/Sprouted ragi.jpg" alt="Sprouted Ragi Choco Malt"/>
-        <h3>Sprouted Ragi Choco Malt</h3>
-        <div class="stars">★★★★★ <small>4 reviews</small></div>
-        <div class="price">From Rs. <strong>249.00</strong></div>
-        <button class="btn">Show options</button>
-      </div>
-      <div class="card">
-        <img class="product" src="../Assets/BestSeller/curry leaves.jpg" alt="Curry Leaves Powder"/>
-        <h3>Curry Leaves Powder</h3>
-        <div class="stars">★★★★★ <small>5 reviews</small></div>
-        <div class="price">From Rs. <strong>220.00</strong></div>
-        <button class="btn">Show options</button>
-      </div>
+      <h3>ABC Malt Powder</h3>
+      <div class="stars">★★★★★ <small>254 reviews</small></div>
+      <div class="price">From Rs. <strong>365.00</strong></div>
+      <button class="btn">Show options</button>
     </div>
-  </main>
+
+    <div class="card">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/BestSeller/karuppu.jpg" alt="Karuppu Kavuni Kanji Mix"/>
+        <img class="product hover-img" src="../Assets/BestSeller/Karuppu2.jpg" alt="Karuppu Kavuni Benefits"/>
+      </div>
+      <h3>Karuppu Kavuni Kanji Mix</h3>
+      <div class="stars">★★★★★ <small>219 reviews</small></div>
+      <div class="price">From Rs. <strong>360.00</strong></div>
+      <button class="btn">Show options</button>
+    </div>
+
+    <div class="card">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/BestSeller/Biotin.jpg" alt="Biotin Powder"/>
+        <img class="product hover-img" src="../Assets/BestSeller/Biotin2.jpg" alt="Biotin Powder Benefits"/>
+      </div>
+      <h3>Biotin Powder</h3>
+      <div class="stars">★★★★★ <small>152 reviews</small></div>
+      <div class="price">From Rs. <strong>299.00</strong></div>
+      <button class="btn">Show options</button>
+    </div>
+
+    <div class="card">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/BestSeller/Nalungu.jpg" alt="Nalungu Maavu"/>
+        <img class="product hover-img" src="..\Assets\BestSeller\nalungu2.jpg" alt="Nalungu Maavu Benefits"/>
+      </div>
+      <h3>Nalungu Maavu</h3>
+      <div class="stars">★★★★★ <small>39 reviews</small></div>
+      <div class="price">From Rs. <strong>350.00</strong></div>
+      <button class="btn">Show options</button>
+    </div>
+
+    <div class="card">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/BestSeller/Sprouted ragi.jpg" alt="Sprouted Ragi Choco Malt"/>
+        <img class="product hover-img" src="../Assets/BestSeller/ragi2.jpg" alt="Sprouted Ragi Choco Malt Benefits"/>
+      </div>
+      <h3>Sprouted Ragi Choco Malt</h3>
+      <div class="stars">★★★★★ <small>4 reviews</small></div>
+      <div class="price">From Rs. <strong>249.00</strong></div>
+      <button class="btn">Show options</button>
+    </div>
+
+    <div class="card">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/BestSeller/curry leaves.jpg" alt="Curry Leaves Powder"/>
+        <img class="product hover-img" src="../Assets/BestSeller/curry2.jpg" alt="Curry Leaves Powder Benefits"/>
+      </div>
+      <h3>Curry Leaves Powder</h3>
+      <div class="stars">★★★★★ <small>5 reviews</small></div>
+      <div class="price">From Rs. <strong>220.00</strong></div>
+      <button class="btn">Show options</button>
+    </div>
+
+  </div>
+</main>
 
   <!-- Back to Top -->
   <div class="backtop">Back to the top ▲</div>
