@@ -12,6 +12,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Static/register.css">
 </head>
 <body>
     <div class="top-bar">
@@ -79,23 +80,31 @@
 </header>
 <div class="outer">
   <div class="login-container">
-    <h2>Login</h2>
-    <form>
-      <label for="email">Email</label>
-      <input type="email" id="email" required>
+    <h2>Create an account</h2>
+   <form action="index.html" method="get">
+  <label for="first">First Name</label>
+  <input type="text" id="first" required>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" required>
-      <a href="reset.html">Forgot your password? </a>
+  <label for="last">Last Name</label>
+  <input type="text" id="last" required>
 
-      <button type="submit">Sign In</button>
-    </form>
+  <label for="email">Email</label>
+  <input type="email" id="email" required>
 
-    <div class="signup-link">
-      New customer? <a href="Register.html"> Sign up for an account</a>
+  <label for="password">Password</label>
+  <input type="password" id="password" required>
+
+  <div class="bun">
+    <button type="submit" class="btn submit-btn">Create</button>
+    <span class="or">or</span>
+    <a href="index.html">
+      <span class="cancel-btn">Return to Store</span>
+    </a>
+  </div>
+</form>
+
     </div>
   </div>
-</div>
   <!-- Back to Top -->
   <div class="backtop">Back to the top ▲</div>
 
@@ -153,6 +162,7 @@
   <img src="../Assets/whatsapp image.png" alt="whats" /></a>
   <!-- JS -->
   <script>
+
     document.querySelector('.backtop')
       .addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
   </script>

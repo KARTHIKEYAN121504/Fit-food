@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Account - Fit & Food Tamil</title>
-  <link rel="stylesheet" href="../Static/login.css">
-    <link rel="stylesheet" href="../Static/About.css">
+  <title>Reset Password - Fit & Food Tamil</title>
+  <link rel="stylesheet" href="../Static/About.css">
+<link rel="stylesheet" href="../Static/reset.css">
+
   <link rel="icon" href="../Assets/BestSeller/fit and foo logo.avif" type="image/x-icon">
-   <link
+  <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="top-bar">
+      <div class="top-bar">
     FSSAI Licensed: 12422012002821 | NABL Approved Lab Tested Products | Quality & Safety Assured
   </div>
   <!-- Header -->
@@ -77,26 +78,25 @@
 
 
 </header>
-<div class="outer">
-  <div class="login-container">
-    <h2>Login</h2>
-    <form>
-      <label for="email">Email</label>
-      <input type="email" id="email" required>
+  <div class="container">
+    <h2>Reset Password</h2>
+    <p id="p">We will send you an email to reset your password.</p>
+    <div id="successMsg" class="message">
+      ✅ Reset email sent successfully!
+    </div>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" required>
-      <a href="reset.html">Forgot your password? </a>
-
-      <button type="submit">Sign In</button>
+    <form id="resetForm">
+      <input type="email" id="email" placeholder="Enter your email" required><br>
+      <div class="bun">
+      <button type="submit" class="btn submit-btn">Submit</button>
+     <span class="or">or</span >
+        <a href="login.html" >
+      <span class="cancel-btn" onclick="resetForm()">Cancel</span></a>
+      </div>
     </form>
 
-    <div class="signup-link">
-      New customer? <a href="Register.html"> Sign up for an account</a>
-    </div>
+    
   </div>
-</div>
-  <!-- Back to Top -->
   <div class="backtop">Back to the top ▲</div>
 
   <!-- Footer -->
@@ -153,9 +153,26 @@
   <img src="../Assets/whatsapp image.png" alt="whats" /></a>
   <!-- JS -->
   <script>
+
     document.querySelector('.backtop')
       .addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
   </script>
 
+
+  <script>
+    const form = document.getElementById('resetForm');
+    const successMsg = document.getElementById('successMsg');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      successMsg.style.display = 'block';
+      document.getElementById("p").style.display = 'none';
+    });
+
+    function resetForm() {
+      document.getElementById('email').value = "";
+      successMsg.style.display = 'none';
+    }
+  </script>
 </body>
 </html>
