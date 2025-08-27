@@ -397,6 +397,36 @@
   background: #43a047;
   transform: translateY(-2px);
 }
+.filter-bar {
+  max-width: 1200px;
+  margin: 10px auto 20px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  color: #333;
+}
+
+.filter-bar label {
+  font-weight: 500;
+  margin-right: 6px;
+  color: #333;
+}
+
+.filter-bar select {
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-bar select:hover {
+  border-color: #4CAF00;
+}
 
 
  /* Footer main */
