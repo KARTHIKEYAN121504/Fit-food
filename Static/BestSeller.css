@@ -20,10 +20,6 @@
   padding: 7.2px 10px;
   font-weight: 400;
 
-
-}
-.header-icons:hover{
-cursor: pointer;
 }
 
 .header-icons{
@@ -493,18 +489,22 @@ cursor: pointer;
       .footer-left { flex-direction: column; align-items: flex-start; }
       .footer-logo { margin-bottom: 10px; }
     }
-.whats {
+
+    /* WhatsApp sticky */
+    .whats {
       position:fixed;
       right:18px;
       bottom:18px;
-      width:100px;
-      height:100px;
+      background:#25D366;
+      width:60px;
+      height:60px;
+      border-radius:50%;
       display:flex;
       align-items:center;
       justify-content:center;
-          z-index:200;
+      box-shadow:0 6px 18px rgba(0,0,0,0.2);
+      z-index:200;
     }
-<<<<<<< HEAD
     .whats img { width:36px; height:36px; }
     /* Filter Bar */
 .filter-bar {
@@ -550,9 +550,6 @@ cursor: pointer;
 }
 
 
-=======
-    .whats img { width:60px; height:60px; }
->>>>>>> 868025c2d88de440b2308548d567c19b496deb84
 
     /* Responsive */
     @media (max-width:1100px){
