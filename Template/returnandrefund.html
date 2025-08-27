@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return and Refund Policy - Fit & Food Tamil</title>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Static/returnandrefund.css">
+    <!-- Phosphor Icons for cart and user icons, and social media icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/dist/p.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Top green bar -->
+    <div class="top-bar">
+        FSSAI Licensed: 12422012002821 | NABL Approved Lab Tested Products | Quality & Safety Assured
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <img src="../Assets/fit and foo logo.avif" alt="Fit & Food Tamil">
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button>🔍</button>
+        </div>
+        <div class="icons">
+            <span>👤</span>
+            <span>🛒</span>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <div class="dropdown">
+            <a href="#">Our Collections ▾</a>
+            <div class="dropdown-content">
+                <a href="#">Best Sellers</a>
+                <a href="#">Skin Care</a>
+                <a href="#">Hair Care</a>
+            </div>
+        </div>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+    </nav>
+    </header>
+
+    <!-- Main Content - Privacy Policy -->
+    <main class="container">
+        <div class="return-policy-section">
+            <h1 id="return-policy-top">Return and Refund Policy</h1>
+            <ol>
+                <li>Cancellation not allowed, once order is placed; hence no refund will be issued.</li>
+                <li>There will be no Cash on Delivery (COD) orders.</li>
+                <li>Damage due to freight or improper usage or wrong application will not be covered under this policy.
+                </li>
+                <li>In case of any damage during transit, please contact us within 24 hours of product delivery and
+                    provide an unboxing video as proof. After verification, we will quickly address the issue and send
+                    you a replacement product. No refund will be provided.</li>
+                <li>Full payment required before order processing.</li>
+            </ol>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Back to Top Link -->
+            <div class="back-to-top-link">
+                <a href="#return-policy-top" class="back-to-top">Back to the top ^</a>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-logo-info">
+                    <img src="../Assets/fit and foo logo.avif" alt="Fit & Food Tamil Logo">
+                    <div class="logo-text">
+                        <span class="fit">FIT</span> <span class="food">& FOOD</span> <span class="tamil">TAMIL</span>
+                    </div>
+                    <p>TNHB Colony,</p>
+                    <p>Villapuram Housing Board,</p>
+                    <p>Madurai 625011.</p>
+                    <a href="tel:+919363599986" class="phone">+91 9363599986</a>
+                    <p>FSSAI: 124220/2002821</p>
+                </div>
+
+                <div class="footer-links-column">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Our Collections</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-column">
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return & Refund Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social-locale">
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/" target="_blank"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="ph ph-youtube-logo"></i></a>
+                    </div>
+                    <div class="locale-selector">
+                        <span>India (INR ₹)</span>
+                        <i class="ph ph-caret-down"></i> <!-- Down arrow icon -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Copyright © 2025 fitandfoodtamil</p>
+                <p>Powered by Ekommerce360</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for demonstration and smooth scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Privacy Policy page loaded successfully!');
+
+            // Smooth scroll for "Back to top" link
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+            const dropdown = document.querySelector(".dropdown > a");
+            dropdown.addEventListener("click", (e) => {
+                e.preventDefault();
+                const content = dropdown.nextElementSibling;
+                content.style.display = content.style.display === "block" ? "none" : "block";
+            });
+        });
+    </script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919363599986" target="_blank" class="whatsapp-button">
+        <i class="ph ph-whatsapp-logo"></i>
+    </a>
+</body>
+
+</html>
