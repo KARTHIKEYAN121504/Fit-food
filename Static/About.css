@@ -294,11 +294,50 @@ a { text-decoration: none; color: inherit; }
 
 
 /* Main Content */
-.content { max-width: 800px; margin: 30px auto; padding: 0 20px; }
-.content h1 { margin-bottom: 16px; font-size: 1.8rem; }
-.content h2 { margin-top: 24px; margin-bottom: 8px; font-size: 1.2rem; color: #555; }
-.content p { margin-bottom: 16px; }
-.back-to-top { display: inline-block; margin-top: 20px; color: #000; }
+.hole {
+  background: #f5f5f5; /* light gray wrapper background */
+  padding: 40px 0;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  background: #f5f5f5; /* white card-like background */
+  border-radius: 6px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+  max-width: 800px; margin: 30px auto; padding: 0 20px;
+}
+
+.content h1 {
+  margin-bottom: 16px;
+  color: #333; /* dark heading color */
+  font-weight: 600;
+}
+
+.content h2 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: #333; /* green heading like stars */
+  font-weight: 500;
+}
+
+.content p {
+  margin-bottom: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.content .btn {
+  background: #359b0d;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 16px;
+}
 
 /* Footer */
 .site-footer {
