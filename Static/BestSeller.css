@@ -428,7 +428,38 @@
   border-color: #4CAF00;
 }
 
+    /* Modal */
+    .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 1000; justify-content: center; align-items: center; }
+    .modal-content { background: #fff; width: 90%; max-width: 950px; border-radius: 4px; display: flex; position: relative; padding: 30px; gap: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    .close { position: absolute; right: 16px; top: 16px; font-size: 22px; cursor: pointer; color: #666; }
 
+    /* Left - Product Image */
+    .modal-left { flex: 1; display: flex; flex-direction: column; align-items: center; }
+    .modal-left img { width: 100%; max-width: 380px; border-radius: 4px; }
+    .thumbs { margin-top: 14px; display: flex; gap: 8px; }
+    .thumbs img { width: 60px; height: 60px; object-fit: contain; border: 1px solid #ddd; border-radius: 4px; cursor: pointer; }
+
+    /* Right - Product Details */
+    .modal-right { flex: 1.2; display: flex; flex-direction: column; gap: 14px; }
+    .modal-right h2 { margin: 0; font-size: 24px; font-weight: 600; }
+    .modal-price { font-size: 20px; font-weight: 600; color: #111; }
+
+    /* Dropdown */
+    .select-box { padding: 10px; border: 1px solid #ccc; border-radius: 4px; width: 180px; font-size: 15px; }
+
+    /* Quantity + Buttons */
+    .qty-row { display: flex; gap: 10px; align-items: center; }
+    .qty-control { display: flex; align-items: center; border: 1px solid #ccc; border-radius: 4px; overflow: hidden; }
+    .qty-control button { width: 35px; height: 35px; border: none; background: #e9f5e6; font-size: 18px; cursor: pointer; }
+    .qty-control input { width: 50px; text-align: center; border: none; font-size: 16px; }
+
+    .add-cart { flex: 1; padding: 10px; border: 2px solid #4CAF00; background: #fff; color: #4CAF00; font-weight: bold; border-radius: 4px; cursor: pointer; font-size: 15px; }
+    .add-cart:hover { background: #f0fff0; }
+    .buy-now { padding: 14px; border: none; background: #4CAF00; color: #fff; font-weight: bold; border-radius: 4px; cursor: pointer; font-size: 16px; width: 100%; }
+    .buy-now:hover { background: #43a047; }
+
+    .full-details { margin-top: 8px; font-size: 16px; color: black; cursor: pointer; text-decoration: none; padding-top: 20px; }
+    .full-details:hover { text-decoration: underline; }
  /* Footer main */
     footer {
       background: #eeb94d;
@@ -521,6 +552,7 @@
           z-index:200;
     }
     .whats img { width:60px; height:60px; }
+
 
     /* Responsive */
     @media (max-width:1100px){
