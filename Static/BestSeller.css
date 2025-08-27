@@ -399,19 +399,7 @@
 }
 
 
-    /* Back to top */
-    .backtop {
-      text-align: center;
-      padding: 14px;
-      background: #eeb94d;
-      color: #111;
-      font-size: 15px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    /* Footer main */
+ /* Footer main */
     footer {
       background: #eeb94d;
       color: #111;
@@ -491,69 +479,22 @@
     }
 
     /* WhatsApp sticky */
-    .whats {
+.whats {
       position:fixed;
       right:18px;
       bottom:18px;
-      background:#25D366;
-      width:60px;
-      height:60px;
-      border-radius:50%;
+      width:100px;
+      height:100px;
       display:flex;
       align-items:center;
       justify-content:center;
-      box-shadow:0 6px 18px rgba(0,0,0,0.2);
-      z-index:200;
+          z-index:200;
     }
-    .whats img { width:36px; height:36px; }
-    /* Filter Bar */
-.filter-bar {
-  max-width: 1200px;
-  margin: 10px auto 20px;
-  padding: 0 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 15px;
-  color: #333;
-}
-
-.filter-bar label {
-  font-weight: 500;
-  margin-right: 6px;
-  color: #333;
-}
-
-.filter-bar select {
-  border: 1px solid #ddd;
-  padding: 6px 10px;
-  border-radius: 4px;
-  background: #fff;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.filter-bar select:hover {
-  border-color: #4CAF00;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .filter-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    
-  }
-  .grid { grid-template-columns: 1fr; 
-}
-
-
+    .whats img { width:60px; height:60px; }
 
     /* Responsive */
     @media (max-width:1100px){
-        .grid { grid-template-columns: repeat(2, 1fr); }
+      .grid { grid-template-columns:repeat(3,1fr); }
       .logo { width:120px; }
     }
     @media (max-width:800px){
@@ -571,4 +512,15 @@
       .logo { width:100px; }
       .search { display:none; }
       .grid { grid-template-columns:1fr; }
+    }
+     /* Back to top */
+    .backtop {
+      text-align: center;
+      padding: 14px;
+      background: #eeb94d;
+      color: #111;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
