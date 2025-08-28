@@ -124,11 +124,6 @@ th.hd, td.price, td.total {
   font-size: 14px;
   text-decoration: underline;
   cursor: pointer;
-  color: #e53935;
-}
-
-.remove-link:hover {
-  color: #c62828;
 }
 
 .subtotal {
