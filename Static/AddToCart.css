@@ -167,7 +167,11 @@
   font-size: 0.9rem;
   margin-left: 4px;
 }
-
+.cd{
+  width:90%;
+  align-items: center;
+  margin-left:80px;
+}
 /* Dropdown menu (hidden by default) */
 .dropdown-menu {
   position: absolute;
@@ -513,17 +517,17 @@
     .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem}
 
     /* Gallery */
-    .gallery{background:#ffffff;border-radius:16px;box-shadow:0 8px 24px rgba(16,24,40,.08);padding:1rem}
-    .main-img{aspect-ratio:1/0;border-radius:12px;overflow:hidden;background:#fff;display:grid;place-items:center}
-    .main-img img{width:386px;height:368px;object-fit:contain;transition:transform .4s ease}
-    .main-img:hover img{transform:scale(1.03)}
-    .thumbs{display:flex;gap:12px;margin-top:12px;overflow:auto;padding-bottom:6px}
+    .gallery{background:#f5f5f5;border-radius:16px;}
+    .main-img{border-radius:12px;overflow:hidden;background:#f5f5f5;display:grid;place-items:center}
+    .main-img img{width:600px;height:600px;transition:transform .4s ease;margin: 5px !important;padding:2% !important;}
+    .main-img:hover img{transform:scale(1.03);cursor: pointer;}
+    .thumbs{display:flex;gap:12px;overflow:auto;margin-left:50px;}
     .thumb{width:71px;height:70.93px;border-radius:10px;overflow:hidden;border:2px solid transparent;cursor:pointer;flex:0 0 auto;background:#fff}
     .thumb img{width:71px;height:70.93px;object-fit:cover}
     .thumb.active{border-color:#4caf50}
 
     /* Product info */
-    .product{background:#ffffff;border-radius:16px;box-shadow:0 8px 24px rgba(16,24,40,.08);padding:1.25rem}
+    .product{background:#f5f5f5;border-radius:16px;padding:1.25rem}
     .title{font-size:1.9rem;font-weight:800;margin-bottom:.2rem}
     .rating{display:flex;align-items:center;gap:.5rem;color:#4caf50;font-weight:700}
     .rating small{color:#6b7280;font-weight:600}
@@ -888,4 +892,30 @@
       font-weight: 500;
       cursor: pointer;
       transition: all 0.3s ease;
+    }
+
+    /*video*/
+        .floating-video {
+      position: fixed;
+      bottom: 30px;
+      right: 10px;
+      width: 250px;
+      height: 260px;
+      border-radius: 10px;
+      z-index: 9999;
+
+      /* Animation defaults */
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .floating-video video{
+        border-radius: 10px;
+    }
+
+    /* Hidden state (animated shrink + fade out) */
+    .hidden-video {
+      opacity: 0;
+      transform: scale(0.3);
+      pointer-events: none;
     }
