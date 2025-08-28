@@ -35,7 +35,8 @@
     <!-- Icons -->
     <div class="header-icons">
       <a href="login.html"><span class="icon"><img src="../Assets/user.png" alt="Account" title="Account" width="20px" height="20px" class="img1"></span></a>
-     <a href=""><span class="icon"><img src="../Assets/shopping-cart.png" alt="Account" title="Account" width="20px" height="20px"></span></a>
+           <a href="#" id="cart-btn"><span class="icon"><img src="../Assets/shopping-cart.png" alt="Cart" width="20px" height="20px"></span></a>
+
     </div>
 
     <!-- Mobile Menu Toggle -->
@@ -76,9 +77,51 @@
 
 </header>
 
+ <!-- Sidebar Cart -->
+<!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cart-sidebar">
+  <!-- Top Navigation -->
+  <div class="cart-header">
+    <button class="back-link" id="back-link">← Continue shopping</button>
+  </div>
 
+  <!-- Order Summary -->
+  <div class="cart-summary">
+    <div class="order-header">
+      <h3>Your Order</h3>
+      <a href="#" class="view-cart">View cart</a>
+    </div>
+    <div class="subtotal">
+      <span>Subtotal:</span>
+      <span class="subtotal-price">Rs. 360.00</span>
+    </div>
+    <button class="checkout-btn">Checkout</button>
+  </div>
 
+  <!-- Products -->
+  <div class="cart-products">
+    <div class="products-header" id="products-header">
+      <h4>Products <span id="product-count">(1)</span></h4>
+      <span class="toggle">⌵</span>
+    </div>
 
+    <div class="cart-item" data-price="360">
+      <img src="../Assets/BestSeller/fit and foo logo.avif" alt="Product">
+      <div class="item-info">
+        <p class="item-name">Karuppu Kavuni Kanji Mix</p>
+        <small class="item-weight">250gms</small>
+        <p class="item-price">Rs. <span class="item-total">360</span>.00</p>
+        
+        <div class="quantity-controls">
+          <button class="qty-btn minus">-</button>
+          <span class="qty">1</span>
+          <button class="qty-btn plus">+</button>
+          <a href="#" class="remove">Remove</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
   <main class="container page">
     <div class="grid">
@@ -472,5 +515,90 @@ thumbs.forEach(btn => {
 
  
   </script>
+   <script>
+  const cartBtn = document.getElementById('cart-btn');
+  const cartSidebar = document.getElementById('cart-sidebar');
+  const closeCart = document.getElementById('back-link');
+  const subtotalEl = document.querySelector('.subtotal-price');
+  const productCountEl = document.getElementById('product-count');
+
+  // Open Cart
+  cartBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    cartSidebar.classList.add('open');
+  });
+
+  // Close Cart
+  closeCart.addEventListener('click', () => {
+    cartSidebar.classList.remove('open');
+  });
+
+  // Toggle Products Section
+  document.getElementById("products-header").addEventListener("click", function () {
+    document.querySelectorAll(".cart-item").forEach(item => {
+      item.style.display = (item.style.display === "none") ? "flex" : "none";
+    });
+  });
+
+  // Update subtotal function
+  function updateSubtotal() {
+    let subtotal = 0;
+    let itemCount = 0;
+
+    document.querySelectorAll(".cart-item").forEach(item => {
+      const qty = parseInt(item.querySelector(".qty").textContent);
+      const price = parseInt(item.getAttribute("data-price"));
+      const total = qty * price;
+
+      item.querySelector(".item-total").textContent = total;
+      subtotal += total;
+      itemCount++;
+    });
+
+    subtotalEl.textContent = `Rs. ${subtotal}.00`;
+
+    // Update product count
+    if (itemCount > 0) {
+      productCountEl.textContent = `(${itemCount})`;
+      productCountEl.style.display = "inline";
+    } else {
+      productCountEl.style.display = "none";
+    }
+  }
+
+  // Quantity + / - / remove
+  document.querySelectorAll(".cart-item").forEach(item => {
+    const qtyEl = item.querySelector(".qty");
+    const plusBtn = item.querySelector(".plus");
+    const minusBtn = item.querySelector(".minus");
+    const removeBtn = item.querySelector(".remove");
+
+    plusBtn.addEventListener("click", () => {
+      let qty = parseInt(qtyEl.textContent);
+      qty++;
+      qtyEl.textContent = qty;
+      updateSubtotal();
+    });
+
+    minusBtn.addEventListener("click", () => {
+      let qty = parseInt(qtyEl.textContent);
+      if (qty > 1) {
+        qty--;
+        qtyEl.textContent = qty;
+        updateSubtotal();
+      }
+    });
+
+    removeBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      item.remove();
+      updateSubtotal();
+    });
+  });
+
+  // Initialize subtotal on load
+  updateSubtotal();
+</script>
+
 </body>
 </html>
