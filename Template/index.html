@@ -78,16 +78,22 @@
   <a href="About.html">About Us</a>
   <a href="#">Contact Us</a>
 </nav>
+<div class="slider">
+  <div class="slides">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Biotin_Powder_Desktop_1512x.png?v=1720094634" class="active" alt="Slide 1">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Kuruppu_Ulunthu_Kanji_Mix_Powder_Desktop_1512x.png?v=1733471566" alt="Slide 2">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Pirandai_Powder_Desktop_1512x.jpg?v=1751371374" alt="Slide 3">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food__Aavarampoo__Kuliyal_Powder_Banner_Desktop_1512x.jpg?v=1751634958" alt="Slide 4">
+  </div>
 
-  <section class="banner">
-    <img
-      src="https://storage.googleapis.com/a1aa/image/829d1fae-89f2-487e-9aa1-6d0801a86742.jpg"
-      alt="Banner showing Biotin Drink Powder package with nuts floating and wooden table background"
-      width="900"
-      height="180"
-      loading="lazy"
-    />
-  </section>
+  <!-- Controller inside image -->
+  <div class="buttons">
+    <button onclick="showSlide(0)" class="active"></button>
+    <button onclick="showSlide(1)"></button>
+    <button onclick="showSlide(2)"></button>
+    <button onclick="showSlide(3)"></button>
+  </div>
+</div>
   <div class="chat-bar" role="region" aria-label="Chat with us">
     <i class="fas fa-comment-alt" aria-hidden="true"></i>
     <div>
@@ -1260,6 +1266,40 @@
 
   <!-- JS -->
   <script>
+    const slides = document.querySelectorAll(".slides img");
+  const buttons = document.querySelectorAll(".buttons button");
+  let currentIndex = 0;
+  let slideInterval;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+      buttons[i].classList.toggle("active", i === index);
+    });
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    let nextIndex = (currentIndex + 1) % slides.length;
+    showSlide(nextIndex);
+  }
+
+  // Auto-slide every 3 seconds
+  function startAutoSlide() {
+    slideInterval = setInterval(nextSlide, 3000);
+  }
+
+  // Restart auto-slide after manual click
+  buttons.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+      showSlide(i);
+      clearInterval(slideInterval);
+      startAutoSlide();
+    });
+  });
+
+  // Start auto-sliding
+  startAutoSlide();
 
     document.querySelector('.backtop')
       .addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
