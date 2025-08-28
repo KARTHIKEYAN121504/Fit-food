@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Best Sellers — Fit and Food Tamil</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-  <link rel="stylesheet" href="..\Static\BestSeller.css">
+  <link rel="stylesheet" href="..\Static/babycare.css">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="icon" href="../Assets/BestSeller/fit and foo logo.avif" type="image/x-icon">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="..\Static\About.css">
 </head>
 <body>
   <!-- Top Strip -->
@@ -88,15 +87,13 @@
   <div class="cart-summary">
     <div class="order-header">
       <h3>Your Order</h3>
-      <a href="checkout.html" class="view-cart">View cart</a>
+      <a href="#" class="view-cart">View cart</a>
     </div>
     <div class="subtotal">
       <span>Subtotal:</span>
       <span class="subtotal-price">Rs. 360.00</span>
     </div>
-    <button class="checkout-btn" onclick="window.location.href='checkout.html'">
-  Checkout
-</button>
+    <button class="checkout-btn">Checkout</button>
   </div>
 
   <!-- Products -->
@@ -107,7 +104,7 @@
     </div>
 
     <div class="cart-item" data-price="360">
-      <img src="../Assets/BestSeller/karuppu.jpg" alt="Product">
+      <img src="../Assets/BestSeller/fit and foo logo.avif" alt="Product">
       <div class="item-info">
         <p class="item-name">Karuppu Kavuni Kanji Mix</p>
         <small class="item-weight">250gms</small>
@@ -125,11 +122,11 @@
 </div>
 
   <!-- Breadcrumb -->
-  <div class="breadcrumb">Home / <strong>Best Sellers</strong></div>
+  <div class="breadcrumb" >Home / <strong>Baby Care Powders</strong></div>
 
   <!-- Title -->
   <div class="title-wrap">
-    <h1>Best Sellers</h1>
+    <h1 data-aos="fade-down">Baby Care Powders</h1>
   </div>
   <div class="filter-bar">
   <div class="availability">
@@ -145,9 +142,12 @@
     <label for="sort">Sort by:</label>
     <select id="sort">
       <option>Best selling</option>
+      <option>Alphabetical, A-Z</option>
+      <option>Alphabetical, Z-A</option>
       <option>Price, low to high</option>
       <option>Price, high to low</option>
-      <option>Newest</option>
+      <option>Date, new to old</option>
+      <option>Date, old to new</option>
     </select>
   </div>
 </div>
@@ -156,69 +156,89 @@
 <main>
   <div class="grid">
 
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
       <div class="img-container">
-        <img class="product main-img" src="../Assets/BestSeller/Abc malt powder.jpg" alt="ABC Malt Powder"/>
-        <img class="product hover-img" src="..\Assets\BestSeller\abc2.jpg" alt="ABC Malt Powder Benefits"/>
+        <img class="product main-img" src="../Assets/babycare/1.webp" alt="ABC Malt Powder"/>
+        <img class="product hover-img" src="..\Assets/babycare/11.webp" alt="ABC Malt Powder Benefits"/>
       </div>
-      <h3>ABC Malt Powder</h3>
+      <h3>Abc Malt Powder</h3>
       <div class="stars">★★★★★ <small>254 reviews</small></div>
       <div class="price">From Rs. <strong>365.00</strong></div>
       <button class="btn">Show options</button>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
       <div class="img-container">
-        <img class="product main-img" src="../Assets/BestSeller/karuppu.jpg" alt="Karuppu Kavuni Kanji Mix"/>
-        <img class="product hover-img" src="../Assets/BestSeller/Karuppu2.jpg" alt="Karuppu Kavuni Benefits"/>
+        <img class="product main-img" src="../Assets/babycare/2.webp" alt="Badam drink powder"/>
+        <img class="product hover-img" src="../Assets/babycare/12.webp" alt="Badam drink powder"/>
       </div>
-      <h3>Karuppu Kavuni Kanji Mix</h3>
-      <div class="stars">★★★★★ <small>219 reviews</small></div>
-      <div class="price">From Rs. <strong>360.00</strong></div>
+      <h3>Badam drink powder</h3>
+      <div class="stars">★★★★★ <small>1 reviews</small></div>
+      <div class="price">From Rs. <strong>270.00</strong></div>
       <button class="btn">Show options</button>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
       <div class="img-container">
-        <img class="product main-img" src="../Assets/BestSeller/Biotin.jpg" alt="Biotin Powder"/>
-        <img class="product hover-img" src="../Assets/BestSeller/Biotin2.jpg" alt="Biotin Powder Benefits"/>
+        <img class="product main-img" src="../Assets/babycare/3.webp" alt="Beetroot malt"/>
+        <img class="product hover-img" src="../Assets/babycare/13.webp" alt="Beetroot malt"/>
       </div>
-      <h3>Biotin Powder</h3>
-      <div class="stars">★★★★★ <small>152 reviews</small></div>
+      <h3>Beetroot malt</h3>
+      <div class="stars">★★★★★ <small>1 reviews</small></div>
       <div class="price">From Rs. <strong>299.00</strong></div>
       <button class="btn">Show options</button>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
       <div class="img-container">
-        <img class="product main-img" src="../Assets/BestSeller/Nalungu.jpg" alt="Nalungu Maavu"/>
-        <img class="product hover-img" src="..\Assets\BestSeller\nalungu2.jpg" alt="Nalungu Maavu Benefits"/>
+        <img class="product main-img" src="../Assets/babycare/4.webp" alt="Biotin powder"/>
+        <img class="product hover-img" src="../Assets/babycare/14.webp" alt="Biotin powder"/>
       </div>
-      <h3>Nalungu Maavu</h3>
-      <div class="stars">★★★★★ <small>39 reviews</small></div>
+      <h3>Biotin powder</h3>
+      <div class="stars">★★★★★ <small>159 reviews</small></div>
+      <div class="price">From Rs. <strong>299.00</strong></div>
+      <button class="btn">Show options</button>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/babycare/5.webp" alt="Carrot malt"/>
+        <img class="product hover-img" src="../Assets/babycare/15.webp" alt="Carrot malt"/>
+      </div>
+      <h3>Carrot malt</h3>
+      <div class="stars">★★★★★ <small>4 reviews</small></div>
+      <div class="price">From Rs. <strong>299.00</strong></div>
+      <button class="btn">Show options</button>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/babycare/6.webp" alt="Kuliyal podi / Bath powder without Turmeric"/>
+        <img class="product hover-img" src="../Assets/babycare/16.webp" alt="Kuliyal podi / Bath powder without Turmeric"/>
+      </div>
+      <h3>Kuliyal podi / Bath powder without Turmeric</h3>
+      <div class="stars">★★★★★ <small>9 reviews</small></div>
       <div class="price">From Rs. <strong>350.00</strong></div>
       <button class="btn">Show options</button>
     </div>
-
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
       <div class="img-container">
-        <img class="product main-img" src="../Assets/BestSeller/Sprouted ragi.jpg" alt="Sprouted Ragi Choco Malt"/>
-        <img class="product hover-img" src="../Assets/BestSeller/ragi2.jpg" alt="Sprouted Ragi Choco Malt Benefits"/>
+        <img class="product main-img" src="../Assets/babycare/6.webp" alt="Malt combo"/>
+        <img class="product hover-img" src="../Assets/babycare/16.webp" alt="Malt combo"/>
       </div>
-      <h3>Sprouted Ragi Choco Malt</h3>
-      <div class="stars">★★★★★ <small>4 reviews</small></div>
-      <div class="price">From Rs. <strong>249.00</strong></div>
+      <h3>Malt combo</h3>
+      <div class="stars">★★★★★ <small>154 reviews</small></div>
+      <div class="price">From Rs. <strong>999.00</strong></div>
       <button class="btn">Show options</button>
     </div>
-
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
       <div class="img-container">
-        <img class="product main-img" src="../Assets/BestSeller/curry leaves.jpg" alt="Curry Leaves Powder"/>
-        <img class="product hover-img" src="../Assets/BestSeller/curry2.jpg" alt="Curry Leaves Powder Benefits"/>
+        <img class="product main-img" src="../Assets/babycare/6.webp" alt="Multi grain health mix"/>
+        <img class="product hover-img" src="../Assets/babycare/16.webp" alt="Multi grain health mix"/>
       </div>
-      <h3>Curry Leaves Powder</h3>
-      <div class="stars">★★★★★ <small>5 reviews</small></div>
-      <div class="price">From Rs. <strong>220.00</strong></div>
+      <h3>Multi grain health mix</h3>
+      <div class="stars">★★★★★ <small>9 reviews</small></div>
+      <div class="price">From Rs. <strong>250.00</strong></div>
       <button class="btn">Show options</button>
     </div>
 
@@ -436,6 +456,17 @@
   // Initialize subtotal on load
   updateSubtotal();
 </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration
+            easing: 'ease-in-out', // Easing type
+            once: false, // Whether animation should happen only once
+            mirror: true, // Whether elements should animate out while scrolling past them
+        });
+    </script>
+
 
 </body>
 </html>
