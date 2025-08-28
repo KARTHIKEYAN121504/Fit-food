@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AddToCart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <link rel="stylesheet" href="..\Static\AddToCart.css">
+  <link rel="icon" href="../Assets/fit and foo logo.avif" type="image/x-icon">
+</head>
+<body>
+  <!-- Top Strip -->
+  <div class="top-bar">
+    FSSAI Licensed: 12422012002821 | NABL Approved Lab Tested Products | Quality & Safety Assured
+  </div>
+  <!-- Head
+<header class="site-header">
+  <!-- Top Green Bar -->
+
+
+  <!-- Main Header -->
+  <div class="header-inner">
+    <button class="nav-toggle" aria-label="Toggle navigation" >☰</button>
+    <!-- Logo -->
+    <img src="../Assets/BestSeller/fit and foo logo.avif" alt="logo" class="logo" />
+
+    <!-- Search Bar -->
+    <div class="search-wrap">
+      <input type="text" class="search" placeholder="Search..." />
+      <button class="search-btn" aria-label="Search"><span><i class="fas fa-search"></i></span></button>
+    </div>
+
+    <!-- Icons -->
+    <div class="header-icons">
+      <a href="login.html"><span class="icon"><img src="../Assets/user.png" alt="Account" title="Account" width="20px" height="20px" class="img1"></span></a>
+     <a href=""><span class="icon"><img src="../Assets/shopping-cart.png" alt="Account" title="Account" width="20px" height="20px"></span></a>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    
+  </div>
+
+  <!-- Navigation Links -->
+  <nav class="nav-links">
+  <a href="index.html">Home</a>
+
+  <!-- Dropdown -->
+  <div class="dropdown">
+    <a href="#">Our Collections <span class="caret">⌵</span></a>
+    <div class="dropdown-menu">
+      <div class="menu-columns">
+        <ul>
+          <li><a href="#">Best Sellers</a></li>
+          <li><a href="#">Baby Care Powders</a></li>
+          <li><a href="#">Skin Care Powders</a></li>
+          <li><a href="#">Hair Care Powders</a></li>
+          <li><a href="#">Health Drink Powders</a></li>
+          <li><a href="#">Weight Gain Powders</a></li>
+          <li><a href="#">Weight Loss Powders</a></li>
+          <li><a href="#">Combo Products</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Traditional</a></li>
+          <li><a href="#">Healthy Foods</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <a href="About.html">About Us</a>
+  <a href="contact.html">Contact Us</a>
+</nav>
+
+
+</header>
+
+
+
+
+
+  <main class="container page">
+    <div class="grid">
+      <!-- Left: Gallery -->
+      <section class="gallery">
+        <div class="main-img" id="mainImg">
+          <img id="hero" src="..\Assets\BestSeller\Abc malt powder.jpg" alt="ABC Malt Powder"/>
+        </div>
+<div class="thumbs" id="thumbs">
+  <button class="thumb active" data-src="..\Assets\BestSeller\Abc malt powder.jpg"><img src="..\Assets\BestSeller\Abc malt powder.jpg" alt="Front"/></button>
+  <button class="thumb" data-src="..\Assets\BestSeller\Abc malt powder.jpg"><img src="..\Assets\BestSeller\Abc malt powder.jpg" alt="Side"/></button>
+  <button class="thumb" data-src="..\Assets\BestSeller\Abc malt powder.jpg"><img src="..\Assets\BestSeller\Abc malt powder.jpg" alt="Nutrition"/></button>
+  <button class="thumb" data-src="..\Assets\BestSeller\Abc malt powder.jpg"><img src="..\Assets\BestSeller\Abc malt powder.jpg" alt="Pack"/></button>
+</div>
+
+
+      </section>
+
+      <!-- Right: Product Info -->
+      <section class="product">
+        <h1 class="title">ABC Malt Powder</h1>
+        <div class="rating">
+          <span>★★★★★</span>
+          <small>254 reviews</small>
+        </div>
+        <div class="price">Rs. 365.00</div>
+
+        <div class="row" style="margin:.3rem 0 1rem">
+          <div class="select">
+            <select aria-label="Weight">
+              <option>100gms</option>
+              <option>250gms</option>
+              <option>500gms</option>
+            </select>
+          </div>
+          <div class="qty" aria-label="Quantity">
+            <button type="button" id="dec">−</button>
+            <input id="qty" value="1" inputmode="numeric" />
+            <button type="button" id="inc">＋</button>
+          </div>
+        </div>
+
+        <div class="cta">
+          <button class="btn btn-outline">Add to cart</button>
+          <button class="btn btn-primary">Buy it now</button>
+        </div>
+
+        <div class="feature-note">
+          📦 Expected delivery between <strong>Sep 9, 2025</strong> and <strong>Sep 12, 2025</strong>.
+        </div>
+
+        <div class="fbt">
+          <h3>Frequently bought together</h3>
+          <div class="cards">
+            <article class="card">
+              <button class="tick active" aria-label="select">✓</button>
+              <div class="mini">
+                <img src="https://placehold.co/88x88" alt="ABC Malt"/>
+                <div>
+                  <div style="font-weight:800">ABC Malt Powder</div>
+                  <div class="muted">100gms</div>
+                </div>
+              </div>
+              <div style="text-align:right" class="muted">Rs. 365.00</div>
+            </article>
+            <article class="card">
+              <button class="tick active" aria-label="select">✓</button>
+              <div class="mini">
+                <img src="https://placehold.co/88x88" alt="Beetroot Malt"/>
+                <div>
+                  <div style="font-weight:800">Beetroot Malt</div>
+                  <div class="muted">100 gms</div>
+                </div>
+              </div>
+              <div style="text-align:right" class="muted">Rs. 299.00</div>
+            </article>
+            <article class="card">
+              <button class="tick active" aria-label="select">✓</button>
+              <div class="mini">
+                <img src="https://placehold.co/88x88" alt="Carrot Malt"/>
+                <div>
+                  <div style="font-weight:800">Carrot Malt</div>
+                  <div class="muted">100 gms</div>
+                </div>
+              </div>
+              <div style="text-align:right" class="muted">Rs. 299.00</div>
+            </article>
+            <article class="card">
+              <button class="tick active" aria-label="select">✓</button>
+              <div class="mini">
+                <img src="https://placehold.co/88x88" alt="Kuliyal Podi"/>
+                <div>
+                  <div style="font-weight:800">Kuliyal Podi / Bath Powder</div>
+                  <div class="muted">250 gms</div>
+                </div>
+              </div>
+              <div style="text-align:right" class="muted">Rs. 350.00</div>
+            </article>
+          </div>
+          <div class="claim">
+            <button class="btn btn-primary" style="width:100%">Claim Offer • Rs. 1,313.00</button>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <details open>
+            <summary>Description</summary>
+            <p>Premium ABC Malt Powder blended for taste and nutrition. No artificial flavours or colours.</p>
+          </details>
+          <details>
+            <summary>Key Ingredients</summary>
+            <p>Ragi, Jaggery, Barley, Almond, Cardamom.</p>
+          </details>
+          <details>
+            <summary>How to use</summary>
+            <p>Add 2 tsp to warm milk/water. Stir well and serve.</p>
+          </details>
+          <details>
+            <summary>Shelf Life</summary>
+            <p>Best before 6 months from the date of packing.</p>
+          </details>
+        </div>
+      </section>
+    </div>
+
+    <!-- Reviews -->
+    <section class="reviews" id="reviews">
+      <center><h3>Customer Reviews</h3></center>
+      <div class="summary">
+        <div>
+          <div class="stars" style="font-size:1.2rem">★★★★★</div>
+          <div><strong>4.58</strong> out of 5</div>
+          <div class="muted">Based on 254 reviews</div>
+        </div>
+        <div class="bars">
+          <div class="bar"><span>5★</span><div class="track"><div class="fill" style="width:66%"></div></div><span class="muted">169</span></div>
+          <div class="bar"><span>4★</span><div class="track"><div class="fill" style="width:26%"></div></div><span class="muted">67</span></div>
+          <div class="bar"><span>3★</span><div class="track"><div class="fill" style="width:6%"></div></div><span class="muted">15</span></div>
+          <div class="bar"><span>2★</span><div class="track"><div class="fill" style="width:1.5%"></div></div><span class="muted">2</span></div>
+          <div class="bar"><span>1★</span><div class="track"><div class="fill" style="width:1%"></div></div><span class="muted">1</span></div>
+        </div>
+        <div class="write-btn">
+          <button class="btn btn-outline">Write a review</button>
+        </div>
+      </div>
+
+      <article class="review">
+        <div class="author"><span>⭐️⭐️⭐️⭐️⭐️</span><strong> Lakshmi</strong><span class="badge">Verified</span><span class="muted">08/25/2025</span></div>
+        <p style="margin-top:.5rem"><strong>Super</strong><br/>Super</p>
+      </article>
+      <article class="review">
+        <div class="author"><span>⭐️⭐️⭐️⭐️</span><strong> G. Kavitha</strong><span class="badge">Verified</span><span class="muted">08/19/2025</span></div>
+        <p style="margin-top:.5rem"><strong>Good</strong><br/>Good product</p>
+      </article>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="section">
+      <h2>Try our Best Sellers of Fit and Food</h2>
+      <div class="grid-4">
+        <article class="p-card">
+          <div class="img"><img src="https://placehold.co/600x600?text=ABC+Malt" alt=""/></div>
+          <div class="body">
+            <div class="name">ABC Malt Powder</div>
+            <div class="reviews">★★★★★ 254 reviews</div>
+            <div class="price">From Rs. 365.00</div>
+          </div>
+          <div class="action"><button class="ghost">Show options</button></div>
+        </article>
+        <article class="p-card">
+          <div class="img"><img src="https://placehold.co/600x600?text=Karuppu+Kavuni" alt=""/></div>
+          <div class="body">
+            <div class="name">Karuppu Kavuni Kanji Mix</div>
+            <div class="reviews">★★★★★ 220 reviews</div>
+            <div class="price">From Rs. 360.00</div>
+          </div>
+          <div class="action"><button class="ghost">Show options</button></div>
+        </article>
+        <article class="p-card">
+          <div class="img"><img src="https://placehold.co/600x600?text=Biotin+Powder" alt=""/></div>
+          <div class="body">
+            <div class="name">Biotin Powder</div>
+            <div class="reviews">★★★★★ 153 reviews</div>
+            <div class="price">From Rs. 299.00</div>
+          </div>
+          <div class="action"><button class="ghost">Show options</button></div>
+        </article>
+        <article class="p-card">
+          <div class="img"><img src="https://placehold.co/600x600?text=Nalungu+Maavu" alt=""/></div>
+          <div class="body">
+            <div class="name">Nalungu Maavu</div>
+            <div class="reviews">★★★★★ 39 reviews</div>
+            <div class="price">From Rs. 350.00</div>
+          </div>
+          <div class="action"><button class="ghost">Show options</button></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- You may also like -->
+    <section class="section">
+      <h2>You may also like</h2>
+      <div class="grid-4">
+        <article class="p-card">
+          <div class="img"><img src="https://placehold.co/600x600?text=Biotin+Powder" alt=""/></div>
+          <div class="body">
+            <div class="name">Biotin Powder</div>
+            <div class="reviews">★★★★★ 153 reviews</div>
+            <div class="price">From Rs. 299.00</div>
+          </div>
+          <div class="action"><button class="ghost">Show options</button></div>
+        </article>
+        <article class="p-card">
+          <div class="img"><img src="https://placehold.co/600x600?text=ABC+Malt+Benefits" alt=""/></div>
+          <div class="body">
+            <div class="name">Premium ABC Malt Powder without Palm Sugar</div>
+            <div class="reviews">★★★★☆ 2 reviews</div>
+            <div class="price">From Rs. 415.00</div>
+          </div>
+          <div class="action"><button class="ghost">Show options</button></div>
+        </article>
+        <article class="p-card">
+          <div class="img"><img src="https://placehold.co/600x600?text=Karuppu+Kavuni" alt=""/></div>
+          <div class="body">
+            <div class="name">Karuppu Kavuni Kanji Mix</div>
+            <div class="reviews">★★★★★ 220 reviews</div>
+            <div class="price">From Rs. 360.00</div>
+          </div>
+          <div class="action"><button class="ghost">Show options</button></div>
+        </article>
+        <article class="p-card">
+          <div class="img"><img src="https://placehold.co/600x600?text=Skin+Brightening+Combo" alt=""/></div>
+          <div class="body">
+            <div class="name">Skin Brightening Combo</div>
+            <div class="reviews">★★★★★ 7 reviews</div>
+            <div class="price"><span style="color:#ef6c00;font-weight:900">Rs. 700.00</span> <span class="muted" style="text-decoration:line-through">Rs. 715.00</span></div>
+          </div>
+          <div class="action"><button class="ghost">Add to cart</button></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+<!-- Modal -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      
+      <!-- Left -->
+      <div class="modal-left">
+        <img id="modalImg" src="" alt="Product">
+        <div class="thumbs" id="thumbs"></div>
+      </div>
+
+      <!-- Right -->
+      <div class="modal-right">
+        <h2 id="modalTitle">Product Name</h2>
+        <div class="modal-price">Rs. <span id="modalPrice">0.00</span></div>
+        
+        <label for="sizeSelect">Quantity</label>
+        <select id="sizeSelect" class="select-box">
+          <option>100gms</option>
+          <option>250gms</option>
+          <option>500gms</option>
+        </select>
+        
+        <div class="qty-row">
+          <div class="qty-control">
+            <button id="minusBtn">-</button>
+            <input type="number" id="qtyInput" value="1" min="1">
+            <button id="plusBtn">+</button>
+          </div>
+          <button class="add-cart">Add to cart</button>
+        </div>
+        
+        <button class="buy-now">Buy it now</button>
+        <a class="full-details" href="#"><u>Full details</u></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <div class="backtop">Back to the top ▲</div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <!-- Left -->
+      <div class="footer-col footer-left">
+        <img src="../Assets/fit and foo logo.avif" alt="logo" class="footer-logo"/>
+        <div class="footer-text">
+          <p><strong>Fit and Food Tamil</strong><br>
+          TNHB Colony,<br>
+          Villapuram Housing Board,<br>
+          Madurai 625011.<br>
+          +91 9363599986</p>
+          <p>FSSAI: 12422012002821</p>
+        </div>
+      </div>
+
+      <!-- Middle -->
+      <div class="footer-col">
+        <a href="#">Home</a>
+        <a href="#">Our Collections</a>
+        <a href="About.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <!-- Right -->
+      <div class="footer-col">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="shippingpolicy.html">Shipping Policy</a>
+        <a href="returnandrefund.html">Return & Refund Policy</a>
+        <a href="termsandconditions.html">Terms & Conditions</a>
+      </div>
+
+      <!-- Socials -->
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Bottom strip -->
+    <div class="footer-bottom">
+      <div class="currency">India (INR ₹)</div>
+      <div>
+        Copyright © 2025 fitandfoodtamil<br>
+        Powered by Ekommerce360
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a class="whats" href="https://wa.me/919363599986" target="_blank" title="WhatsApp">
+    <img src="../Assets/whatsapp image.png" alt="whats" />
+  </a>
+
+  <!-- JS -->
+  <script>
+document.querySelectorAll('.tick').forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+  });
+});
+    document.querySelector('.backtop')
+      .addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+        <!-- JS -->
+  
+    const modal = document.getElementById("productModal");
+    const closeBtn = document.querySelector(".close");
+    const qtyInput = document.getElementById("qtyInput");
+    const minusBtn = document.getElementById("minusBtn");
+    const plusBtn = document.getElementById("plusBtn");
+
+    // Open modal
+    document.querySelectorAll('.card .btn').forEach((btn) => {
+      btn.addEventListener("click", () => {
+        let card = btn.closest(".card");
+        document.getElementById("modalTitle").innerText = card.querySelector("h3").innerText;
+        document.getElementById("modalPrice").innerText = card.querySelector(".price strong").innerText;
+        document.getElementById("modalImg").src = card.querySelector(".main-img").src;
+        modal.style.display = "flex";
+      });
+    });
+
+    // Close modal
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; };
+
+    // Quantity controls
+    minusBtn.onclick = () => { if (qtyInput.value > 1) qtyInput.value--; };
+    plusBtn.onclick = () => qtyInput.value++;
+   
+const mainImg = document.getElementById('hero');
+const thumbs = document.querySelectorAll('.thumb');
+
+thumbs.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Update main image
+    mainImg.src = btn.getAttribute('data-src');
+
+    // Remove active class from all thumbnails
+    thumbs.forEach(t => t.classList.remove('active'));
+
+    // Add active class to clicked thumbnail
+    btn.classList.add('active');
+  });
+});
+
+
+ 
+  </script>
+</body>
+</html>
