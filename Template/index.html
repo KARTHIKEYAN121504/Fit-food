@@ -80,22 +80,27 @@
 </nav>
 <div class="slider">
   <div class="slides">
-    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Biotin_Powder_Desktop_1512x.png?v=1720094634" class="active" alt="Slide 1">
+    <!-- Original slides -->
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_ABC_Mix_Banner_Desktop_1512x.png?v=1720094634" alt="Slide 1">
     <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Kuruppu_Ulunthu_Kanji_Mix_Powder_Desktop_1512x.png?v=1733471566" alt="Slide 2">
-    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Pirandai_Powder_Desktop_1512x.jpg?v=1751371374" alt="Slide 3">
-    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food__Aavarampoo__Kuliyal_Powder_Banner_Desktop_1512x.jpg?v=1751634958" alt="Slide 4">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Premium__Shikakai_Powder_Desktop_1512x.jpg?v=1750922067" alt="Slide 3">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Biotin_Powder_Desktop_1512x.png?v=1720094634" alt="Slide 4">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Premium_Kuliyal_Powder_Banner_Desktop_1512x.jpg?v=1750921944" alt="Slide 5">
+    <!-- Clone of first slide for smooth looping -->
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_ABC_Mix_Banner_Desktop_1512x.png?v=1720094634" alt="Slide 1 clone">
   </div>
 
   <!-- Controller inside image -->
   <div class="buttons">
-    <button onclick="showSlide(0)" class="active"></button>
-    <button onclick="showSlide(1)"></button>
-    <button onclick="showSlide(2)"></button>
-    <button onclick="showSlide(3)"></button>
+    <button onclick="goToSlide(0)" class="active"></button>
+    <button onclick="goToSlide(1)"></button>
+    <button onclick="goToSlide(2)"></button>
+    <button onclick="goToSlide(3)"></button>
+    <button onclick="goToSlide(4)"></button>
   </div>
 </div>
   <div class="chat-bar" role="region" aria-label="Chat with us">
-  <i class="fa-regular fa-comment-dots"></i>
+<i class="fa-regular fa-comment-dots"></i>
     <div>
       <p>Chat With Us</p>
       <p>Talk to our team via chat</p>
@@ -1188,7 +1193,7 @@
       clearTimeout(window.autoScrollTimeout);
       window.autoScrollTimeout = setTimeout(() => {
         startAutoScroll();
-      }, 3000);
+      }, 5000);
     }
 
     // Start auto scroll on page load
@@ -1265,41 +1270,65 @@
   </a>
 
   <!-- JS -->
-  <script>
-    const slides = document.querySelectorAll(".slides img");
-  const buttons = document.querySelectorAll(".buttons button");
-  let currentIndex = 0;
-  let slideInterval;
+<script>
+const slides = document.querySelector('.slides');
+const slideImages = document.querySelectorAll('.slides img');
+const buttons = document.querySelectorAll('.buttons button');
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("active", i === index);
-      buttons[i].classList.toggle("active", i === index);
-    });
-    currentIndex = index;
-  }
+let currentIndex = 0;
+let slideInterval;
+const slideCount = slideImages.length - 1; // last one is clone
 
-  function nextSlide() {
-    let nextIndex = (currentIndex + 1) % slides.length;
-    showSlide(nextIndex);
-  }
+function goToSlide(index) {
+  slides.style.transition = "transform 0.8s ease-in-out";
+  currentIndex = index;
+  slides.style.transform = `translateX(${-index * 100}%)`;
 
-  // Auto-slide every 3 seconds
-  function startAutoSlide() {
-    slideInterval = setInterval(nextSlide, 3000);
-  }
+  updateButtons();
+}
 
-  // Restart auto-slide after manual click
+// update active button
+function updateButtons() {
   buttons.forEach((btn, i) => {
-    btn.addEventListener("click", () => {
-      showSlide(i);
-      clearInterval(slideInterval);
-      startAutoSlide();
-    });
+    btn.classList.toggle("active", i === currentIndex % slideCount);
   });
+}
 
-  // Start auto-sliding
-  startAutoSlide();
+function nextSlide() {
+  currentIndex++;
+  slides.style.transition = "transform 0.8s ease-in-out";
+  slides.style.transform = `translateX(${-currentIndex * 100}%)`;
+
+  if (currentIndex === slideCount) {
+    // wait for transition to finish before resetting instantly
+    setTimeout(() => {
+      slides.style.transition = "none"; 
+      slides.style.transform = "translateX(0)";
+      currentIndex = 0;
+      updateButtons();
+    }, 800); // match transition duration
+  }
+  updateButtons();
+}
+
+// auto slide every 5 sec
+function startAutoSlide() {
+  slideInterval = setInterval(nextSlide, 5000);
+}
+
+function stopAutoSlide() {
+  clearInterval(slideInterval);
+}
+
+// pause on hover
+const slider = document.querySelector('.slider');
+slider.addEventListener("mouseenter", stopAutoSlide);
+slider.addEventListener("mouseleave", startAutoSlide);
+
+// start
+startAutoSlide();
+updateButtons();
+
 
     document.querySelector('.backtop')
       .addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
