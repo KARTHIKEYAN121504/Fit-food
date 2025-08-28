@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Best Sellers — Fit and Food Tamil</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <link rel="stylesheet" href="..\Static/babycare.css">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" href="../Assets/BestSeller/fit and foo logo.avif" type="image/x-icon">
+</head>
+<body>
+  <!-- Top Strip -->
+  <div class="top-bar">
+    FSSAI Licensed: 12422012002821 | NABL Approved Lab Tested Products | Quality & Safety Assured
+  </div>
+  <!-- Header -->
+<header class="site-header">
+  <!-- Top Green Bar -->
+
+
+  <!-- Main Header -->
+  <div class="header-inner">
+    <button class="nav-toggle" aria-label="Toggle navigation" >☰</button>
+    <!-- Logo -->
+    <img src="../Assets/BestSeller/fit and foo logo.avif" alt="logo" class="logo" />
+
+    <!-- Search Bar -->
+    <div class="search-wrap">
+      <input type="text" class="search" placeholder="Search..." />
+      <button class="search-btn" aria-label="Search"><span><i class="fas fa-search"></i></span></button>
+    </div>
+
+    <!-- Icons -->
+    <div class="header-icons">
+      <a href="login.html"><span class="icon"><img src="../Assets/user.png" alt="Account" title="Account" width="20px" height="20px" class="img1"></span></a>
+           <a href="#" id="cart-btn"><span class="icon"><img src="../Assets/shopping-cart.png" alt="Cart" width="20px" height="20px"></span></a>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    
+  </div>
+
+  <!-- Navigation Links -->
+  <nav class="nav-links">
+  <a href="index.html">Home</a>
+
+  <!-- Dropdown -->
+  <div class="dropdown">
+    <a href="#">Our Collections <span class="caret">⌵</span></a>
+    <div class="dropdown-menu">
+      <div class="menu-columns">
+        <ul>
+          <li><a href="#">Best Sellers</a></li>
+          <li><a href="#">Baby Care Powders</a></li>
+          <li><a href="#">Skin Care Powders</a></li>
+          <li><a href="#">Hair Care Powders</a></li>
+          <li><a href="#">Health Drink Powders</a></li>
+          <li><a href="#">Weight Gain Powders</a></li>
+          <li><a href="#">Weight Loss Powders</a></li>
+          <li><a href="#">Combo Products</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Traditional</a></li>
+          <li><a href="#">Healthy Foods</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <a href="About.html">About Us</a>
+  <a href="contact.html">Contact Us</a>
+</nav>
+
+
+</header>
+
+ <!-- Sidebar Cart -->
+<!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cart-sidebar">
+  <!-- Top Navigation -->
+  <div class="cart-header">
+    <button class="back-link" id="back-link">← Continue shopping</button>
+  </div>
+
+  <!-- Order Summary -->
+  <div class="cart-summary">
+    <div class="order-header">
+      <h3>Your Order</h3>
+      <a href="#" class="view-cart">View cart</a>
+    </div>
+    <div class="subtotal">
+      <span>Subtotal:</span>
+      <span class="subtotal-price">Rs. 360.00</span>
+    </div>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+
+  <!-- Products -->
+  <div class="cart-products">
+    <div class="products-header" id="products-header">
+      <h4>Products <span id="product-count">(1)</span></h4>
+      <span class="toggle">⌵</span>
+    </div>
+
+    <div class="cart-item" data-price="360">
+      <img src="../Assets/BestSeller/fit and foo logo.avif" alt="Product">
+      <div class="item-info">
+        <p class="item-name">Karuppu Kavuni Kanji Mix</p>
+        <small class="item-weight">250gms</small>
+        <p class="item-price">Rs. <span class="item-total">360</span>.00</p>
+        
+        <div class="quantity-controls">
+          <button class="qty-btn minus">-</button>
+          <span class="qty">1</span>
+          <button class="qty-btn plus">+</button>
+          <a href="#" class="remove">Remove</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb" >Home / <strong>Baby Care Powders</strong></div>
+
+  <!-- Title -->
+  <div class="title-wrap">
+    <h1 data-aos="fade-down">Baby Care Powders</h1>
+  </div>
+  <div class="filter-bar">
+  <div class="availability">
+    <label for="availability">Availability:</label>
+    <select id="availability">
+      <option>All</option>
+      <option>In Stock</option>
+      <option>Out of Stock</option>
+    </select>
+  </div>
+
+  <div class="sort-by">
+    <label for="sort">Sort by:</label>
+    <select id="sort">
+      <option>Best selling</option>
+      <option>Alphabetical, A-Z</option>
+      <option>Alphabetical, Z-A</option>
+      <option>Price, low to high</option>
+      <option>Price, high to low</option>
+      <option>Date, new to old</option>
+      <option>Date, old to new</option>
+    </select>
+  </div>
+</div>
+
+
+<main>
+  <div class="grid">
+
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/babycare/1.webp" alt="ABC Malt Powder"/>
+        <img class="product hover-img" src="..\Assets/babycare/11.webp" alt="ABC Malt Powder Benefits"/>
+      </div>
+      <h3>Abc Malt Powder</h3>
+      <div class="stars">★★★★★ <small>254 reviews</small></div>
+      <div class="price">From Rs. <strong>365.00</strong></div>
+      <button class="btn">Show options</button>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/babycare/2.webp" alt="Badam drink powder"/>
+        <img class="product hover-img" src="../Assets/babycare/12.webp" alt="Badam drink powder"/>
+      </div>
+      <h3>Badam drink powder</h3>
+      <div class="stars">★★★★★ <small>1 reviews</small></div>
+      <div class="price">From Rs. <strong>270.00</strong></div>
+      <button class="btn">Show options</button>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/babycare/3.webp" alt="Beetroot malt"/>
+        <img class="product hover-img" src="../Assets/babycare/13.webp" alt="Beetroot malt"/>
+      </div>
+      <h3>Beetroot malt</h3>
+      <div class="stars">★★★★★ <small>1 reviews</small></div>
+      <div class="price">From Rs. <strong>299.00</strong></div>
+      <button class="btn">Show options</button>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/babycare/4.webp" alt="Biotin powder"/>
+        <img class="product hover-img" src="../Assets/babycare/14.webp" alt="Biotin powder"/>
+      </div>
+      <h3>Biotin powder</h3>
+      <div class="stars">★★★★★ <small>159 reviews</small></div>
+      <div class="price">From Rs. <strong>299.00</strong></div>
+      <button class="btn">Show options</button>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/babycare/5.webp" alt="Carrot malt"/>
+        <img class="product hover-img" src="../Assets/babycare/15.webp" alt="Carrot malt"/>
+      </div>
+      <h3>Carrot malt</h3>
+      <div class="stars">★★★★★ <small>4 reviews</small></div>
+      <div class="price">From Rs. <strong>299.00</strong></div>
+      <button class="btn">Show options</button>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/babycare/6.webp" alt="Kuliyal podi / Bath powder without Turmeric"/>
+        <img class="product hover-img" src="../Assets/babycare/16.webp" alt="Kuliyal podi / Bath powder without Turmeric"/>
+      </div>
+      <h3>Kuliyal podi / Bath powder without Turmeric</h3>
+      <div class="stars">★★★★★ <small>9 reviews</small></div>
+      <div class="price">From Rs. <strong>350.00</strong></div>
+      <button class="btn">Show options</button>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/babycare/6.webp" alt="Malt combo"/>
+        <img class="product hover-img" src="../Assets/babycare/16.webp" alt="Malt combo"/>
+      </div>
+      <h3>Malt combo</h3>
+      <div class="stars">★★★★★ <small>154 reviews</small></div>
+      <div class="price">From Rs. <strong>999.00</strong></div>
+      <button class="btn">Show options</button>
+    </div>
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/babycare/6.webp" alt="Multi grain health mix"/>
+        <img class="product hover-img" src="../Assets/babycare/16.webp" alt="Multi grain health mix"/>
+      </div>
+      <h3>Multi grain health mix</h3>
+      <div class="stars">★★★★★ <small>9 reviews</small></div>
+      <div class="price">From Rs. <strong>250.00</strong></div>
+      <button class="btn">Show options</button>
+    </div>
+
+  </div>
+</main>
+<!-- Modal -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      
+      <!-- Left -->
+      <div class="modal-left">
+        <img id="modalImg" src="" alt="Product">
+        <div class="thumbs" id="thumbs"></div>
+      </div>
+
+      <!-- Right -->
+      <div class="modal-right">
+        <h2 id="modalTitle">Product Name</h2>
+        <div class="modal-price">Rs. <span id="modalPrice">0.00</span></div>
+        
+        <label for="sizeSelect">Quantity</label>
+        <select id="sizeSelect" class="select-box">
+          <option>100gms</option>
+          <option>250gms</option>
+          <option>500gms</option>
+        </select>
+        
+        <div class="qty-row">
+          <div class="qty-control">
+            <button id="minusBtn">-</button>
+            <input type="number" id="qtyInput" value="1" min="1">
+            <button id="plusBtn">+</button>
+          </div>
+          <button class="add-cart">Add to cart</button>
+        </div>
+        
+        <button class="buy-now">Buy it now</button>
+        <a class="full-details" href="#"><u>Full details</u></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <div class="backtop">Back to the top ▲</div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <!-- Left -->
+      <div class="footer-col footer-left">
+        <img src="../Assets/fit and foo logo.avif" alt="logo" class="footer-logo"/>
+        <div class="footer-text">
+          <p><strong>Fit and Food Tamil</strong><br>
+          TNHB Colony,<br>
+          Villapuram Housing Board,<br>
+          Madurai 625011.<br>
+          +91 9363599986</p>
+          <p>FSSAI: 12422012002821</p>
+        </div>
+      </div>
+
+      <!-- Middle -->
+      <div class="footer-col">
+        <a href="#">Home</a>
+        <a href="#">Our Collections</a>
+        <a href="About.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <!-- Right -->
+      <div class="footer-col">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="shippingpolicy.html">Shipping Policy</a>
+        <a href="returnandrefund.html">Return & Refund Policy</a>
+        <a href="termsandconditions.html">Terms & Conditions</a>
+      </div>
+
+      <!-- Socials -->
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Bottom strip -->
+    <div class="footer-bottom">
+      <div class="currency">India (INR ₹)</div>
+      <div>
+        Copyright © 2025 fitandfoodtamil<br>
+        Powered by Ekommerce360
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a class="whats" href="https://wa.me/919363599986" target="_blank" title="WhatsApp">
+    <img src="../Assets/whatsapp image.png" alt="whats" />
+  </a>
+
+  <!-- JS -->
+  <script>
+
+    document.querySelector('.backtop')
+      .addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+        <!-- JS -->
+  
+    const modal = document.getElementById("productModal");
+    const closeBtn = document.querySelector(".close");
+    const qtyInput = document.getElementById("qtyInput");
+    const minusBtn = document.getElementById("minusBtn");
+    const plusBtn = document.getElementById("plusBtn");
+
+    // Open modal
+    document.querySelectorAll('.card .btn').forEach((btn) => {
+      btn.addEventListener("click", () => {
+        let card = btn.closest(".card");
+        document.getElementById("modalTitle").innerText = card.querySelector("h3").innerText;
+        document.getElementById("modalPrice").innerText = card.querySelector(".price strong").innerText;
+        document.getElementById("modalImg").src = card.querySelector(".main-img").src;
+        modal.style.display = "flex";
+      });
+    });
+
+    // Close modal
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; };
+
+    // Quantity controls
+    minusBtn.onclick = () => { if (qtyInput.value > 1) qtyInput.value--; };
+    plusBtn.onclick = () => qtyInput.value++;
+ 
+  </script>
+   <script>
+  const cartBtn = document.getElementById('cart-btn');
+  const cartSidebar = document.getElementById('cart-sidebar');
+  const closeCart = document.getElementById('back-link');
+  const subtotalEl = document.querySelector('.subtotal-price');
+  const productCountEl = document.getElementById('product-count');
+
+  // Open Cart
+  cartBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    cartSidebar.classList.add('open');
+  });
+
+  // Close Cart
+  closeCart.addEventListener('click', () => {
+    cartSidebar.classList.remove('open');
+  });
+
+  // Toggle Products Section
+  document.getElementById("products-header").addEventListener("click", function () {
+    document.querySelectorAll(".cart-item").forEach(item => {
+      item.style.display = (item.style.display === "none") ? "flex" : "none";
+    });
+  });
+
+  // Update subtotal function
+  function updateSubtotal() {
+    let subtotal = 0;
+    let itemCount = 0;
+
+    document.querySelectorAll(".cart-item").forEach(item => {
+      const qty = parseInt(item.querySelector(".qty").textContent);
+      const price = parseInt(item.getAttribute("data-price"));
+      const total = qty * price;
+
+      item.querySelector(".item-total").textContent = total;
+      subtotal += total;
+      itemCount++;
+    });
+
+    subtotalEl.textContent = `Rs. ${subtotal}.00`;
+
+    // Update product count
+    if (itemCount > 0) {
+      productCountEl.textContent = `(${itemCount})`;
+      productCountEl.style.display = "inline";
+    } else {
+      productCountEl.style.display = "none";
+    }
+  }
+
+  // Quantity + / - / remove
+  document.querySelectorAll(".cart-item").forEach(item => {
+    const qtyEl = item.querySelector(".qty");
+    const plusBtn = item.querySelector(".plus");
+    const minusBtn = item.querySelector(".minus");
+    const removeBtn = item.querySelector(".remove");
+
+    plusBtn.addEventListener("click", () => {
+      let qty = parseInt(qtyEl.textContent);
+      qty++;
+      qtyEl.textContent = qty;
+      updateSubtotal();
+    });
+
+    minusBtn.addEventListener("click", () => {
+      let qty = parseInt(qtyEl.textContent);
+      if (qty > 1) {
+        qty--;
+        qtyEl.textContent = qty;
+        updateSubtotal();
+      }
+    });
+
+    removeBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      item.remove();
+      updateSubtotal();
+    });
+  });
+
+  // Initialize subtotal on load
+  updateSubtotal();
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration
+            easing: 'ease-in-out', // Easing type
+            once: false, // Whether animation should happen only once
+            mirror: true, // Whether elements should animate out while scrolling past them
+        });
+    </script>
+
+
+</body>
+</html>
