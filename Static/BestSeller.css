@@ -176,10 +176,11 @@
   border-radius: 0px;
 }
 .qty {
-  padding: 2px 10px;
-  border: 1px solid #ccc;
+  padding: 4px 10px;
+  padding-top:3.9px;
+  border: 2px solid #43b02a;
   background: #fff;
-  font-size: 14px;
+  font-size: 10px;
 }
 .remove {
   font-size: 14px;
