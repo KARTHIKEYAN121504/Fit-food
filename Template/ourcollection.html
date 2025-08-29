@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Collection - Fit and Food</title>
+    <link rel="stylesheet" href="../Static/ourcollection.css">
+     <link rel="icon" href="../Assets/BestSeller/fit and foo logo.avif" type="image/x-icon">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="top-bar">
+    FSSAI Licensed: 12422012002821 | NABL Approved Lab Tested Products | Quality & Safety Assured
+  </div>
+  <!-- Header -->
+<header class="site-header">
+  <!-- Top Green Bar -->
+
+
+  <!-- Main Header -->
+  <div class="header-inner">
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <!-- Logo -->
+    <img src="../Assets/BestSeller/fit and foo logo.avif" alt="logo" class="logo" />
+
+    <!-- Search Bar -->
+    <div class="search-wrap">
+      <input type="text" class="search" placeholder="Search..." />
+      <button class="search-btn" aria-label="Search"><span><i class="fas fa-search"></i></span></button>
+    </div>
+
+    <!-- Icons -->
+    <div class="header-icons">
+      <a href="login.html"><span class="icon"><img src="../Assets/user.png" alt="Account" title="Account" width="20px" height="20px" class="img1"></span></a>
+      <a href="" id="cart-btn"><span class="icon"><img src="../Assets/shopping-cart.png" alt="Cart" width="20px" height="20px"></span></a>
+    </div>
+    <!-- Mobile Menu Toggle -->
+    
+  </div>
+
+  <!-- Navigation Links -->
+  <nav class="nav-links">
+  <a href="index.html">Home</a>
+
+  <!-- Dropdown -->
+  <div class="dropdown">
+    <a href="">Our Collections <span class="caret">⌵</span></a>
+    <div class="dropdown-menu">
+      <div class="menu-columns">
+        <ul>
+          <li><a href="BestSeller.html">Best Sellers</a></li>
+          <li><a href="babycare.html">Baby Care Powders</a></li>
+          <li><a href="skincare.html">Skin Care Powders</a></li>
+          <li><a href="haircare.html">Hair Care Powders</a></li>
+          <li><a href="healthdrink.html">Health Drink Powders</a></li>
+          <li><a href="">Weight Gain Powders</a></li>
+          <li><a href="">Weight Loss Powders</a></li>
+          <li><a href="">Combo Products</a></li>
+        </ul>
+        <ul>
+          <li><a href="">Traditional</a></li>
+          <li><a href="">Healthy Foods</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <a href="About.html" >About Us</a>
+  <a href="contact.html">Contact Us</a>
+</nav>
+
+
+</header>
+
+ <!-- Sidebar Cart -->
+<!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cart-sidebar">
+  <!-- Top Navigation -->
+  <div class="cart-header">
+    <button class="back-link" id="back-link">← Continue shopping</button>
+  </div>
+
+  <!-- Order Summary -->
+  <div class="cart-summary">
+    <div class="order-header">
+      <h3>Your Order</h3>
+      <a href="checkout.html" class="view-cart">View cart</a>
+    </div>
+    <div class="subtotal">
+      <span>Subtotal:</span>
+      <span class="subtotal-price">Rs. 360.00</span>
+    </div>
+    <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+  Checkout
+</button>
+
+  </div>
+
+  <!-- Products -->
+  <div class="cart-products">
+    <div class="products-header" id="products-header">
+      <h4>Products <span id="product-count">(1)</span></h4>
+      <span class="toggle">⌵</span>
+    </div>
+
+    <div class="cart-item" data-price="360">
+      <img src="../Assets/BestSeller/karuppu.jpg" alt="Product">
+      <div class="item-info">
+        <p class="item-name">Karuppu Kavuni Kanji Mix</p>
+        <small class="item-weight">250gms</small>
+        <p class="item-price">Rs. <span class="item-total">360</span>.00</p>
+        
+        <div class="quantity-controls">
+          <button class="qty-btn minus">-</button>
+          <span class="qty">1</span>
+          <button class="qty-btn plus">+</button>
+          <a href="" class="remove">Remove</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+  <section class="collections" aria-label="Our Collections">
+    <h2>Our Collections</h2>
+    <div class="grid-collections">
+      <a href="babycare.html" class="collection-item">
+        <img src="../Assets/ourcollection/1.webp" alt="Smiling baby being fed with a spoon, colorful background" />
+        
+      </a>
+      <a href="haircare.html" class="collection-item">
+        <img src="../Assets/ourcollection/2.webp" alt="Woman with long black hair in profile, wearing brown top" />
+        
+      </a>
+      <a href="healthdrink.html" class="collection-item">
+        <img src="../Assets/ourcollection/3.webp" alt="Smiling boy flexing arm holding a glass of health drink" />
+        
+      </a>
+      <a href="skincare.html" class="collection-item">
+        <img src="../Assets/ourcollection/4.webp" alt="Woman applying cream on face in front of mirror" />
+       
+      </a>
+      <a href="#" class="collection-item">
+        <img src="../Assets/ourcollection/5.webp" alt="Glass of chocolate weight gain shake with almonds on table" />
+        
+      </a>
+      <a href="#" class="collection-item">
+        <img src="../Assets/ourcollection/6.webp" alt="Person measuring waist with blue tape measure" />
+        
+      </a>
+      <a href="#" class="collection-item">
+        <img src="../Assets/ourcollection/7.webp" alt="Boxes of best selling products stacked" />
+      </a>
+      <a href="#" class="collection-item">
+        <img src="../Assets/ourcollection/8.webp" alt="Combo product packages displayed on white background" />
+        
+      </a>
+      <a href="#" class="collection-item wide">
+        <img src="../Assets/ourcollection/9.webp" alt="Person preparing traditional healthy food in kitchen with natural light" />
+      </a>
+    </div>
+  </section>
+<!-- Back to Top -->
+  <div class="backtop">Back to the top ▲</div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <!-- Left -->
+      <div class="footer-col footer-left">
+        <img src="../Assets/fit and foo logo.avif" alt="logo" class="footer-logo"/>
+        <div class="footer-text">
+          <p><strong>Fit and Food Tamil</strong><br>
+          TNHB Colony,<br>
+          Villapuram Housing Board,<br>
+          Madurai 625011.<br>
+          +91 9363599986</p>
+          <p>FSSAI: 12422012002821</p>
+        </div>
+      </div>
+
+      <!-- Middle -->
+      <div class="footer-col">
+        <a href="../Template/index.html">Home</a>
+        <a href="../Template/ourcollection.html">Our Collections</a>
+        <a href="../Template/About.html">About Us</a>
+        <a href="../Template/contact.html">Contact Us</a>
+      </div>
+
+      <!-- Right -->
+      <div class="footer-col">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="shippingpolicy.html">Shipping Policy</a>
+        <a href="returnandrefund.html">Return & Refund Policy</a>
+        <a href="termsandconditions.html">Terms & Conditions</a>
+      </div>
+
+      <!-- Socials -->
+      <div class="socials">
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Bottom strip -->
+    <div class="footer-bottom">
+      <div class="currency">India (INR ₹)</div>
+      <div>
+        Copyright © 2025 fitandfoodtamil<br>
+        Powered by Ekommerce360
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+<a class="whats" href="https://wa.me/919363599986" target="_blank" title="WhatsApp">
+  <img src="../Assets/whatsapp image.png" alt="whats" /></a>
+  <!-- JS -->
+  <script>
+    document.querySelectorAll('.btn')
+      .forEach(b=>b.addEventListener('click',()=>alert('Show options clicked')));
+
+    document.querySelector('.backtop')
+      .addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  </script>
+   <script>
+  const cartBtn = document.getElementById('cart-btn');
+  const cartSidebar = document.getElementById('cart-sidebar');
+  const closeCart = document.getElementById('back-link');
+  const subtotalEl = document.querySelector('.subtotal-price');
+  const productCountEl = document.getElementById('product-count');
+
+  // Open Cart
+  cartBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    cartSidebar.classList.add('open');
+  });
+
+  // Close Cart
+  closeCart.addEventListener('click', () => {
+    cartSidebar.classList.remove('open');
+  });
+
+  // Toggle Products Section
+  document.getElementById("products-header").addEventListener("click", function () {
+    document.querySelectorAll(".cart-item").forEach(item => {
+      item.style.display = (item.style.display === "none") ? "flex" : "none";
+    });
+  });
+
+  // Update subtotal function
+  function updateSubtotal() {
+    let subtotal = 0;
+    let itemCount = 0;
+
+    document.querySelectorAll(".cart-item").forEach(item => {
+      const qty = parseInt(item.querySelector(".qty").textContent);
+      const price = parseInt(item.getAttribute("data-price"));
+      const total = qty * price;
+
+      item.querySelector(".item-total").textContent = total;
+      subtotal += total;
+      itemCount++;
+    });
+
+    subtotalEl.textContent = `Rs. ${subtotal}.00`;
+
+    // Update product count
+    if (itemCount > 0) {
+      productCountEl.textContent = `(${itemCount})`;
+      productCountEl.style.display = "inline";
+    } else {
+      productCountEl.style.display = "none";
+    }
+  }
+
+  // Quantity + / - / remove
+  document.querySelectorAll(".cart-item").forEach(item => {
+    const qtyEl = item.querySelector(".qty");
+    const plusBtn = item.querySelector(".plus");
+    const minusBtn = item.querySelector(".minus");
+    const removeBtn = item.querySelector(".remove");
+
+    plusBtn.addEventListener("click", () => {
+      let qty = parseInt(qtyEl.textContent);
+      qty++;
+      qtyEl.textContent = qty;
+      updateSubtotal();
+    });
+
+    minusBtn.addEventListener("click", () => {
+      let qty = parseInt(qtyEl.textContent);
+      if (qty > 1) {
+        qty--;
+        qtyEl.textContent = qty;
+        updateSubtotal();
+      }
+    });
+
+    removeBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      item.remove();
+      updateSubtotal();
+    });
+  });
+
+  // Initialize subtotal on load
+  updateSubtotal();
+</script>
+</body>
+</html>

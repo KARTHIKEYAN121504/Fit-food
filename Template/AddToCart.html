@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AddToCart</title>
+  <title>produc page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
   <link rel="stylesheet" href="..\Static\AddToCart.css">
   <link rel="icon" href="../Assets/fit and foo logo.avif" type="image/x-icon">
@@ -11,11 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Top Strip -->
+ <!-- Top Strip -->
   <div class="top-bar">
     FSSAI Licensed: 12422012002821 | NABL Approved Lab Tested Products | Quality & Safety Assured
   </div>
-  <!-- Head
+  <!-- Header -->
 <header class="site-header">
   <!-- Top Green Bar -->
 
@@ -36,7 +36,6 @@
     <div class="header-icons">
       <a href="login.html"><span class="icon"><img src="../Assets/user.png" alt="Account" title="Account" width="20px" height="20px" class="img1"></span></a>
            <a href="#" id="cart-btn"><span class="icon"><img src="../Assets/shopping-cart.png" alt="Cart" width="20px" height="20px"></span></a>
-
     </div>
 
     <!-- Mobile Menu Toggle -->
@@ -53,11 +52,11 @@
     <div class="dropdown-menu">
       <div class="menu-columns">
         <ul>
-          <li><a href="#">Best Sellers</a></li>
-          <li><a href="#">Baby Care Powders</a></li>
-          <li><a href="#">Skin Care Powders</a></li>
-          <li><a href="#">Hair Care Powders</a></li>
-          <li><a href="#">Health Drink Powders</a></li>
+          <li><a href="BestSeller.html">Best Sellers</a></li>
+          <li><a href="babycare.html">Baby Care Powders</a></li>
+          <li><a href="skincare.html">Skin Care Powders</a></li>
+          <li><a href="haircare.html">Hair Care Powders</a></li>
+          <li><a href="healthdrink.html">Health Drink Powders</a></li>
           <li><a href="#">Weight Gain Powders</a></li>
           <li><a href="#">Weight Loss Powders</a></li>
           <li><a href="#">Combo Products</a></li>
@@ -89,13 +88,15 @@
   <div class="cart-summary">
     <div class="order-header">
       <h3>Your Order</h3>
-      <a href="#" class="view-cart">View cart</a>
+      <a href="checkout.html" class="view-cart">View cart</a>
     </div>
     <div class="subtotal">
       <span>Subtotal:</span>
       <span class="subtotal-price">Rs. 360.00</span>
     </div>
-    <button class="checkout-btn">Checkout</button>
+  <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+  Checkout
+</button>
   </div>
 
   <!-- Products -->
@@ -106,7 +107,7 @@
     </div>
 
     <div class="cart-item" data-price="360">
-      <img src="../Assets/BestSeller/fit and foo logo.avif" alt="Product">
+      <img src="../Assets/BestSeller/karuppu.jpg" alt="Product">
       <div class="item-info">
         <p class="item-name">Karuppu Kavuni Kanji Mix</p>
         <small class="item-weight">250gms</small>
@@ -124,6 +125,7 @@
 </div>
 
   <main class="container page">
+    <div class="cd">
     <div class="grid">
       <!-- Left: Gallery -->
       <section class="gallery">
@@ -246,124 +248,179 @@
         </div>
       </section>
     </div>
+  </div>
+  <div class="container1">
+    <h2>Customer Reviews</h2>
 
-    <!-- Reviews -->
-    <section class="reviews" id="reviews">
-      <center><h3>Customer Reviews</h3></center>
-      <div class="summary">
-        <div>
-          <div class="stars" style="font-size:1.2rem">★★★★★</div>
-          <div><strong>4.58</strong> out of 5</div>
-          <div class="muted">Based on 254 reviews</div>
-        </div>
-        <div class="bars">
-          <div class="bar"><span>5★</span><div class="track"><div class="fill" style="width:66%"></div></div><span class="muted">169</span></div>
-          <div class="bar"><span>4★</span><div class="track"><div class="fill" style="width:26%"></div></div><span class="muted">67</span></div>
-          <div class="bar"><span>3★</span><div class="track"><div class="fill" style="width:6%"></div></div><span class="muted">15</span></div>
-          <div class="bar"><span>2★</span><div class="track"><div class="fill" style="width:1.5%"></div></div><span class="muted">2</span></div>
-          <div class="bar"><span>1★</span><div class="track"><div class="fill" style="width:1%"></div></div><span class="muted">1</span></div>
-        </div>
-        <div class="write-btn">
-          <button class="btn btn-outline">Write a review</button>
-        </div>
+    <div class="summary">
+      <div class="stars">
+        <p><span>4.58</span> out of 5</p>
+        <p>Based on 254 reviews</p>
       </div>
 
-      <article class="review">
-        <div class="author"><span>⭐️⭐️⭐️⭐️⭐️</span><strong> Lakshmi</strong><span class="badge">Verified</span><span class="muted">08/25/2025</span></div>
-        <p style="margin-top:.5rem"><strong>Super</strong><br/>Super</p>
-      </article>
-      <article class="review">
-        <div class="author"><span>⭐️⭐️⭐️⭐️</span><strong> G. Kavitha</strong><span class="badge">Verified</span><span class="muted">08/19/2025</span></div>
-        <p style="margin-top:.5rem"><strong>Good</strong><br/>Good product</p>
-      </article>
-    </section>
+      <div class="distribution">
+        <div>★★★★★ 
+          <div class="bar"><div class="bar-fill" style="width: 66.5%"></div></div>
+          169</div>
+        <div>★★★★☆ 
+          <div class="bar"><div class="bar-fill" style="width: 26.3%"></div></div>
+          67</div>
+        <div>★★★☆☆ 
+          <div class="bar"><div class="bar-fill" style="width: 5.9%"></div></div>
+          15</div>
+        <div>★★☆☆☆ 
+          <div class="bar"><div class="bar-fill" style="width: 0.8%"></div></div>
+          2</div>
+        <div>★☆☆☆☆ 
+          <div class="bar"><div class="bar-fill" style="width: 0.4%"></div></div>
+          1</div>
+      </div>
 
+      <button class="review-btn">Write a review</button>
+    </div>
+
+    <div class="sort-section1">
+      <label for="sort">Sort by:</label>
+      <select id="sort">
+        <option>Most Recent</option>
+        <option>Highest Rated</option>
+        <option>Lowest Rated</option>
+      </select>
+    </div>
+
+    <!-- Sample Reviews -->
+    <div class="review">
+      <div>
+        <span class="name1">Lakshmi</span>
+        <span class="verified1">Verified</span>
+      </div>
+      <div class="title1">Super</div>
+      <div class="text1">Super</div>
+      <div class="date1">08/25/2025</div>
+    </div>
+
+    <div class="review">
+      <div>
+        <span class="name1">Niranjana Devi A</span>
+        <span class="verified1">Verified</span>
+      </div>
+      <div class="title1">Good</div>
+      <div class="text1">Good product</div>
+      <div class="date1">08/21/2025</div>
+    </div>
+  </div>
     <!-- Best Sellers -->
     <section class="section">
       <h2>Try our Best Sellers of Fit and Food</h2>
-      <div class="grid-4">
-        <article class="p-card">
-          <div class="img"><img src="https://placehold.co/600x600?text=ABC+Malt" alt=""/></div>
-          <div class="body">
-            <div class="name">ABC Malt Powder</div>
-            <div class="reviews">★★★★★ 254 reviews</div>
-            <div class="price">From Rs. 365.00</div>
-          </div>
-          <div class="action"><button class="ghost">Show options</button></div>
-        </article>
-        <article class="p-card">
-          <div class="img"><img src="https://placehold.co/600x600?text=Karuppu+Kavuni" alt=""/></div>
-          <div class="body">
-            <div class="name">Karuppu Kavuni Kanji Mix</div>
-            <div class="reviews">★★★★★ 220 reviews</div>
-            <div class="price">From Rs. 360.00</div>
-          </div>
-          <div class="action"><button class="ghost">Show options</button></div>
-        </article>
-        <article class="p-card">
-          <div class="img"><img src="https://placehold.co/600x600?text=Biotin+Powder" alt=""/></div>
-          <div class="body">
-            <div class="name">Biotin Powder</div>
-            <div class="reviews">★★★★★ 153 reviews</div>
-            <div class="price">From Rs. 299.00</div>
-          </div>
-          <div class="action"><button class="ghost">Show options</button></div>
-        </article>
-        <article class="p-card">
-          <div class="img"><img src="https://placehold.co/600x600?text=Nalungu+Maavu" alt=""/></div>
-          <div class="body">
-            <div class="name">Nalungu Maavu</div>
-            <div class="reviews">★★★★★ 39 reviews</div>
-            <div class="price">From Rs. 350.00</div>
-          </div>
-          <div class="action"><button class="ghost">Show options</button></div>
-        </article>
+        <div class="grid-change">
+
+    <div class="card-change">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/BestSeller/Abc malt powder.jpg" alt="ABC Malt Powder"/>
+        <img class="product hover-img" src="..\Assets\BestSeller\abc2.jpg" alt="ABC Malt Powder Benefits"/>
       </div>
+      <h3>ABC Malt Powder</h3>
+      <div class="stars-change">★★★★★ <small>254 reviews</small></div>
+      <div class="price-change">From Rs. <strong>365.00</strong></div>
+      <button class="btn-change">Show options</button>
+    </div>
+
+    <div class="card-change">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/BestSeller/karuppu.jpg" alt="Karuppu Kavuni Kanji Mix"/>
+        <img class="product hover-img" src="../Assets/BestSeller/Karuppu2.jpg" alt="Karuppu Kavuni Benefits"/>
+      </div>
+      <h3>Karuppu Kavuni Kanji Mix</h3>
+      <div class="stars-change">★★★★★ <small>219 reviews</small></div>
+      <div class="price-change">From Rs. <strong>360.00</strong></div>
+      <button class="btn-change">Show options</button>
+    </div>
+
+    <div class="card-change">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/BestSeller/Biotin.jpg" alt="Biotin Powder"/>
+        <img class="product hover-img" src="../Assets/BestSeller/Biotin2.jpg" alt="Biotin Powder Benefits"/>
+      </div>
+      <h3>Biotin Powder</h3>
+      <div class="stars-change">★★★★★ <small>152 reviews</small></div>
+      <div class="price-change">From Rs. <strong>299.00</strong></div>
+      <button class="btn-change">Show options</button>
+    </div>
+
+    <div class="card-change">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/BestSeller/Nalungu.jpg" alt="Nalungu Maavu"/>
+        <img class="product hover-img" src="..\Assets\BestSeller\nalungu2.jpg" alt="Nalungu Maavu Benefits"/>
+      </div>
+      <h3>Nalungu Maavu</h3>
+      <div class="stars-change">★★★★★ <small>39 reviews</small></div>
+      <div class="price-change">From Rs. <strong>350.00</strong></div>
+      <button class="btn-change">Show options</button>
+    </div>
+
     </section>
 
     <!-- You may also like -->
     <section class="section">
       <h2>You may also like</h2>
-      <div class="grid-4">
-        <article class="p-card">
-          <div class="img"><img src="https://placehold.co/600x600?text=Biotin+Powder" alt=""/></div>
-          <div class="body">
-            <div class="name">Biotin Powder</div>
-            <div class="reviews">★★★★★ 153 reviews</div>
-            <div class="price">From Rs. 299.00</div>
-          </div>
-          <div class="action"><button class="ghost">Show options</button></div>
-        </article>
-        <article class="p-card">
-          <div class="img"><img src="https://placehold.co/600x600?text=ABC+Malt+Benefits" alt=""/></div>
-          <div class="body">
-            <div class="name">Premium ABC Malt Powder without Palm Sugar</div>
-            <div class="reviews">★★★★☆ 2 reviews</div>
-            <div class="price">From Rs. 415.00</div>
-          </div>
-          <div class="action"><button class="ghost">Show options</button></div>
-        </article>
-        <article class="p-card">
-          <div class="img"><img src="https://placehold.co/600x600?text=Karuppu+Kavuni" alt=""/></div>
-          <div class="body">
-            <div class="name">Karuppu Kavuni Kanji Mix</div>
-            <div class="reviews">★★★★★ 220 reviews</div>
-            <div class="price">From Rs. 360.00</div>
-          </div>
-          <div class="action"><button class="ghost">Show options</button></div>
-        </article>
-        <article class="p-card">
-          <div class="img"><img src="https://placehold.co/600x600?text=Skin+Brightening+Combo" alt=""/></div>
-          <div class="body">
-            <div class="name">Skin Brightening Combo</div>
-            <div class="reviews">★★★★★ 7 reviews</div>
-            <div class="price"><span style="color:#ef6c00;font-weight:900">Rs. 700.00</span> <span class="muted" style="text-decoration:line-through">Rs. 715.00</span></div>
-          </div>
-          <div class="action"><button class="ghost">Add to cart</button></div>
-        </article>
+             <div class="grid-change">
+
+    <div class="card-change">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/BestSeller/Abc malt powder.jpg" alt="ABC Malt Powder"/>
+        <img class="product hover-img" src="..\Assets\BestSeller\abc2.jpg" alt="ABC Malt Powder Benefits"/>
       </div>
+      <h3>ABC Malt Powder</h3>
+      <div class="stars-change">★★★★★ <small>254 reviews</small></div>
+      <div class="price-change">From Rs. <strong>365.00</strong></div>
+      <button class="btn-change">Show options</button>
+    </div>
+
+    <div class="card-change">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/BestSeller/karuppu.jpg" alt="Karuppu Kavuni Kanji Mix"/>
+        <img class="product hover-img" src="../Assets/BestSeller/Karuppu2.jpg" alt="Karuppu Kavuni Benefits"/>
+      </div>
+      <h3>Karuppu Kavuni Kanji Mix</h3>
+      <div class="stars-change">★★★★★ <small>219 reviews</small></div>
+      <div class="price-change">From Rs. <strong>360.00</strong></div>
+      <button class="btn-change">Show options</button>
+    </div>
+
+    <div class="card-change">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/BestSeller/Biotin.jpg" alt="Biotin Powder"/>
+        <img class="product hover-img" src="../Assets/BestSeller/Biotin2.jpg" alt="Biotin Powder Benefits"/>
+      </div>
+      <h3>Biotin Powder</h3>
+      <div class="stars-change">★★★★★ <small>152 reviews</small></div>
+      <div class="price-change">From Rs. <strong>299.00</strong></div>
+      <button class="btn-change">Show options</button>
+    </div>
+
+    <div class="card-change">
+      <div class="img-container">
+        <img class="product main-img" src="../Assets/BestSeller/Nalungu.jpg" alt="Nalungu Maavu"/>
+        <img class="product hover-img" src="..\Assets\BestSeller\nalungu2.jpg" alt="Nalungu Maavu Benefits"/>
+      </div>
+      <h3>Nalungu Maavu</h3>
+      <div class="stars-change">★★★★★ <small>39 reviews</small></div>
+      <div class="price-change">From Rs. <strong>350.00</strong></div>
+      <button class="btn-change">Show options</button>
+    </div>
     </section>
   </main>
+<!--video-->
+
+  <video id="cornerVideo" class="floating-video" 
+    src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_yhdccd79cb1742017284807_low.mp4?v=1742017303" 
+    playsinline 
+    webkit-playsinline 
+    disablepictureinpicture
+    autoplay
+    muted
+  ></video>
+
 
 <!-- Modal -->
   <div id="productModal" class="modal">
@@ -424,8 +481,8 @@
 
       <!-- Middle -->
       <div class="footer-col">
-        <a href="#">Home</a>
-        <a href="#">Our Collections</a>
+        <a href="index.html">Home</a>
+        <a href="ourcollection.html">Our Collections</a>
         <a href="About.html">About Us</a>
         <a href="contact.html">Contact Us</a>
       </div>
@@ -599,6 +656,70 @@ thumbs.forEach(btn => {
   // Initialize subtotal on load
   updateSubtotal();
 </script>
+ <script>
+    const video = document.getElementById("cornerVideo");
+    let lastCheck = 0;
+
+    setInterval(() => {
+      if (!video.paused && !video.ended) {
+        const current = Math.floor(video.currentTime);
+
+        // Every 10s trigger animation
+        if (current > 0 && current % 10 === 0 && current !== lastCheck) {
+          lastCheck = current;
+
+          // Pause + animate hide
+          video.pause();
+          video.classList.add("hidden-video");
+
+          // After 3s, show again + resume
+          setTimeout(() => {
+            video.classList.remove("hidden-video");
+            video.play();
+          }, 3000);
+        }
+      }
+    }, 1000);
+    document.querySelectorAll('.qty').forEach(qtyContainer => {
+  const minusBtn = qtyContainer.querySelector('.minus-btn, #dec'); // Match minus buttons
+  const plusBtn = qtyContainer.querySelector('.plus-btn, #inc');   // Match plus buttons
+  const qtyInput = qtyContainer.querySelector('input');
+
+  if (minusBtn && plusBtn && qtyInput) {
+    minusBtn.addEventListener('click', () => {
+      let value = parseInt(qtyInput.value);
+      if (value > 1) {
+        qtyInput.value = value - 1;
+      }
+    });
+
+    plusBtn.addEventListener('click', () => {
+      let value = parseInt(qtyInput.value);
+      qtyInput.value = value + 1;
+    });
+  }
+});
+
+// For modal quantity
+const modalMinus = document.getElementById('minusBtn');
+const modalPlus = document.getElementById('plusBtn');
+const modalQtyInput = document.getElementById('qtyInput');
+
+if (modalMinus && modalPlus && modalQtyInput) {
+  modalMinus.addEventListener('click', () => {
+    let value = parseInt(modalQtyInput.value);
+    if (value > 1) {
+      modalQtyInput.value = value - 1;
+    }
+  });
+
+  modalPlus.addEventListener('click', () => {
+    let value = parseInt(modalQtyInput.value);
+    modalQtyInput.value = value + 1;
+  });
+}
+  </script>
+
 
 </body>
 </html>

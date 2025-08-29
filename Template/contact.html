@@ -6,11 +6,13 @@
   <title>Contact us  - Fit & Food Tamil</title>
   <link rel="stylesheet" href="../Static/Contact.css">
   <link rel="icon" href="../Assets/BestSeller/fit and foo logo.avif" type="image/x-icon">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="../Static/About.css">
 </head>
 <body>
@@ -57,10 +59,10 @@
       <div class="menu-columns">
         <ul>
           <li><a href="BestSeller.html">Best Sellers</a></li>
-          <li><a href="#">Baby Care Powders</a></li>
-          <li><a href="#">Skin Care Powders</a></li>
-          <li><a href="#">Hair Care Powders</a></li>
-          <li><a href="#">Health Drink Powders</a></li>
+          <li><a href="babycare.html">Baby Care Powders</a></li>
+          <li><a href="skincare.html">Skin Care Powders</a></li>
+          <li><a href="haircare.html">Hair Care Powders</a></li>
+          <li><a href="healthdrink.html">Health Drink Powders</a></li>
           <li><a href="#">Weight Gain Powders</a></li>
           <li><a href="#">Weight Loss Powders</a></li>
           <li><a href="#">Combo Products</a></li>
@@ -74,7 +76,7 @@
   </div>
 
   <a href="About.html">About Us</a>
-  <a href="#">Contact Us</a>
+  <a href="contact.html">Contact Us</a>
 </nav>
 
  <!-- Sidebar Cart -->
@@ -89,13 +91,15 @@
   <div class="cart-summary">
     <div class="order-header">
       <h3>Your Order</h3>
-      <a href="#" class="view-cart">View cart</a>
+      <a href="checkout.html" class="view-cart">View cart</a>
     </div>
     <div class="subtotal">
       <span>Subtotal:</span>
       <span class="subtotal-price">Rs. 360.00</span>
     </div>
-    <button class="checkout-btn">Checkout</button>
+    <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+  Checkout
+</button>
   </div>
 
   <!-- Products -->
@@ -106,7 +110,7 @@
     </div>
 
     <div class="cart-item" data-price="360">
-      <img src="../Assets/BestSeller/fit and foo logo.avif" alt="Product">
+      <img src="../Assets/BestSeller/karuppu.jpg" alt="Product">
       <div class="item-info">
         <p class="item-name">Karuppu Kavuni Kanji Mix</p>
         <small class="item-weight">250gms</small>
@@ -127,22 +131,22 @@
 
   <div class="hole">
     <div class="content">
-      <h1>Contact Us</h1>
-      <p>
+      <h1 data-aos="fade-down" data-aos-duration="400">Contact Us</h1>
+      <p data-aos="fade-right" data-aos-delay="500" >
         Kindly message us on WhatsApp for product or order details.  
         Customers are requested to avoid phone calls.
       </p>
 
-      <p>
+      <p data-aos="fade-right" data-aos-delay="500" >
         WhatsApp us at <a href="https://wa.me/919363599986" target="blank">+91 93635 99986</a>
       </p>
 
-      <p>
+      <p data-aos="fade-right" data-aos-delay="500">
         Mail us at <a href="mailto:fitandfoodtamil@gmail.com">fitandfoodtamil@gmail.com</a>
       </p>
 
-      <h2>Address</h2><br>
-      <p>
+      <h2 data-aos="fade-right" data-aos-duration="500">Address</h2><br>
+      <p data-aos="fade-right" data-aos-delay="500">
         <strong>Fit and Food Tamil</strong><br>
         <br>
         TNHB Colony,<br>
@@ -177,10 +181,10 @@
 
       <!-- Middle -->
       <div class="footer-col">
-        <a href="#">Home</a>
-        <a href="#">Our Collections</a>
+        <a href="index.html">Home</a>
+        <a href="ourcollection.html">Our Collections</a>
         <a href="About.html">About Us</a>
-        <a href="#">Contact Us</a>
+        <a href="contact.html">Contact Us</a>
       </div>
 
       <!-- Right -->
@@ -305,6 +309,16 @@
   // Initialize subtotal on load
   updateSubtotal();
 </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration
+            easing: 'ease-in-out', // Easing type
+            once: false, // Whether animation should happen only once
+            mirror: true, // Whether elements should animate out while scrolling past them
+        });
+    </script>
 
 </body>
 </html>

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../Static/returnandrefund.css">
   <link rel="stylesheet" href="..\Static\BestSeller.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Phosphor Icons for cart and user icons, and social media icons -->
     <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/dist/p.min.js"></script>
@@ -64,10 +65,10 @@
       <div class="menu-columns">
         <ul>
           <li><a href="BestSeller.html">Best Sellers</a></li>
-          <li><a href="#">Baby Care Powders</a></li>
-          <li><a href="#">Skin Care Powders</a></li>
-          <li><a href="#">Hair Care Powders</a></li>
-          <li><a href="#">Health Drink Powders</a></li>
+          <li><a href="babycare.html">Baby Care Powders</a></li>
+          <li><a href="skincare.html">Skin Care Powders</a></li>
+          <li><a href="haircare.html">Hair Care Powders</a></li>
+          <li><a href="healthdrink.html">Health Drink Powders</a></li>
           <li><a href="#">Weight Gain Powders</a></li>
           <li><a href="#">Weight Loss Powders</a></li>
           <li><a href="#">Combo Products</a></li>
@@ -99,13 +100,15 @@
   <div class="cart-summary">
     <div class="order-header">
       <h3>Your Order</h3>
-      <a href="#" class="view-cart">View cart</a>
+      <a href="checkout.html" class="view-cart">View cart</a>
     </div>
     <div class="subtotal">
       <span>Subtotal:</span>
       <span class="subtotal-price">Rs. 360.00</span>
     </div>
-    <button class="checkout-btn">Checkout</button>
+    <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+  Checkout
+</button>
   </div>
 
   <!-- Products -->
@@ -116,7 +119,7 @@
     </div>
 
     <div class="cart-item" data-price="360">
-      <img src="../Assets/BestSeller/fit and foo logo.avif" alt="Product">
+      <img src="../Assets/BestSeller/karuppu.jpg" alt="Product">
       <div class="item-info">
         <p class="item-name">Karuppu Kavuni Kanji Mix</p>
         <small class="item-weight">250gms</small>
@@ -136,8 +139,8 @@
     <!-- Main Content - Privacy Policy -->
     <main class="container">
         <div class="return-policy-section">
-            <h1 id="return-policy-top">Return and Refund Policy</h1>
-            <ol>
+            <h1 id="return-policy-top" data-aos="fade-down" data-aos-duration="400">Return and Refund Policy</h1>
+            <ol data-aos="fade-right" data-aos-delay="500">
                 <li>Cancellation not allowed, once order is placed; hence no refund will be issued.</li>
                 <li>There will be no Cash on Delivery (COD) orders.</li>
                 <li>Damage due to freight or improper usage or wrong application will not be covered under this policy.
@@ -172,17 +175,17 @@
 
       <!-- Middle -->
       <div class="footer-col">
-        <a href="#">Home</a>
-        <a href="#">Our Collections</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
+        <a href="index.html">Home</a>
+        <a href="ourcollection.html">Our Collections</a>
+        <a href="About.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
       </div>
 
       <!-- Right -->
       <div class="footer-col">
         <a href="privacy.html">Privacy Policy</a>
         <a href="shippingpolicy.html">Shipping Policy</a>
-        <a href="#top">Return & Refund Policy</a>
+        <a href="returnandrefund.html">Return & Refund Policy</a>
         <a href="termsandconditions.html">Terms & Conditions</a>
       </div>
 
@@ -323,6 +326,16 @@
   // Initialize subtotal on load
   updateSubtotal();
 </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration
+            easing: 'ease-in-out', // Easing type
+            once: false, // Whether animation should happen only once
+            mirror: true, // Whether elements should animate out while scrolling past them
+        });
+    </script>
 
 </body>
 

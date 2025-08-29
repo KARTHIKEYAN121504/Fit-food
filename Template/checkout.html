@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - Fit & Food</title>
+    <link rel="stylesheet" href="../Static/About.css">
+    <link rel="stylesheet" href="../Static/checkout.css">
+  <link rel="icon" href="../Assets/BestSeller/fit and foo logo.avif" type="image/x-icon">
+   <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="top-bar">
+    FSSAI Licensed: 12422012002821 | NABL Approved Lab Tested Products | Quality & Safety Assured
+  </div>
+  <!-- Header -->
+<header class="site-header">
+  <!-- Top Green Bar -->
+
+
+  <!-- Main Header -->
+  <div class="header-inner">
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <!-- Logo -->
+    <img src="../Assets/BestSeller/fit and foo logo.avif" alt="logo" class="logo" />
+
+    <!-- Search Bar -->
+    <div class="search-wrap">
+      <input type="text" class="search" placeholder="Search..." />
+      <button class="search-btn" aria-label="Search"><span><i class="fas fa-search"></i></span></button>
+    </div>
+
+    <!-- Icons -->
+    <div class="header-icons">
+      <a href="login.html"><span class="icon"><img src="../Assets/user.png" alt="Account" title="Account" width="20px" height="20px" class="img1"></span></a>
+      <a href="#" id="cart-btn"><span class="icon"><img src="../Assets/shopping-cart.png" alt="Cart" width="20px" height="20px"></span></a>
+    </div>
+    <!-- Mobile Menu Toggle -->
+    
+  </div>
+
+  <!-- Navigation Links -->
+  <nav class="nav-links">
+  <a href="index.html">Home</a>
+
+  <!-- Dropdown -->
+  <div class="dropdown">
+    <a href="#">Our Collections <span class="caret">⌵</span></a>
+    <div class="dropdown-menu">
+      <div class="menu-columns">
+        <ul>
+          <li><a href="BestSeller.html">Best Sellers</a></li>
+          <li><a href="babycare.html">Baby Care Powders</a></li>
+          <li><a href="skincare.html">Skin Care Powders</a></li>
+          <li><a href="haircare.html">Hair Care Powders</a></li>
+          <li><a href="healthdrink.html">Health Drink Powders</a></li>
+          <li><a href="#">Weight Gain Powders</a></li>
+          <li><a href="#">Weight Loss Powders</a></li>
+          <li><a href="#">Combo Products</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Traditional</a></li>
+          <li><a href="#">Healthy Foods</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <a href="About.html" >About Us</a>
+  <a href="contact.html">Contact Us</a>
+</nav>
+
+
+</header>
+
+<div class="cart-container">
+  <h1>Shopping cart</h1>
+  <a class="continue-shopping">Continue shopping</a>
+
+  <table>
+  <colgroup>
+    <col style="width:50%"> <!-- Description -->
+    <col style="width:15%"> <!-- Price -->
+    <col style="width:20%"> <!-- Quantity -->
+    <col style="width:15%"> <!-- Total -->
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+ <tbody id="cart-items">
+        <!-- NOTE: data-price contains the raw numeric unit price (no formatting). -->
+        <tr class="cart-item">
+          <td>
+            <div class="product-info">
+              <img src="../Assets/BestSeller/karuppu.jpg" alt="" />
+              <div>
+                <div class="product-name">Karuppu Kavuni Kanji Mix</div>
+                <div>250gms</div>
+              </div>
+            </div>
+          </td>
+
+          <!-- data-price holds numeric price (integer or decimal) -->
+          <td class="price" data-price="360">Rs. 360.00</td>
+
+          <td>
+            <div class="qty-controls">
+              <button type="button" class="decrease">-</button>
+              <span class="qty">1</span>
+              <button type="button" class="increase">+</button>
+            </div>
+            <a href="#" class="remove-link">Remove</a>
+          </td>
+
+          <!-- total displayed (formatted) -->
+          <td class="total">Rs. 360.00</td>
+        </tr>
+
+        <!--
+          Duplicate rows for additional products. Each product row should include:
+            - a .price element with data-price="X"
+            - a .qty span
+            - a .total cell (will be recalculated automatically)
+        -->
+      </tbody>
+    </table>
+
+    <p class="subtotal">Subtotal: Rs. 0.00</p>
+    <p class="tax-note">Tax included. Shipping calculated at checkout.</p>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+
+  <!-- Back to Top -->
+  <div class="backtop">Back to the top ▲</div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <!-- Left -->
+      <div class="footer-col footer-left">
+        <img src="../Assets/fit and foo logo.avif" alt="logo" class="footer-logo"/>
+        <div class="footer-text">
+          <p><strong>Fit and Food Tamil</strong><br>
+          TNHB Colony,<br>
+          Villapuram Housing Board,<br>
+          Madurai 625011.<br>
+          +91 9363599986</p>
+          <p>FSSAI: 12422012002821</p>
+        </div>
+      </div>
+
+      <!-- Middle -->
+      <div class="footer-col">
+        <a href="index.html">Home</a>
+        <a href="ourcollection.html">Our Collections</a>
+        <a href="About.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <!-- Right -->
+      <div class="footer-col">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="returnandrefund.html">Shipping Policy</a>
+        <a href="shippingpolicy.html">Return & Refund Policy</a>
+        <a href="termsandconditions.html">Terms & Conditions</a>
+      </div>
+
+      <!-- Socials -->
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Bottom strip -->
+    <div class="footer-bottom">
+      <div class="currency">India (INR ₹)</div>
+      <div>
+        Copyright © 2025 fitandfoodtamil<br>
+        Powered by Ekommerce360
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+<a class="whats" href="https://wa.me/919363599986" target="_blank" title="WhatsApp">
+  <img src="../Assets/whatsapp image.png" alt="whats" /></a>
+<script>
+  const tbody = document.querySelector('#cart-items');
+
+  tbody.addEventListener('click', (e) => {
+    const row = e.target.closest('tr');
+    if (!row) return;
+
+    if (e.target.classList.contains('increase')) {
+      const qtyEl = row.querySelector('.qty');
+      qtyEl.textContent = String(parseInt(qtyEl.textContent) + 1);
+      updateRowTotal(row);
+      updateSubtotal();
+    }
+
+    if (e.target.classList.contains('decrease')) {
+      const qtyEl = row.querySelector('.qty');
+      const next = Math.max(1, parseInt(qtyEl.textContent) - 1);
+      qtyEl.textContent = String(next);
+      updateRowTotal(row);
+      updateSubtotal();
+    }
+
+    if (e.target.classList.contains('remove-link')) {
+      e.preventDefault();
+      row.remove();
+      updateSubtotal();
+    }
+  });
+
+  // ---- Helpers ----
+  function parsePrice(text) {
+    // Extract digits and decimal safely
+    const num = text.replace(/[^0-9.]/g, '');
+    return parseFloat(num) || 0;
+  }
+
+  function formatPrice(n) {
+    // Always return Rs. with two decimals
+    return 'Rs. ' + n.toFixed(2);
+  }
+
+  function updateRowTotal(row) {
+    const unit = parsePrice(row.querySelector('.price').textContent);
+    const qty  = parseInt(row.querySelector('.qty').textContent);
+    const total = unit * qty;
+    row.querySelector('.total').textContent = formatPrice(total);
+  }
+
+  function updateSubtotal() {
+    let subtotal = 0;
+    document.querySelectorAll('#cart-items tr').forEach(r => {
+      subtotal += parsePrice(r.querySelector('.total').textContent);
+    });
+    document.querySelector('.subtotal').textContent = 'Subtotal: ' + formatPrice(subtotal);
+  }
+
+  // ---- Init ----
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('#cart-items tr').forEach(updateRowTotal);
+    updateSubtotal();
+  });
+  (function () {
+  const tbody = document.querySelector('#cart-items');
+  const subtotalEl = document.querySelector('.subtotal');
+
+  if (!tbody) return;
+
+  // Format number to "Rs. X.YY"
+  function formatPrice(n) {
+    return 'Rs. ' + Number(n).toFixed(2);
+  }
+
+  // Get unit price number from .price[data-price]
+  function getUnitPrice(row) {
+    const priceCell = row.querySelector('.price');
+    if (!priceCell) return 0;
+    const raw = priceCell.dataset.price;
+    return raw ? parseFloat(raw) : 0;
+  }
+
+  // Get quantity (int) from row; ensure valid integer >= 1
+  function getQty(row) {
+    const qtyEl = row.querySelector('.qty');
+    if (!qtyEl) return 0;
+    const q = parseInt(qtyEl.textContent, 10);
+    return isNaN(q) || q < 1 ? 1 : q;
+  }
+
+  // Update a single row's total cell (reads unit price from data-price)
+  function updateRowTotal(row) {
+    const unit = getUnitPrice(row);
+    const qty = getQty(row);
+    const total = unit * qty;
+    const totalCell = row.querySelector('.total');
+    if (totalCell) totalCell.textContent = formatPrice(total);
+  }
+
+  // Update subtotal by summing unit*qty for each visible row
+  function updateSubtotal() {
+    let subtotal = 0;
+    document.querySelectorAll('#cart-items tr').forEach(r => {
+      const unit = getUnitPrice(r);
+      const qty = getQty(r);
+      subtotal += unit * qty;
+    });
+    if (subtotalEl) subtotalEl.textContent = 'Subtotal: ' + formatPrice(subtotal);
+  }
+
+  // Handle clicks via event delegation
+  tbody.addEventListener('click', (e) => {
+    const btn = e.target;
+    const row = btn.closest('tr');
+    if (!row) return;
+
+    // Increase
+    if (btn.classList.contains('increase')) {
+      const qtyEl = row.querySelector('.qty');
+      qtyEl.textContent = String(getQty(row) + 1);
+      updateRowTotal(row);
+      updateSubtotal();
+      return;
+    }
+
+    // Decrease
+    if (btn.classList.contains('decrease')) {
+      const qtyEl = row.querySelector('.qty');
+      const current = getQty(row);
+      const next = Math.max(1, current - 1);
+      qtyEl.textContent = String(next);
+      updateRowTotal(row);
+      updateSubtotal();
+      return;
+    }
+
+    // Remove
+    if (btn.classList.contains('remove-link')) {
+      e.preventDefault();
+      row.remove();
+      updateSubtotal();
+      return;
+    }
+  });
+
+  // Initialize all rows totals & subtotal on DOMContentLoaded
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('#cart-items tr').forEach(updateRowTotal);
+    updateSubtotal();
+  });
+
+  // also run immediately in case script is at bottom and DOMContentLoaded already fired
+  document.querySelectorAll('#cart-items tr').forEach(updateRowTotal);
+  updateSubtotal();
+})();
+</script>
+<!--Demo--></body>
+</html>

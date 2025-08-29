@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../Static/shippingpolicy.css">
   <link rel="stylesheet" href="..\Static\BestSeller.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+ <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Phosphor Icons for cart and user icons, and social media icons -->
     <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/dist/p.min.js"></script>
       <link rel="stylesheet" href="..\Static\BestSeller.css">
@@ -62,10 +63,10 @@
       <div class="menu-columns">
         <ul>
           <li><a href="BestSeller.html">Best Sellers</a></li>
-          <li><a href="#">Baby Care Powders</a></li>
-          <li><a href="#">Skin Care Powders</a></li>
-          <li><a href="#">Hair Care Powders</a></li>
-          <li><a href="#">Health Drink Powders</a></li>
+          <li><a href="babycare.html">Baby Care Powders</a></li>
+          <li><a href="skincare.html">Skin Care Powders</a></li>
+          <li><a href="haircare.html">Hair Care Powders</a></li>
+          <li><a href="healthdrink.html">Health Drink Powders</a></li>
           <li><a href="#">Weight Gain Powders</a></li>
           <li><a href="#">Weight Loss Powders</a></li>
           <li><a href="#">Combo Products</a></li>
@@ -96,13 +97,15 @@
   <div class="cart-summary">
     <div class="order-header">
       <h3>Your Order</h3>
-      <a href="#" class="view-cart">View cart</a>
+      <a href="checkout.html" class="view-cart">View cart</a>
     </div>
     <div class="subtotal">
       <span>Subtotal:</span>
       <span class="subtotal-price">Rs. 360.00</span>
     </div>
-    <button class="checkout-btn">Checkout</button>
+   <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+  Checkout
+</button>
   </div>
 
   <!-- Products -->
@@ -113,7 +116,7 @@
     </div>
 
     <div class="cart-item" data-price="360">
-      <img src="../Assets/BestSeller/fit and foo logo.avif" alt="Product">
+      <img src="../Assets/BestSeller/karuppu.jpg" alt="Product">
       <div class="item-info">
         <p class="item-name">Karuppu Kavuni Kanji Mix</p>
         <small class="item-weight">250gms</small>
@@ -134,48 +137,48 @@
     <!-- Main Content - Privacy Policy -->
     <main class="container">
         <div class="shipping-privacy-policy-section">
-            <h1 id="shipping-privacy-policy-top">Shipping Policy</h1>
-            <p>
+            <h1 id="shipping-privacy-policy-top" data-aos="fade-down" data-aos-duration="400">Shipping Policy</h1>
+            <p data-aos="fade-right" data-aos-delay="500">
                 Purchases are shipped from our manufacturing unit in Madurai by reputed courier agencies.
             </p>
-            <p>For India orders – All domestic orders are processed within 8-10 business days. You can expect delivery
+            <p data-aos="fade-right" data-aos-delay="500">For India orders – All domestic orders are processed within 8-10 business days. You can expect delivery
                 of the order within 12 business days . For locations which are in the interiors or in difficult coverage
                 area, this may take between 14 business days</p>
-            <p>For International orders – We also ship internationally across all countries. All international orders
+            <p data-aos="fade-right" data-aos-delay="500">For International orders – We also ship internationally across all countries. All international orders
                 are processed within 8-10 business days. You can expect delivery of the order within 14 business days.
             </p>
-            <p>ORDER DELIVERIES WILL BE MADE BETWEEN 10:00 AM – 6:00 PM Monday – Saturday. Excluding public holidays
+            <p data-aos="fade-right" data-aos-delay="500">ORDER DELIVERIES WILL BE MADE BETWEEN 10:00 AM – 6:00 PM Monday – Saturday. Excluding public holidays
 
             </p>
-            <p>Goods will need to be signed for upon delivery. If you cannot be there to sign for your delivery please
+            <p data-aos="fade-right" data-aos-delay="500">Goods will need to be signed for upon delivery. If you cannot be there to sign for your delivery please
                 suggest an alternative i.e. a family member, colleague, neighbour, etc. However takes Fit and Food Tamil
                 has no responsibility for goods signed by an alternative person.
 
             </p>
-            <p>For any complaints with regards to your order please contact Customer care number 8637451144 (Only Whats
+            <p data-aos="fade-right" data-aos-delay="500">For any complaints with regards to your order please contact Customer care number 8637451144 (Only Whats
                 App) within 2 business days of your order delivery for resolution.
 
             </p>
-            <h4>Shipping charges</h4>
-            <p><b>For India Orders:</b>We ship products throughout India.The shipping charges for all over TamilNadu is
+            <h4 data-aos="fade-right" data-aos-delay="500">Shipping charges</h4>
+            <p data-aos="fade-right" data-aos-delay="500"><b>For India Orders:</b>We ship products throughout India.The shipping charges for all over TamilNadu is
                 Rs.50 and Border states around Tamilnadu( Karnataka, Kerala,Andhra Pradesh,Telungana) is Rs.80.</p>
-            <p>Courier charges for all states in India except Tamilnadu, Kerala, Karnataka,Andhra Pradesh and Telungana
+            <p data-aos="fade-right" data-aos-delay="500">Courier charges for all states in India except Tamilnadu, Kerala, Karnataka,Andhra Pradesh and Telungana
                 is Rs.150</p>
-            <p>For Tamilnadu we will send via ST Courier/Professional courier/Delhivery</p>
-            <p>Other states except Tamilnadu we will send via Professional /Delhivery</p>
-            <h4>For International Orders:</h4>
-            <p>Shipping rates for each country vary depending on the size and quantity of the package. All products will
+            <p data-aos="fade-right" data-aos-delay="500">For Tamilnadu we will send via ST Courier/Professional courier/Delhivery</p>
+            <p data-aos="fade-right" data-aos-delay="500">Other states except Tamilnadu we will send via Professional /Delhivery</p>
+            <h4 data-aos="fade-right" data-aos-delay="500">For International Orders:</h4>
+            <p data-aos="fade-right" data-aos-delay="500">Shipping rates for each country vary depending on the size and quantity of the package. All products will
                 be shipped via FedEx courier service.</p>
-            <p>Shipping charges are calculated based on the total gross weight of the cart, which includes:</p>
+            <p data-aos="fade-right" data-aos-delay="500">Shipping charges are calculated based on the total gross weight of the cart, which includes:</p>
 
-            <ul>
+            <ul data-aos="fade-right" data-aos-delay="500">
                 <li>Product weight</li>
                 <li>Inner packing weight</li>
                 <li>Outer carton weight</li>
             </ul><br>
-            <p>Please note that shipping costs are not based solely on the product weight.</p>
-            <h4>Customs & Duties</h4>
-            <p>Custom duties may be applicable at the time of delivery. These charges vary by country and are determined
+            <p data-aos="fade-right" data-aos-delay="500">Please note that shipping costs are not based solely on the product weight.</p>
+            <h4 data-aos="fade-right" data-aos-delay="500">Customs & Duties</h4>
+            <p data-aos="fade-right" data-aos-delay="500">Custom duties may be applicable at the time of delivery. These charges vary by country and are determined
                 by the <b>local customs regulations</b> the destination country.
 
             </p>
@@ -207,16 +210,16 @@
 
       <!-- Middle -->
       <div class="footer-col">
-        <a href="#">Home</a>
-        <a href="#">Our Collections</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
+        <a href="index.html">Home</a>
+        <a href="ourcollection.html">Our Collections</a>
+        <a href="About.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
       </div>
 
       <!-- Right -->
       <div class="footer-col">
         <a href="privacy.html">Privacy Policy</a>
-        <a href="#top">Shipping Policy</a>
+        <a href="shippingpolicy.html">Shipping Policy</a>
         <a href="returnandrefund.html">Return & Refund Policy</a>
         <a href="termsandconditions.html">Terms & Conditions</a>
       </div>
@@ -358,6 +361,16 @@
   // Initialize subtotal on load
   updateSubtotal();
 </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration
+            easing: 'ease-in-out', // Easing type
+            once: false, // Whether animation should happen only once
+            mirror: true, // Whether elements should animate out while scrolling past them
+        });
+    </script>
 
 </body>
 

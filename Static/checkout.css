@@ -1,0 +1,200 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.cart-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background:#f5f5f5;
+  padding: 30px;
+}
+
+.cart-container h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.continue-shopping {
+  display: inline-block;
+  margin-bottom: 25px;
+  margin-top:25px;
+  font-weight: 500;
+  text-decoration:underline;
+  cursor: pointer;
+}
+
+.continue-shopping:hover {
+  text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; 
+}
+
+th {
+  text-align: left;
+  font-weight: 500;
+  color: #666;
+    padding: 15px 20px;
+
+  border-bottom: 2px solid #eee;
+}
+
+td {
+  padding: 20px 20px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.product-info img {
+  width: 90px;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.product-name {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 4px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.price {
+    margin-left: 0;   /* ❌ remove the extra gap */
+    text-align: center; /* or right, depending on design */
+}
+
+th.hd, td.price, td.total {
+    text-align: center;   /* keeps Price, Quantity, Total aligned */
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.qty-controls button {
+  background: #4CAF50;
+  color: #f5f5f5;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.qty-controls button:hover {
+  background: #43a047;
+}
+
+.qty-controls span {
+  display: inline-block;
+  min-width: 28px;
+  text-align: center;
+  font-size: 15px;
+  background: #f5f5f5;
+  padding: 3px 12px;
+  padding-top:1px;
+  padding-bottom:3px;
+  border: 1px solid #43a047;
+}
+
+.remove-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.subtotal {
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: right;
+  margin-left:128px;
+}
+
+.tax-note {
+  font-size: 14px;
+  color: #777;
+  margin: 10px 0 25px;
+  text-align: left;
+}
+
+.checkout-btn {
+  background: #4CAF50;
+  color: #fff;
+  padding: 14px 15px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 2px;
+  cursor: pointer;
+  float: left;
+  transition: 0.3s;
+  width:125px;
+  margin-left:200px;
+}
+
+.checkout-btn:hover {
+  background: #43a047;
+}
+th, td {
+  padding: 15px 20px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f0f0f0;
+}
+th:nth-child(1){ width: 50%; text-align: left; }   /* Description */
+th:nth-child(2) { width: 10%; text-align: center; } /* Price */
+th:nth-child(3)  { width: 20%; text-align: center; } /* Quantity */
+th:nth-child(4) { width: 20%; text-align: center; } /* Total */
+
+th, td {
+  padding: 15px 20px;
+  vertical-align: middle;
+  border-bottom: 1px solid #f0f0f0;
+}
+td:nth-child(1){ width: 600px; text-align: left; }   /* Description */
+td:nth-child(2) { width: 100px; text-align: center; } /* Price */
+td:nth-child(3)  { width: 100%; text-align: center; } /* Quantity */
+td:nth-child(4) { width: 100px; text-align: center; } /* Total */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* ✅ ensures columns stay aligned */
+}
+
+th, td {
+  padding: 15px 20px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+th:first-child, td:first-child { text-align: left; }  /* Description left */
+.price, .total {
+  white-space: nowrap;
+  text-align: center;
+  /* optional: adjust spacing */
+}
