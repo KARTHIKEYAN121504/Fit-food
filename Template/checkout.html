@@ -338,106 +338,9 @@
                 updateSubtotal();
             });
 
-<<<<<<< HEAD
-  // ---- Init ----
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('#cart-items tr').forEach(updateRowTotal);
-    updateSubtotal();
-  });
-  (function () {
-  const tbody = document.querySelector('#cart-items');
-  const subtotalEl = document.querySelector('.subtotal');
 
-  if (!tbody) return;
-
-  // Format number to "Rs. X.YY"
-  function formatPrice(n) {
-    return 'Rs. ' + Number(n).toFixed(2);
-  }
-
-  // Get unit price number from .price[data-price]
-  function getUnitPrice(row) {
-    const priceCell = row.querySelector('.price');
-    if (!priceCell) return 0;
-    const raw = priceCell.dataset.price;
-    return raw ? parseFloat(raw) : 0;
-  }
-
-  // Get quantity (int) from row; ensure valid integer >= 1
-  function getQty(row) {
-    const qtyEl = row.querySelector('.qty');
-    if (!qtyEl) return 0;
-    const q = parseInt(qtyEl.textContent, 10);
-    return isNaN(q) || q < 1 ? 1 : q;
-  }
-
-  // Update a single row's total cell (reads unit price from data-price)
-  function updateRowTotal(row) {
-    const unit = getUnitPrice(row);
-    const qty = getQty(row);
-    const total = unit * qty;
-    const totalCell = row.querySelector('.total');
-    if (totalCell) totalCell.textContent = formatPrice(total);
-  }
-
-  // Update subtotal by summing unit*qty for each visible row
-  function updateSubtotal() {
-    let subtotal = 0;
-    document.querySelectorAll('#cart-items tr').forEach(r => {
-      const unit = getUnitPrice(r);
-      const qty = getQty(r);
-      subtotal += unit * qty;
-    });
-    if (subtotalEl) subtotalEl.textContent = 'Subtotal: ' + formatPrice(subtotal);
-  }
-
-  // Handle clicks via event delegation
-  tbody.addEventListener('click', (e) => {
-    const btn = e.target;
-    const row = btn.closest('tr');
-    if (!row) return;
-
-    // Increase
-    if (btn.classList.contains('increase')) {
-      const qtyEl = row.querySelector('.qty');
-      qtyEl.textContent = String(getQty(row) + 1);
-      updateRowTotal(row);
-      updateSubtotal();
-      return;
-    }
-
-    // Decrease
-    if (btn.classList.contains('decrease')) {
-      const qtyEl = row.querySelector('.qty');
-      const current = getQty(row);
-      const next = Math.max(1, current - 1);
-      qtyEl.textContent = String(next);
-      updateRowTotal(row);
-      updateSubtotal();
-      return;
-    }
-
-    // Remove
-    if (btn.classList.contains('remove-link')) {
-      e.preventDefault();
-      row.remove();
-      updateSubtotal();
-      return;
-    }
-  });
-
-  // Initialize all rows totals & subtotal on DOMContentLoaded
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('#cart-items tr').forEach(updateRowTotal);
-    updateSubtotal();
-  });
-
-  // also run immediately in case script is at bottom and DOMContentLoaded already fired
-  document.querySelectorAll('#cart-items tr').forEach(updateRowTotal);
-  updateSubtotal();
-})();
-</script>
-    <script>
+          });</script>
+          <script>
     function toggleMenu() {
   document.getElementById("mobileMenu").classList.toggle("active");
 }
@@ -458,12 +361,3 @@ function openPanel(panelId) {
 }
 
 </script>
-
-=======
-            // Initial calculation on page load
-            updateSubtotal();
-        });
-    </script>
->>>>>>> 38fa401aa9bb630acc20355ca998c419f879df75
-<!--Demo--></body>
-</html>
