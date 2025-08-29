@@ -596,15 +596,9 @@
       </div>
 
       <!-- Middle -->
-<<<<<<< HEAD
-      <div' class="footer-col">
-        <a href="#">Home</a>
-        <a href="#">Our Collections</a>
-=======
       <div class="footer-col">
         <a href="index.html">Home</a>
         <a href="ourcollection.html">Our Collections</a>
->>>>>>> 1c8ff5ac596904eeb2bdd1f51c8cabf6d0d429be
         <a href="About.html">About Us</a>
         <a href="contact.html">Contact Us</a>
       </div>
@@ -902,12 +896,13 @@ document.getElementById("miniCartBtn").addEventListener("click", openMiniCart);
   const popup = document.getElementById("popup");
   const popupVideo = document.getElementById("myVideo");
 
+  
   // Open popup when floating video is clicked
   wrapper.addEventListener("click", () => {
     popup.style.display = "flex";
     popupVideo.currentTime = cornerVideo.currentTime; // sync time
     popupVideo.play();
-    cornerVideo.pause(); // pause corner video while popup is open
+// pause corner video while popup is open
   });
 
   // Close popup function
@@ -915,7 +910,19 @@ document.getElementById("miniCartBtn").addEventListener("click", openMiniCart);
     popup.style.display = "none";
     cornerVideo.currentTime = popupVideo.currentTime; // sync time back
     cornerVideo.play();
+
   }
+// Close popup function and stop videos
+function closePopup() {
+  popup.style.display = "none";
+
+  // Stop both videos
+  popupVideo.pause();
+
+  // Optional: reset floating video to start
+  cornerVideo.currentTime = 0;
+  popupVideo.currentTime = 0;
+}
 
   // Mute/unmute floating video
   muteOverlay.addEventListener("click", (e) => {
