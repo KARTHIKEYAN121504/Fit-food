@@ -2063,16 +2063,16 @@ height:500px;
     footer{
       padding:0px;
       margin:0px;
-      width:340px;
+      width:auto;
     }
     .backtop{
-      width:340px;
+      width:auto;
     } 
     header{
-      width:340px;
+      width:auto;
     }
     .top-bar{
-      width: 340px;
+      width: auto;
     }
     .header-icons{
       margin-top:25px;
@@ -2095,4 +2095,11 @@ height:500px;
       width:300px;
       height:300px;
     }
+    header{
+        width:auto;
+        padding: auto;
+      }
+      .site-header{
+        width: auto;
+      }
 }

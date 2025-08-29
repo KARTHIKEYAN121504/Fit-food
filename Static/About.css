@@ -1075,13 +1075,23 @@ cursor: pointer;
       width:320px;
     }
     footer{
-      width:320px;
-      padding:10px;
+      width:auto;
+      padding:auto;
     }
     .backtop{
-      width:320px;
-      padding:10px;
+      width:auto;
+      padding:auto;
       text-align: center;}
+      header{
+        width:auto;
+        padding: AUTO;
+      }
+      .top-bar{
+        width:auto;
+      }
+       .site-header{
+        width: auto;
+      }
 }
 
 html {
