@@ -919,3 +919,248 @@
       transform: scale(0.3);
       pointer-events: none;
     }
+/* ... (Your existing desktop CSS) ... */
+
+@media (max-width: 768px) {
+  /* General Layout */
+  body {
+    font-size: 14px;
+  }
+  .wrap, .container, .cd, .grid-change, .footer-inner, .container1 {
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+  .section h2 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .backtop {
+    padding: 10px;
+  }
+  .whats {
+    width: 60px;
+    height: 60px;
+    right: 10px;
+    bottom: 10px;
+  }
+  .whats img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Header & Navigation */
+  .site-header {
+    flex-direction: column;
+  }
+  .header-inner {
+    padding: 10px;
+  }
+  .logo {
+    width: 100px;
+  }
+  .search-wrap {
+    order: 3;
+    flex: 1;
+    margin: 10px 0 0;
+  }
+  .search, .search-btn {
+    display: none;
+  }
+  .header-icons {
+    margin: 0;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  .nav-links a {
+    padding: 10px;
+    border-top: 1px solid #eee;
+    text-align: center;
+  }
+  .nav-links a.active::after {
+    display: none;
+  }
+  .dropdown .dropdown-menu {
+    position: static;
+    display: block;
+    width: 100%;
+    box-shadow: none;
+    padding: 0;
+    border: none;
+    margin-top: 0;
+  }
+  .menu-columns {
+    flex-direction: column;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  /* Main Product Page */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .main-img img, .thumbs img {
+    width: 100%;
+    height: auto;
+  }
+  .main-img, .thumbs {
+    margin: 0;
+  }
+  .thumbs {
+    justify-content: center;
+  }
+  .thumb {
+    width: 60px;
+    height: 60px;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .product {
+    padding: 1rem;
+  }
+  
+  /* Product Form & CTA */
+  .row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .select,
+  .qty,
+  .btn {
+    width: 100%;
+  }
+  .qty button {
+    width: 50px;
+    height: 50px;
+  }
+  .cta {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .btn {
+    width: 100%;
+    padding: 14px 18px;
+  }
+  .feature-note {
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* Frequently Bought Together */
+  .fbt .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .fbt .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    text-align: left;
+    padding: 10px;
+  }
+  .fbt .card .mini {
+    justify-content: flex-start;
+  }
+  .fbt .card .tick {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .claim .btn {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  /* Reviews Section */
+  .summary {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+  .stars, .distribution {
+    flex: none;
+    width: 100%;
+  }
+  .distribution div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .bar {
+    flex-grow: 1;
+    max-width: 200px;
+  }
+
+  /* Best Sellers & "You may also like" grids */
+  .grid-change {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .card-change {
+    padding: 10px;
+  }
+  .img-container, .img-container img {
+    width: 100%;
+    height: auto;
+  }
+  .card-change h3 {
+    font-size: 1rem;
+  }
+  .btn-change {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  /* Modal */
+  .modal-content {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+  .modal-right {
+    gap: 10px;
+  }
+  .qty-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .qty-control, .add-cart, .buy-now {
+    width: 100%;
+  }
+  .modal-left img {
+    width: 100%;
+    height: auto;
+  }
+  .thumbs {
+    justify-content: center;
+  }
+
+  /* Cart Sidebar */
+  .cart-sidebar {
+    width: 100%;
+    padding: 15px;
+  }
+  .cart-header button {
+    font-size: 16px;
+    padding: 15px;
+  }
+  .cart-summary {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+}
