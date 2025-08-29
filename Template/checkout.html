@@ -131,7 +131,7 @@
     </div>
   </div>
 
-  <a href="#" >About Us</a>
+  <a href="About.html" >About Us</a>
   <a href="contact.html">Contact Us</a>
 </nav>
 
@@ -338,6 +338,17 @@
                 updateSubtotal();
             });
 
+<<<<<<< HEAD
+=======
+  // ---- Init ----
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('#cart-items tr').forEach(updateRowTotal);
+    updateSubtotal();
+  });
+  (function () {
+  const tbody = document.querySelector('#cart-items');
+  const subtotalEl = document.querySelector('.subtotal');
+>>>>>>> f76aa3c7e7d3141bc9184f7b8e5a3a2619a5c94d
 
           });</script>
           <script>
@@ -360,4 +371,15 @@ function openPanel(panelId) {
   document.getElementById(panelId).classList.add("active");
 }
 
+<<<<<<< HEAD
 </script>
+=======
+</script>
+
+            // Initial calculation on page load
+            updateSubtotal();
+        });
+    </script>
+<!--Demo--></body>
+</html>
+>>>>>>> f76aa3c7e7d3141bc9184f7b8e5a3a2619a5c94d
