@@ -17,7 +17,7 @@
 </head>
 <body>
   <!-- Top Strip -->
-  <div class="top-bar">
+<div class="top-bar">
     FSSAI Licensed: 12422012002821 | NABL Approved Lab Tested Products | Quality & Safety Assured
   </div>
   <!-- Header -->
@@ -27,22 +27,79 @@
 
   <!-- Main Header -->
   <div class="header-inner">
-    <button class="nav-toggle" aria-label="Toggle navigation" >☰</button>
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <!-- Main Menu -->
+  <div class="menu-panel active" id="mainMenu">
+    <div class="menu-header">
+      <h2>Menu</h2>
+      <button class="close-btn" onclick="toggleMenu()">✕</button>
+    </div>
+    <ul class="menu-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#" onclick="openPanel('collectionsMenu')" style="display:inline-flex;">Our Collections</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="login.html">Account</a></li>
+    </ul>
+  </div>
+
+  <!-- Submenu Panel -->
+  <div class="menu-panel" id="collectionsMenu">
+    <div class="menu-header">
+      <button class="back-btn" onclick="openPanel('mainMenu')"> Back</button>
+    </div>
+    <ul class="menu-list">
+      <li><a href="BestSeller.html">Best Sellers</a></li>
+      <li><a href="babycare.html">Baby Care Powders</a></li>
+      <li><a href="skincare.html">Skin Care Powders</a></li>
+      <li><a href="haircare.html">Hair Care Powders</a></li>
+      <li><a href="healthdrink.html">Health Drink Powders</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
     <!-- Logo -->
     <img src="../Assets/BestSeller/fit and foo logo.avif" alt="logo" class="logo" />
 
     <!-- Search Bar -->
     <div class="search-wrap">
-      <input type="text" class="search" placeholder="Search..." />
+      <input type="text" class="search" placeholder="Search..." onkeyup="filterResults()" />
       <button class="search-btn" aria-label="Search"><span><i class="fas fa-search"></i></span></button>
     </div>
-
     <!-- Icons -->
-  <div class="header-icons">
-      <a href="login.html"><span class="icon"><img src="../Assets/user.png" alt="Account" title="Account" width="20px" height="20px" class="img1"></span></a>
-          <a href="#" id="cart-btn"><span class="icon"><img src="../Assets/shopping-cart.png" alt="Cart" width="20px" height="20px"></span></a>
+   <!-- Icons -->
+<div class="header-icons">
+  <div class="im">
+  <a href="login.html">
+    <span class="icon">
+      <img src="../Assets/user.png" alt="Account" title="Account" width="20px" height="20px" class="img1">
+    </span>
+  </a>
+  </div>
+<div class="im1">
+  <a onclick="toggleSearch()">
+    <span class="icon"><i class="fas fa-search"></i></span>
+  </a>
+</div>
+<div class="im2">
+  <a href="#" id="cart-btn">
+    <span class="icon">
+      <img src="../Assets/shopping-cart.png" alt="Cart" width="20px" height="20px">
+    </span>
+  </a>
+  </div>
+</div>
 
-    </div>
+<!-- 🔑 Move search overlay outside -->
+<div class="mobile-search-overlay" id="mobileSearch">
+  <input type="text" placeholder="Search products..." />
+  <span class="icon1"><i class="fas fa-search"></i></span>
+</div>
 
     <!-- Mobile Menu Toggle -->
     
@@ -75,9 +132,13 @@
     </div>
   </div>
 
-  <a href="About.html">About Us</a>
+  <a href="#" >About Us</a>
   <a href="contact.html">Contact Us</a>
 </nav>
+
+
+</header>
+
 
  <!-- Sidebar Cart -->
 <!-- Cart Sidebar -->
@@ -319,6 +380,27 @@
             mirror: true, // Whether elements should animate out while scrolling past them
         });
     </script>
+    <script>
+    function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+function toggleSearch() {
+  document.getElementById("mobileSearch").classList.toggle("active");
+}
+
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+function openPanel(panelId) {
+  // Hide all panels
+  document.querySelectorAll(".menu-panel").forEach(p => p.classList.remove("active"));
+  // Show requested one
+  document.getElementById(panelId).classList.add("active");
+}
+
+</script>
 
 </body>
 </html>
