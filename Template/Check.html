@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout – Fit & Food Tamil (Replica)</title>
+  <link rel="stylesheet" href="..\Static\Check.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo" aria-label="Fit & Food Tamil"><img src="../Assets/fit and foo logo.avif" alt=""></div>
+  </header>
+
+  <main class="wrap checkout">
+    <!-- LEFT: FORM COLUMN -->
+    <section>
+      <!-- Contact -->
+      <h2>Contact</h2>
+      <div class="field"><label>Email</label><input type="email" placeholder="" /></div>
+      <label class="checkbox"><input type="checkbox" /> Email me with news and offers</label>
+
+      <!-- Delivery -->
+      <h2>Delivery</h2>
+      <div class="field">
+        <label>Country/Region</label>
+        <select>
+          <option>India</option>
+          <option>—</option>
+        </select>
+      </div>
+      <div class="row row-2">
+        <div class="field"><label>First name</label><input type="text" /></div>
+        <div class="field"><label>Last name</label><input type="text" /></div>
+      </div>
+      <div class="field with-icon">
+        <label>Address</label>
+        <input type="text" />
+        <span class="icon">🔍</span>
+      </div>
+      <div class="field"><label>Apartment, suite, etc. (optional)</label><input type="text" /></div>
+      <div class="row row-3">
+        <div class="field"><label>City</label><input type="text" /></div>
+        <div class="field"><label>State</label>
+          <select>
+            <option>Tamil Nadu</option>
+            <option>Kerala</option>
+            <option>Karnataka</option>
+          </select>
+        </div>
+        <div class="field"><label>PIN code</label><input type="text" inputmode="numeric" /></div>
+      </div>
+      <div class="field with-icon">
+        <label>Phone</label>
+        <input type="tel" />
+        <span class="icon">❓</span>
+      </div>
+      <label class="checkbox" style="margin-top:6px"><input type="checkbox" /> Save this information for next time</label>
+
+      <div class="field">
+        <p style="font-weight:600; margin:18px 0 8px">Which courier service is nearby your address? If you don't have any courier service in your area, please choose India Post.</p>
+        <div class="shipping-banner">Enter your shipping address to view available shipping methods.</div>
+      </div>
+
+      <!-- Payment -->
+      <h2>Payment</h2>
+      <p class="muted" style="margin:0 0 10px">All transactions are secure and encrypted.</p>
+      <div class="payment-card">
+        <div class="payment-head">
+          <div class="pay-title">PhonePe Payment Gateway (UPI, Cards & NetBanking)</div>
+          <div class="badges">
+            <span class="badge">UPI</span>
+            <span class="badge">VISA</span>
+            <span class="badge">Mastercard</span>
+            <span class="badge">RuPay</span>
+            <span class="badge">+3</span>
+          </div>
+        </div>
+        <div class="payment-body">
+          <div class="illus" aria-hidden="true"></div>
+          <div class="small">After clicking “Pay now”, you will be redirected to PhonePe Payment Gateway (UPI, Cards & NetBanking) to complete your purchase securely.</div>
+        </div>
+      </div>
+
+      <!-- Billing address -->
+      <h2 style="margin-top:22px">Billing address</h2>
+      <label class="radio"><input type="radio" name="bill" checked /> <strong>Same as shipping address</strong></label>
+      <label class="radio"><input type="radio" name="bill" /> Use a different billing address</label>
+
+      <button class="btn" style="margin-top:12px">Pay now</button>
+
+      <nav class="legal">
+        <a href="#">Refund policy</a>
+        <a href="#">Shipping</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms of service</a>
+        <a href="#">Contact</a>
+      </nav>
+    </section>
+
+    <!-- RIGHT: SUMMARY COLUMN -->
+    <aside class="summary">
+      <div class="summary-card">
+        <div class="item">
+          <div class="thumb">
+            <img alt="Karuppu Kavuni Kanji Mix" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=400&auto=format&fit=crop" />
+          </div>
+          <div>
+            <div class="title">Karuppu Kavuni Kanji Mix</div>
+            <div class="muted">250gms</div>
+          </div>
+          <div class="price">₹360.00</div>
+        </div>
+        <div class="lines"></div>
+        <div class="kv"><span>Subtotal</span><span>₹360.00</span></div>
+        <div class="kv"><span>Shipping <span title="Shipping calculated at next step">ⓘ</span></span><span class="muted">Enter shipping address</span></div>
+        <div class="total">
+          <div>
+            <div style="font-weight:700; margin-bottom:4px">Total</div>
+            <div class="muted">Including ₹17.14 in taxes</div>
+          </div>
+          <div class="amount">INR ₹360.00</div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script>
+    // Tiny enhancement: if all required delivery fields have values, enable the shipping banner text.
+    (function(){
+      const required = Array.from(document.querySelectorAll('.row-2 input, .with-icon input[type="text"], .row-3 input, .row-3 select, .field select'));
+      const banner = document.querySelector('.shipping-banner');
+      function check(){
+        const filled = required.every(el => (el.tagName==='SELECT'? el.value : el.value.trim()).length>0);
+        banner.style.opacity = filled ? '1' : '1';
+        banner.style.filter = filled ? 'grayscale(0%)' : 'grayscale(10%)';
+        banner.textContent = filled ? 'Shipping methods will appear on the next step.' : 'Enter your shipping address to view available shipping methods.';
+      }
+      required.forEach(el => el.addEventListener('input', check));
+    })();
+  </script>
+</body>
+</html>
