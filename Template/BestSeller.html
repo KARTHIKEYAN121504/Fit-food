@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
   <link rel="stylesheet" href="..\Static\BestSeller.css">
   <link rel="icon" href="../Assets/BestSeller/fit and foo logo.avif" type="image/x-icon">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="..\Static\About.css">
 </head>
@@ -188,7 +189,7 @@
 
   <!-- Title -->
   <div class="title-wrap">
-    <h1>Best Sellers</h1>
+    <h1 data-aos="fade-down">Best Sellers</h1>
   </div>
   <div class="filter-bar">
   <div class="availability">
@@ -204,9 +205,12 @@
     <label for="sort">Sort by:</label>
     <select id="sort">
       <option>Best selling</option>
+      <option>Alphabetical, A-Z</option>
+      <option>Alphabetical, Z-A</option>
       <option>Price, low to high</option>
       <option>Price, high to low</option>
-      <option>Newest</option>
+      <option>Date, new to old</option>
+      <option>Date, old to new</option>
     </select>
   </div>
 </div>
@@ -215,7 +219,7 @@
 <main>
   <div class="grid">
 
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
       <div class="img-container">
         <img class="product main-img" src="../Assets/BestSeller/Abc malt powder.jpg" alt="ABC Malt Powder"/>
         <img class="product hover-img" src="..\Assets\BestSeller\abc2.jpg" alt="ABC Malt Powder Benefits"/>
@@ -226,7 +230,7 @@
       <button class="btn">Show options</button>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
       <div class="img-container">
         <img class="product main-img" src="../Assets/BestSeller/karuppu.jpg" alt="Karuppu Kavuni Kanji Mix"/>
         <img class="product hover-img" src="../Assets/BestSeller/Karuppu2.jpg" alt="Karuppu Kavuni Benefits"/>
@@ -237,7 +241,7 @@
       <button class="btn">Show options</button>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
       <div class="img-container">
         <img class="product main-img" src="../Assets/BestSeller/Biotin.jpg" alt="Biotin Powder"/>
         <img class="product hover-img" src="../Assets/BestSeller/Biotin2.jpg" alt="Biotin Powder Benefits"/>
@@ -248,7 +252,7 @@
       <button class="btn">Show options</button>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
       <div class="img-container">
         <img class="product main-img" src="../Assets/BestSeller/Nalungu.jpg" alt="Nalungu Maavu"/>
         <img class="product hover-img" src="..\Assets\BestSeller\nalungu2.jpg" alt="Nalungu Maavu Benefits"/>
@@ -259,7 +263,7 @@
       <button class="btn">Show options</button>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
       <div class="img-container">
         <img class="product main-img" src="../Assets/BestSeller/Sprouted ragi.jpg" alt="Sprouted Ragi Choco Malt"/>
         <img class="product hover-img" src="../Assets/BestSeller/ragi2.jpg" alt="Sprouted Ragi Choco Malt Benefits"/>
@@ -270,7 +274,7 @@
       <button class="btn">Show options</button>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-up" data-aos-delay="400">
       <div class="img-container">
         <img class="product main-img" src="../Assets/BestSeller/curry leaves.jpg" alt="Curry Leaves Powder"/>
         <img class="product hover-img" src="../Assets/BestSeller/curry2.jpg" alt="Curry Leaves Powder Benefits"/>
@@ -495,6 +499,7 @@
   // Initialize subtotal on load
   updateSubtotal();
 </script>
+<<<<<<< HEAD
     <script>
     function toggleMenu() {
   document.getElementById("mobileMenu").classList.toggle("active");
@@ -516,6 +521,20 @@ function openPanel(panelId) {
 }
 
 </script>
+=======
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration
+            easing: 'ease-in-out', // Easing type
+            once: false, // Whether animation should happen only once
+            mirror: true, // Whether elements should animate out while scrolling past them
+        });
+    </script>
+
+
+>>>>>>> 38fa401aa9bb630acc20355ca998c419f879df75
 
 </body>
 </html>

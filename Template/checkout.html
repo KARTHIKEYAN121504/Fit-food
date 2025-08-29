@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Cart - Fit & Food</title>
-    <link rel="stylesheet" href="../Static/About.css">
     <link rel="stylesheet" href="../Static/checkout.css">
   <link rel="icon" href="../Assets/BestSeller/fit and foo logo.avif" type="image/x-icon">
    <link
@@ -138,68 +137,92 @@
 
 </header>
 
-<div class="cart-container">
-  <h1>Shopping cart</h1>
-  <a class="continue-shopping">Continue shopping</a>
-
-  <table>
-  <colgroup>
-    <col style="width:50%"> <!-- Description -->
-    <col style="width:15%"> <!-- Price -->
-    <col style="width:20%"> <!-- Quantity -->
-    <col style="width:15%"> <!-- Total -->
-  </colgroup>
-
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Quantity</th>
-      <th>Total</th>
-    </tr>
-  </thead>
- <tbody id="cart-items">
-        <!-- NOTE: data-price contains the raw numeric unit price (no formatting). -->
-        <tr class="cart-item">
-          <td>
-            <div class="product-info">
-              <img src="../Assets/BestSeller/karuppu.jpg" alt="" />
-              <div>
-                <div class="product-name">Karuppu Kavuni Kanji Mix</div>
-                <div>250gms</div>
-              </div>
-            </div>
-          </td>
-
-          <!-- data-price holds numeric price (integer or decimal) -->
-          <td class="price" data-price="360">Rs. 360.00</td>
-
-          <td>
-            <div class="qty-controls">
-              <button type="button" class="decrease">-</button>
-              <span class="qty">1</span>
-              <button type="button" class="increase">+</button>
-            </div>
-            <a href="#" class="remove-link">Remove</a>
-          </td>
-
-          <!-- total displayed (formatted) -->
-          <td class="total">Rs. 360.00</td>
-        </tr>
-
-        <!--
-          Duplicate rows for additional products. Each product row should include:
-            - a .price element with data-price="X"
-            - a .qty span
-            - a .total cell (will be recalculated automatically)
-        -->
-      </tbody>
-    </table>
-
-    <p class="subtotal">Subtotal: Rs. 0.00</p>
-    <p class="tax-note">Tax included. Shipping calculated at checkout.</p>
-    <button class="checkout-btn">Checkout</button>
-  </div>
+ <div class="cart-container">
+        <h1>Shopping cart</h1>
+        <a class="continue-shopping" href="#">Continue shopping</a>
+        <div class="cart-table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <tr class="cart-item">
+                        <td>
+                            <div class="product-info">
+                                <img src="../Assets/haircare/1.webp" alt="" />
+                                <div>
+                                    <div class="product-name">Karuppu Kavuni Kanji Mix</div>
+                                    <div>250gms</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price" data-price="360">Rs. 360.00</td>
+                        <td>
+                            <div class="qty-controls">
+                                <button type="button" class="decrease">-</button>
+                                <span class="qty">1</span>
+                                <button type="button" class="increase">+</button>
+                            </div>
+                            <a href="#" class="remove-link">Remove</a>
+                        </td>
+                        <td class="total">Rs. 360.00</td>
+                    </tr>
+                    <tr class="cart-item">
+                        <td>
+                            <div class="product-info">
+                                <img src="../Assets/haircare/2.webp" alt="" />
+                                <div>
+                                    <div class="product-name">Karuppu Kavuni Kanji Mix</div>
+                                    <div>250gms</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price" data-price="360">Rs. 360.00</td>
+                        <td>
+                            <div class="qty-controls">
+                                <button type="button" class="decrease">-</button>
+                                <span class="qty">1</span>
+                                <button type="button" class="increase">+</button>
+                            </div>
+                            <a href="#" class="remove-link">Remove</a>
+                        </td>
+                        <td class="total">Rs. 360.00</td>
+                    </tr>
+                    <tr class="cart-item">
+                        <td>
+                            <div class="product-info">
+                                <img src="../Assets/healthdrink/3.webp" alt="" />
+                                <div>
+                                    <div class="product-name">Karuppu Kavuni Kanji Mix</div>
+                                    <div>250gms</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="price" data-price="360">Rs. 360.00</td>
+                        <td>
+                            <div class="qty-controls">
+                                <button type="button" class="decrease">-</button>
+                                <span class="qty">1</span>
+                                <button type="button" class="increase">+</button>
+                            </div>
+                            <a href="#" class="remove-link">Remove</a>
+                        </td>
+                        <td class="total">Rs. 360.00</td>
+                    </tr>
+                    </tbody>
+            </table>
+        </div>
+        <div class="cart-summary">
+            <p class="subtotal">Subtotal: Rs. 0.00</p>
+            <p class="tax-note">Tax included. Shipping calculated at checkout.</p>
+            <a href="Check.html"><button class="checkout-btn">Checkout</button></a>
+        </div>
+    </div>
 
   <!-- Back to Top -->
   <div class="backtop">Back to the top ▲</div>
@@ -256,62 +279,65 @@
   <!-- WhatsApp -->
 <a class="whats" href="https://wa.me/919363599986" target="_blank" title="WhatsApp">
   <img src="../Assets/whatsapp image.png" alt="whats" /></a>
-<script>
-  const tbody = document.querySelector('#cart-items');
 
-  tbody.addEventListener('click', (e) => {
-    const row = e.target.closest('tr');
-    if (!row) return;
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartItemsBody = document.querySelector('#cart-items');
+            const subtotalElement = document.querySelector('.subtotal');
+            
+            // Helper function to format price
+            function formatPrice(price) {
+                return 'Rs. ' + Number(price).toFixed(2);
+            }
 
-    if (e.target.classList.contains('increase')) {
-      const qtyEl = row.querySelector('.qty');
-      qtyEl.textContent = String(parseInt(qtyEl.textContent) + 1);
-      updateRowTotal(row);
-      updateSubtotal();
-    }
+            // Helper function to update the total for a single row
+            function updateRowTotal(row) {
+                const price = parseFloat(row.querySelector('.price').dataset.price);
+                const quantity = parseInt(row.querySelector('.qty').textContent, 10);
+                const total = price * quantity;
+                row.querySelector('.total').textContent = formatPrice(total);
+            }
 
-    if (e.target.classList.contains('decrease')) {
-      const qtyEl = row.querySelector('.qty');
-      const next = Math.max(1, parseInt(qtyEl.textContent) - 1);
-      qtyEl.textContent = String(next);
-      updateRowTotal(row);
-      updateSubtotal();
-    }
+            // Function to calculate and update the subtotal
+            function updateSubtotal() {
+                let subtotal = 0;
+                document.querySelectorAll('.cart-item').forEach(item => {
+                    const price = parseFloat(item.querySelector('.price').dataset.price);
+                    const quantity = parseInt(item.querySelector('.qty').textContent, 10);
+                    subtotal += price * quantity;
+                });
+                subtotalElement.textContent = 'Subtotal: ' + formatPrice(subtotal);
+            }
 
-    if (e.target.classList.contains('remove-link')) {
-      e.preventDefault();
-      row.remove();
-      updateSubtotal();
-    }
-  });
+            // Event listener for the entire cart table body
+            cartItemsBody.addEventListener('click', (event) => {
+                const target = event.target;
+                const row = target.closest('.cart-item');
 
-  // ---- Helpers ----
-  function parsePrice(text) {
-    // Extract digits and decimal safely
-    const num = text.replace(/[^0-9.]/g, '');
-    return parseFloat(num) || 0;
-  }
+                if (!row) return;
 
-  function formatPrice(n) {
-    // Always return Rs. with two decimals
-    return 'Rs. ' + n.toFixed(2);
-  }
+                const qtyElement = row.querySelector('.qty');
+                let currentQty = parseInt(qtyElement.textContent, 10);
 
-  function updateRowTotal(row) {
-    const unit = parsePrice(row.querySelector('.price').textContent);
-    const qty  = parseInt(row.querySelector('.qty').textContent);
-    const total = unit * qty;
-    row.querySelector('.total').textContent = formatPrice(total);
-  }
+                if (target.classList.contains('increase')) {
+                    currentQty++;
+                    qtyElement.textContent = currentQty;
+                } else if (target.classList.contains('decrease')) {
+                    if (currentQty > 1) {
+                        currentQty--;
+                        qtyElement.textContent = currentQty;
+                    }
+                } else if (target.classList.contains('remove-link')) {
+                    event.preventDefault();
+                    row.remove();
+                }
 
-  function updateSubtotal() {
-    let subtotal = 0;
-    document.querySelectorAll('#cart-items tr').forEach(r => {
-      subtotal += parsePrice(r.querySelector('.total').textContent);
-    });
-    document.querySelector('.subtotal').textContent = 'Subtotal: ' + formatPrice(subtotal);
-  }
+                // Update totals after any action
+                updateRowTotal(row);
+                updateSubtotal();
+            });
 
+<<<<<<< HEAD
   // ---- Init ----
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('#cart-items tr').forEach(updateRowTotal);
@@ -432,5 +458,11 @@ function openPanel(panelId) {
 
 </script>
 
+=======
+            // Initial calculation on page load
+            updateSubtotal();
+        });
+    </script>
+>>>>>>> 38fa401aa9bb630acc20355ca998c419f879df75
 <!--Demo--></body>
 </html>
