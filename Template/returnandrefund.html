@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../Static/returnandrefund.css">
   <link rel="stylesheet" href="..\Static\BestSeller.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Phosphor Icons for cart and user icons, and social media icons -->
     <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/dist/p.min.js"></script>
@@ -138,8 +139,8 @@
     <!-- Main Content - Privacy Policy -->
     <main class="container">
         <div class="return-policy-section">
-            <h1 id="return-policy-top">Return and Refund Policy</h1>
-            <ol>
+            <h1 id="return-policy-top" data-aos="fade-down" data-aos-duration="400">Return and Refund Policy</h1>
+            <ol data-aos="fade-right" data-aos-delay="500">
                 <li>Cancellation not allowed, once order is placed; hence no refund will be issued.</li>
                 <li>There will be no Cash on Delivery (COD) orders.</li>
                 <li>Damage due to freight or improper usage or wrong application will not be covered under this policy.
@@ -325,6 +326,16 @@
   // Initialize subtotal on load
   updateSubtotal();
 </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration
+            easing: 'ease-in-out', // Easing type
+            once: false, // Whether animation should happen only once
+            mirror: true, // Whether elements should animate out while scrolling past them
+        });
+    </script>
 
 </body>
 

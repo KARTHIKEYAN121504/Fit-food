@@ -14,6 +14,7 @@
     <!-- Phosphor Icons for cart and user icons, and social media icons -->
     <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/dist/p.min.js"></script>
       <link rel="stylesheet" href="..\Static\BestSeller.css">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="icon" href="../Assets/BestSeller/fit and foo logo.avif" type="image/x-icon">
 
 </head>
@@ -138,9 +139,9 @@
     <!-- Main Content - Privacy Policy -->
     <main class="container">
         <div class="privacy-policy-section">
-            <h1 id="privacy-policy-top">Privacy policy</h1>
-            <h2>Personal Information</h2>
-            <p>
+            <h1 id="privacy-policy-top"  data-aos="fade-down" data-aos-duration="400">Privacy policy</h1>
+            <h2  data-aos="fade-down" data-aos-duration="500">Personal Information</h2>
+            <p data-aos="fade-right" data-aos-delay="500">
                 FIT AND FOOD TAMIL is the owner of the website www.fitandfoodtamil.com. Fit and Food Tamil respects your
                 privacy. This Privacy Policy provides succinctly the manner your data is collected and used by Fit and
                 Food Tamil on the Site. As a visitor to the Site/ Customer you are advised to please read the Privacy
@@ -150,8 +151,8 @@
 
             </p>
 
-            <h2>What information is or may be collected from you?</h2>
-            <p>
+            <h2  data-aos="fade-down" data-aos-duration="600">What information is or may be collected from you?</h2>
+            <p data-aos="fade-right" data-aos-delay="700">
                 As part of the registration process on the Site, Fit and Food Tamil may collect the following personally
                 identifiable information about you: Name including first and last name, alternate email address, mobile
                 phone number and contact details, Postal code, Demographic profile (like your age, gender, occupation,
@@ -159,10 +160,10 @@
                 click on the site, the number of times you access the page and any such browsing information.
             </p>
 
-            <h2>How do we collect the information?
+            <h2  data-aos="fade-down" data-aos-duration="600">How do we collect the information?
 
             </h2>
-            <p>
+            <p data-aos="fade-right" data-aos-delay="700">
                 Fit and Food Tamil will collect personally identifiable information about you only as part of a
                 voluntary registration process, on-line survey or any combination thereof. The Site may contain links to
                 other Web sites. Fit and Food Tamil is not responsible for the privacy practices of such Web sites which
@@ -173,10 +174,10 @@
 
             </p>
 
-            <h2>How is the information used?
+            <h2 data-aos="fade-down" data-aos-duration="600">How is the information used?
 
             </h2>
-            <p>
+            <p data-aos="fade-right" data-aos-delay="700">
                 Fit and Food Tamil will use your personal information to provide personalized features to you on the
                 Site and to provide for promotional offers to you through the Site and other channel. Fit and Food Tamil
                 will also provide this information to its business associates and partners to get in touch with you when
@@ -192,10 +193,10 @@
 
             </p>
 
-            <h2>With whom will your information be shared?
+            <h2 data-aos="fade-down" data-aos-duration="600">With whom will your information be shared?
 
             </h2>
-            <p>
+            <p data-aos="fade-right" data-aos-delay="700">
                 Fit and Food Tamil will not use your financial information for any purpose other than to complete a
                 transaction with you. Fit and Food Tamil does not rent, sell or share your personal information and will
                 not disclose any of your personally identifiable information to third parties. In addition Fit and Food
@@ -207,10 +208,10 @@
 
             </p>
 
-            <h2>What choices are available to you, regarding collection, use and distribution of information?
+            <h2 data-aos="fade-down" data-aos-duration="600">What choices are available to you, regarding collection, use and distribution of information?
 
             </h2>
-            <p>
+            <p data-aos="fade-right" data-aos-delay="700">
                 Supplying personally identifiable information is entirely voluntary. You are required to register with
                 the Site in order to shop on the site. You may change your interests at any time and may opt-in or
                 opt-out of any marketing / promotional / newsletters mailings. The Site reserve the right to send you
@@ -225,10 +226,10 @@
 
             </p>
 
-            <h2>What security procedures are in place to protect information from loss or misuse, or alteration?
+            <h2 data-aos="fade-down" data-aos-duration="600">What security procedures are in place to protect information from loss or misuse, or alteration?
 
             </h2>
-            <p>
+            <p data-aos="fade-right" data-aos-delay="700">
                 To protect against the loss, misuse and alteration of the information under its control, Fit and Food
                 Tamil has in place appropriate physical, electronic and managerial procedures. For example, Fit and Food
                 Tamil servers are accessible only to authorized personnel and your information is shared with employees
@@ -239,15 +240,15 @@
                 disclosure of your information due to errors in transmission or unauthorized acts of third parties.
 
             </p>
-            <h2>How can you correct in accuracies in the information
+            <h2 data-aos="fade-down" data-aos-duration="600">How can you correct in accuracies in the information
 
             </h2>
-            <p>To correct or update any information you have provided, the Site allows you to do it online. In the event
+            <p data-aos="fade-right" data-aos-delay="700">To correct or update any information you have provided, the Site allows you to do it online. In the event
                 of loss of access details you can send an e-mail to: fitandfoodtamil@gmail.com
 
             </p>
-            <h2>Policy updates</h2>
-            <p>Fit and Food Tamil reserves the right to change or update this policy at any time. Such changes shall be
+            <h2 data-aos="fade-down" data-aos-duration="600">Policy updates</h2>
+            <p data-aos="fade-right" data-aos-delay="700">Fit and Food Tamil reserves the right to change or update this policy at any time. Such changes shall be
                 effective immediately upon posting to the Site.
 
             </p>
@@ -426,6 +427,16 @@
   // Initialize subtotal on load
   updateSubtotal();
 </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration
+            easing: 'ease-in-out', // Easing type
+            once: false, // Whether animation should happen only once
+            mirror: true, // Whether elements should animate out while scrolling past them
+        });
+    </script>
 
 </body>
 
