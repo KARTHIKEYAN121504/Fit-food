@@ -51,7 +51,7 @@
 
   <!-- Navigation Links -->
   <nav class="nav-links">
-  <a href="#">Home</a>
+  <a href="index.html">Home</a>
 
   <!-- Dropdown -->
   <div class="dropdown">
@@ -131,22 +131,27 @@
 
 <div class="slider">
   <div class="slides">
-    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Biotin_Powder_Desktop_1512x.png?v=1720094634" class="active" alt="Slide 1">
+    <!-- Original slides -->
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_ABC_Mix_Banner_Desktop_1512x.png?v=1720094634" alt="Slide 1">
     <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Kuruppu_Ulunthu_Kanji_Mix_Powder_Desktop_1512x.png?v=1733471566" alt="Slide 2">
-    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Pirandai_Powder_Desktop_1512x.jpg?v=1751371374" alt="Slide 3">
-    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food__Aavarampoo__Kuliyal_Powder_Banner_Desktop_1512x.jpg?v=1751634958" alt="Slide 4">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Premium__Shikakai_Powder_Desktop_1512x.jpg?v=1750922067" alt="Slide 3">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Biotin_Powder_Desktop_1512x.png?v=1720094634" alt="Slide 4">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_Premium_Kuliyal_Powder_Banner_Desktop_1512x.jpg?v=1750921944" alt="Slide 5">
+    <!-- Clone of first slide for smooth looping -->
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit_and_Food_ABC_Mix_Banner_Desktop_1512x.png?v=1720094634" alt="Slide 1 clone">
   </div>
 
   <!-- Controller inside image -->
   <div class="buttons">
-    <button onclick="showSlide(0)" class="active"></button>
-    <button onclick="showSlide(1)"></button>
-    <button onclick="showSlide(2)"></button>
-    <button onclick="showSlide(3)"></button>
+    <button onclick="goToSlide(0)" class="active"></button>
+    <button onclick="goToSlide(1)"></button>
+    <button onclick="goToSlide(2)"></button>
+    <button onclick="goToSlide(3)"></button>
+    <button onclick="goToSlide(4)"></button>
   </div>
 </div>
   <div class="chat-bar" role="region" aria-label="Chat with us">
-  <i class="fa-regular fa-comment-dots"></i>
+<i class="fa-regular fa-comment-dots"></i>
     <div>
       <p>Chat With Us</p>
       <p>Talk to our team via chat</p>
@@ -245,596 +250,306 @@
       </article>
     </div>
   </section>
-  <section class="welcome-banner" aria-label="Welcome banner">
+  <div class="welcome-banner" aria-label="Welcome banner">
     <img
-      src="https://storage.googleapis.com/a1aa/image/2bc45145-01f8-44a3-ea44-a49e1686f1c9.jpg"
+      src="https://www.fitandfoodtamil.com/cdn/shop/files/Fit-Food-Banner_87233877-7778-4e92-8a8f-a54870e82f4e_1296x.jpg?v=1743071650"
       alt="Welcome to Fit and Food Tamil banner with green leaves background and text about healthy food and social media icons"
-      width="900"
-      height="180"
       loading="lazy"
     />
-  </section>
-  <section class="our-care" aria-label="Our Care">
-    <h2>Our Care</h2>
-    <div class="our-care-scroll-wrapper" aria-live="polite" aria-atomic="true">
-      <div class="our-care-scroll" aria-hidden="true">
-        <article class="our-care-item">
-          <img
-            src="https://storage.googleapis.com/a1aa/image/683a2fa5-48f6-4415-9a2d-269b5922c4df.jpg"
-            alt="Weight Gain product image with nuts on a light background"
-            width="140"
-            height="120"
-            loading="lazy"
-          />
-          <p>Weight Gain</p>
-        </article>
-        <article class="our-care-item">
-          <img
-            src="https://storage.googleapis.com/a1aa/image/cd3f2310-ef09-4c79-a3e8-bf209cff6a76.jpg"
-            alt="Best Sellers product image with multiple packages on a light background"
-            width="140"
-            height="120"
-            loading="lazy"
-          />
-          <p>Best Sellers</p>
-        </article>
-        <article class="our-care-item">
-          <img
-            src="https://storage.googleapis.com/a1aa/image/10801eac-d34b-489d-25f6-b70113628491.jpg"
-            alt="Combo product image with multiple packages on a light background"
-            width="140"
-            height="120"
-            loading="lazy"
-          />
-          <p>Combo</p>
-        </article>
-        <article class="our-care-item">
-          <img
-            src="https://storage.googleapis.com/a1aa/image/ced4dd15-840d-4ef2-5a71-523704f431b9.jpg"
-            alt="Traditional Healthy product image with person and package on a light background"
-            width="140"
-            height="120"
-            loading="lazy"
-          />
-          <p>Traditional Healthy</p>
-        </article>
-        <article class="our-care-item">
-          <img
-            src="https://storage.googleapis.com/a1aa/image/1a2b3c4d-5678-90ab-cdef-1234567890ab.jpg"
-            alt="Baby Care product image with baby and products on a light background"
-            width="140"
-            height="120"
-            loading="lazy"
-          />
-          <p>Baby Care</p>
-        </article>
-        <article class="our-care-item">
-          <img
-            src="https://storage.googleapis.com/a1aa/image/2b3c4d5e-6789-01bc-def0-2345678901bc.jpg"
-            alt="Haircare product image with hair products on a light background"
-            width="140"
-            height="120"
-            loading="lazy"
-          />
-          <p>Haircare</p>
-        </article>
-        <article class="our-care-item">
-          <img
-            src="https://storage.googleapis.com/a1aa/image/3c4d5e6f-7890-12cd-ef01-3456789012cd.jpg"
-            alt="Weightloss product image with supplements on a light background"
-            width="140"
-            height="120"
-            loading="lazy"
-          />
-          <p>Weightloss</p>
-        </article>
-        <!-- Repeat for seamless scroll -->
-        <article class="our-care-item">
-          <img
-            src="https://storage.googleapis.com/a1aa/image/683a2fa5-48f6-4415-9a2d-269b5922c4df.jpg"
-            alt="Weight Gain product image with nuts on a light background"
-            width="140"
-            height="120"
-            loading="lazy"
-          />
-          <p>Weight Gain</p>
-        </article>
-        <article class="our-care-item">
-          <img
-            src="https://storage.googleapis.com/a1aa/image/cd3f2310-ef09-4c79-a3e8-bf209cff6a76.jpg"
-            alt="Best Sellers product image with multiple packages on a light background"
-            width="140"
-            height="120"
-            loading="lazy"
-          />
-          <p>Best Sellers</p>
-        </article>
-        <article class="our-care-item">
-          <img
-            src="https://storage.googleapis.com/a1aa/image/10801eac-d34b-489d-25f6-b70113628491.jpg"
-            alt="Combo product image with multiple packages on a light background"
-            width="140"
-            height="120"
-            loading="lazy"
-          />
-          <p>Combo</p>
-        </article>
-        <article class="our-care-item">
-          <img
-            src="https://storage.googleapis.com/a1aa/image/ced4dd15-840d-4ef2-5a71-523704f431b9.jpg"
-            alt="Traditional Healthy product image with person and package on a light background"
-            width="140"
-            height="120"
-            loading="lazy"
-          />
-          <p>Traditional Healthy</p>
-        </article>
-        <article class="our-care-item">
-          <img
-            src="https://storage.googleapis.com/a1aa/image/1a2b3c4d-5678-90ab-cdef-1234567890ab.jpg"
-            alt="Baby Care product image with baby and products on a light background"
-            width="140"
-            height="120"
-            loading="lazy"
-          />
-          <p>Baby Care</p>
-        </article>
-        <article class="our-care-item">
-          <img
-            src="https://storage.googleapis.com/a1aa/image/2b3c4d5e-6789-01bc-def0-2345678901bc.jpg"
-            alt="Haircare product image with hair products on a light background"
-            width="140"
-            height="120"
-            loading="lazy"
-          />
-          <p>Haircare</p>
-        </article>
-        <article class="our-care-item">
-          <img
-            src="https://storage.googleapis.com/a1aa/image/3c4d5e6f-7890-12cd-ef01-3456789012cd.jpg"
-            alt="Weightloss product image with supplements on a light background"
-            width="140"
-            height="120"
-            loading="lazy"
-          />
-          <p>Weightloss</p>
-        </article>
-      </div>
-    </div>
-  </section>
-  <a
-    href="https://wa.me/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Chat on WhatsApp"
-    class="whatsapp-btn"
-  >
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <div class="container">
-    <h2>Shop by Videos</h2>
-    <div class="horizontal-scroll">
-      <div class="card">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/49318a2b-ca8e-432d-4389-919ee4920859.jpg"
-          alt="Video thumbnail showing ABC Malt Powder in clay cups with cashew nuts on wooden table"
-          height="192"
-          width="144"
-        />
-        <div class="card-content">
-          <div class="card-title-row">
-            <img
-              src="https://storage.googleapis.com/a1aa/image/e52bfd0f-398e-444b-76ab-0d87c33198f7.jpg"
-              alt="Small product icon for ABC Malt Powder"
-              height="20"
-              width="20"
-            />
-            <p class="card-title">ABC Malt Powder</p>
-          </div>
-          <p class="card-price">Rs. 365.00</p>
-          <button class="btn-add">
-            Add to cart <i class="fas fa-caret-down"></i>
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/1cf36d83-b6ac-4be4-5726-f15f5b3676e6.jpg"
-          alt="Video thumbnail showing Karuppu Kavuni Kanji Mix in clay pot with hand stirring and grains on table"
-          height="192"
-          width="144"
-        />
-        <div class="card-content">
-          <div class="card-title-row">
-            <img
-              src="https://storage.googleapis.com/a1aa/image/a1ce5331-ef77-4f19-2482-f1ec42794f92.jpg"
-              alt="Small product icon for Karuppu Kavuni Kanji Mix"
-              height="20"
-              width="20"
-            />
-            <p class="card-title">Karuppu Kavuni Kanji Mix</p>
-          </div>
-          <p class="card-price">Rs. 360.00</p>
-          <button class="btn-add">
-            Add to cart <i class="fas fa-caret-down"></i>
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/e349bd31-0c5e-4fbc-3d22-c2f22401657e.jpg"
-          alt="Video thumbnail showing man pointing to his head wearing blue shirt"
-          height="192"
-          width="144"
-        />
-        <div class="card-content">
-          <div class="card-title-row">
-            <img
-              src="https://storage.googleapis.com/a1aa/image/29db5133-6a42-4a86-fe02-cc4d239f7f09.jpg"
-              alt="Small product icon for Biotin Powder"
-              height="20"
-              width="20"
-            />
-            <p class="card-title">Biotin Powder</p>
-          </div>
-          <p class="card-price">Rs. 299.00</p>
-          <button class="btn-add">
-            Add to cart <i class="fas fa-caret-down"></i>
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/karupu-uluntu-kanji.jpg"
-          alt="Video thumbnail showing Karupu Uluntu Kanji in clay pot with hand stirring"
-          height="192"
-          width="144"
-        />
-        <div class="card-content">
-          <div class="card-title-row">
-            <img
-              src="https://storage.googleapis.com/a1aa/image/karupu-uluntu-icon.jpg"
-              alt="Small product icon for Karupu Uluntu Kanji"
-              height="20"
-              width="20"
-            />
-            <p class="card-title">Karupu Uluntu Kanji</p>
-          </div>
-          <p class="card-price">Rs. 320.00</p>
-          <button class="btn-add">
-            Add to cart <i class="fas fa-caret-down"></i>
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/030482db-5849-48c7-c1f8-b55e12415f64.jpg"
-          alt="Video thumbnail showing Nalungu Maavu package with wooden stand"
-          height="192"
-          width="144"
-        />
-        <div class="card-content">
-          <div class="card-title-row">
-            <img
-              src="https://storage.googleapis.com/a1aa/image/nalungu-maavu-icon.jpg"
-              alt="Small product icon for Nalungu Maavu"
-              height="20"
-              width="20"
-            />
-            <p class="card-title">Nalungu Maavu</p>
-          </div>
-          <p class="card-price">Rs. 280.00</p>
-          <button class="btn-add">
-            Add to cart <i class="fas fa-caret-down"></i>
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/54e4c1a9-8b6e-43a1-3eb8-730b3c48b0c7.jpg"
-          alt="Video thumbnail showing Kuliyal Podi package on wooden stand"
-          height="192"
-          width="144"
-        />
-        <div class="card-content">
-          <div class="card-title-row">
-            <img
-              src="https://storage.googleapis.com/a1aa/image/kuliyal-podi-icon.jpg"
-              alt="Small product icon for Kuliyal Podi"
-              height="20"
-              width="20"
-            />
-            <p class="card-title">Kuliyal Podi</p>
-          </div>
-          <p class="card-price">Rs. 310.00</p>
-          <button class="btn-add">
-            Add to cart <i class="fas fa-caret-down"></i>
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/shikakai-powder.jpg"
-          alt="Video thumbnail showing Shikakai Powder package on wooden stand"
-          height="192"
-          width="144"
-        />
-        <div class="card-content">
-          <div class="card-title-row">
-            <img
-              src="https://storage.googleapis.com/a1aa/image/shikakai-icon.jpg"
-              alt="Small product icon for Shikakai Powder"
-              height="20"
-              width="20"
-            />
-            <p class="card-title">Shikakai Powder</p>
-          </div>
-          <p class="card-price">Rs. 250.00</p>
-          <button class="btn-add">
-            Add to cart <i class="fas fa-caret-down"></i>
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/moringa-leaf-powder.jpg"
-          alt="Video thumbnail showing Moringa Leaf Powder package on wooden stand"
-          height="192"
-          width="144"
-        />
-        <div class="card-content">
-          <div class="card-title-row">
-            <img
-              src="https://storage.googleapis.com/a1aa/image/moringa-icon.jpg"
-              alt="Small product icon for Moringa Leaf Powder"
-              height="20"
-              width="20"
-            />
-            <p class="card-title">Moringa Leaf Powder</p>
-          </div>
-          <p class="card-price">Rs. 270.00</p>
-          <button class="btn-add">
-            Add to cart <i class="fas fa-caret-down"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="middle-grid">
-      <div class="relative">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/eaa31d81-87e7-4f39-b6b1-ebcc18adb0ee.jpg"
-          alt="Hand holding two ABC Malt Powder packages on wooden board with red cloth background"
-          height="200"
-          width="300"
-        />
-        <div class="label-top-left">Skin Care</div>
-        <div class="label-bottom-text">Skin Glowing Health Drink</div>
-      </div>
-      <div class="relative">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/fca8ac8e-894f-4fd6-bb09-900ebcf812e3.jpg"
-          alt="Hands opening yellow box with hair care products inside, red saree background"
-          height="200"
-          width="300"
-        />
-        <div class="label-top-left">Hair Care</div>
-        <div class="label-bottom-text">Precious Gift made with Mom's love</div>
-      </div>
-      <div class="relative full-width">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/7c393b67-12bc-440e-83ec-d90233b3b176.jpg"
-          alt="Pouring brown liquid into clay pot with grains around, weight loss product"
-          height="200"
-          width="600"
-        />
-        <div class="label-top-left">Weight Loss</div>
-      </div>
-    </div>
-
-    <div class="section-header">
-      <h3>Skin Care Powders</h3>
-      <a href="#">View all</a>
-    </div>
-    <div class="product-list">
-      <div class="product-item">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/6b9539ed-88ea-466a-34fa-a3ef3d3bb824.jpg"
-          alt="ABC Malt Powder package on wooden stand with yellow label"
-          height="96"
-          width="96"
-        />
-        <p class="product-name">ABC Malt Powder</p>
-        <div class="reviews">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i
-          ><i class="fas fa-star"></i><i class="fas fa-star"></i
-          ><i class="fas fa-star"></i>
-          <span>254 reviews</span>
-        </div>
-      </div>
-      <div class="product-item">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/54e4c1a9-8b6e-43a1-3eb8-730b3c48b0c7.jpg"
-          alt="Premium Kuliyal Podi Bath Powder package on wooden stand with yellow label"
-          height="96"
-          width="96"
-        />
-        <p class="product-name">Premium Kuliyal Podi / Bath Powder</p>
-        <div class="reviews">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i
-          ><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          <span>32 reviews</span>
-        </div>
-      </div>
-      <div class="product-item">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/030482db-5849-48c7-c1f8-b55e12415f64.jpg"
-          alt="Nalungu Maavu package on wooden stand with yellow label"
-          height="96"
-          width="96"
-        />
-        <p class="product-name">Nalungu Maavu</p>
-        <div class="reviews">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i
-          ><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          <span>39 reviews</span>
-        </div>
-      </div>
-      <div class="product-item">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/5f492b10-fefd-45a2-91a8-e07d6cf7d11d.jpg"
-          alt="Biotin Powder package on wooden stand with yellow label"
-          height="96"
-          width="96"
-        />
-        <p class="product-name">Biotin Powder</p>
-        <div class="reviews">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i
-          ><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          <span>152 reviews</span>
-        </div>
-      </div>
-      <div class="product-item">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/karupu-uluntu-kanji.jpg"
-          alt="Karupu Uluntu Kanji package on wooden stand with yellow label"
-          height="96"
-          width="96"
-        />
-        <p class="product-name">Karupu Uluntu Kanji</p>
-        <div class="reviews">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i
-          ><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          <span>45 reviews</span>
-        </div>
-      </div>
-      <div class="product-item">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/030482db-5849-48c7-c1f8-b55e12415f64.jpg"
-          alt="Nalungu Maavu package on wooden stand with yellow label"
-          height="96"
-          width="96"
-        />
-        <p class="product-name">Nalungu Maavu</p>
-        <div class="reviews">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i
-          ><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          <span>39 reviews</span>
-        </div>
-      </div>
-      <div class="product-item">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/54e4c1a9-8b6e-43a1-3eb8-730b3c48b0c7.jpg"
-          alt="Kuliyal Podi package on wooden stand with yellow label"
-          height="96"
-          width="96"
-        />
-        <p class="product-name">Kuliyal Podi</p>
-        <div class="reviews">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i
-          ><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          <span>32 reviews</span>
-        </div>
-      </div>
-      <div class="product-item">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/shikakai-powder.jpg"
-          alt="Shikakai Powder package on wooden stand with yellow label"
-          height="96"
-          width="96"
-        />
-        <p class="product-name">Shikakai Powder</p>
-        <div class="reviews">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i
-          ><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          <span>28 reviews</span>
-        </div>
-      </div>
-      <div class="product-item">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/moringa-leaf-powder.jpg"
-          alt="Moringa Leaf Powder package on wooden stand with yellow label"
-          height="96"
-          width="96"
-        />
-        <p class="product-name">Moringa Leaf Powder</p>
-        <div class="reviews">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i
-          ><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          <span>30 reviews</span>
-        </div>
-      </div>
-    </div>
   </div>
-    <section>
-    <h2>Hair Care Powders</h2>
-    <div class="grid">
-      <div class="product-card">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/c89659d1-bed1-494e-42db-c6622ffa14e2.jpg"
-          alt="Biotin Powder Packet with woman in blue saree and wooden stand"
-          class="product-image"
-          width="280"
-          height="280"
-        />
-        <p class="product-name">Biotin Powder</p>
-        <div class="reviews">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          <span>152 reviews</span>
-        </div>
-        <p class="price">From <strong>Rs. 299.00</strong></p>
-        <button class="btn">Show options</button>
-      </div>
-      <div class="product-card">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/0708a63f-de82-4fb5-5f4e-af7780f8bdf1.jpg"
-          alt="Shikakai Powder Packet with woman in blue saree and wooden stand"
-          class="product-image"
-          width="280"
-          height="280"
-        />
-        <p class="product-name">Shikakai Powder</p>
-        <div class="reviews">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          <span>15 reviews</span>
-        </div>
-        <p class="price">From <strong>Rs. 340.00</strong></p>
-        <button class="btn">Show options</button>
-      </div>
-      <div class="product-card">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/4b47d951-8fe5-4629-26d0-8e38af12785f.jpg"
-          alt="Curry Leaves Powder Packet with woman in blue saree and wooden stand"
-          class="product-image"
-          width="280"
-          height="280"
-        />
-        <p class="product-name">Curry Leaves Powder</p>
-        <div class="reviews">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          <span>5 reviews</span>
-        </div>
-        <p class="price">From <strong>Rs. 220.00</strong></p>
-        <button class="btn">Show options</button>
-      </div>
-      <div class="product-card">
-        <img
-          src="https://storage.googleapis.com/a1aa/image/25b31746-08d9-449e-2c36-955494e2d4de.jpg"
-          alt="Premium Shikakai Powder Packet with woman in blue saree and wooden stand"
-          class="product-image"
-          width="280"
-          height="280"
-        />
-        <p class="product-name">Premium Shikakai Powder</p>
-        <div class="reviews">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          <span>13 reviews</span>
-        </div>
-        <p class="price">From <strong>Rs. 460.00</strong></p>
-        <button class="btn">Show options</button>
-      </div>
+<section class="our-care" aria-label="Our Care">
+  <h2>Our Care</h2>
+  <div class="our-care-scroll-wrapper">
+    <button class="slider-btn prev">&#10094;</button>
+    <div class="our-care-scroll" id="slider2">
+      <!-- All your cards -->
+      <article class="our-care-item">
+        <img src="https://storage.googleapis.com/a1aa/image/683a2fa5-48f6-4415-9a2d-269b5922c4df.jpg" alt="Weight Gain"/>
+        <p>Weight Gain</p>
+      </article>
+      <article class="our-care-item">
+        <img src="https://storage.googleapis.com/a1aa/image/cd3f2310-ef09-4c79-a3e8-bf209cff6a76.jpg" alt="Best Sellers"/>
+        <p>Best Sellers</p>
+      </article>
+      <article class="our-care-item">
+        <img src="https://storage.googleapis.com/a1aa/image/10801eac-d34b-489d-25f6-b70113628491.jpg" alt="Combo"/>
+        <p>Combo</p>
+      </article>
+      <article class="our-care-item">
+        <img src="https://storage.googleapis.com/a1aa/image/ced4dd15-840d-4ef2-5a71-523704f431b9.jpg" alt="Traditional Healthy"/>
+        <p>Traditional Healthy</p>
+      </article>
+      <article class="our-care-item">
+        <img src="https://www.fitandfoodtamil.com/cdn/shop/collections/Baby_Care_2_400x.png?v=1729245742" alt="Baby Care"/>
+        <p>Baby Care</p>
+      </article>
+      <article class="our-care-item">
+        <img src="https://www.fitandfoodtamil.com/cdn/shop/collections/Hair_Care_Powders_2_400x.png?v=1729245726" alt="Haircare"/>
+        <p>Haircare</p>
+      </article>
+      <article class="our-care-item">
+        <img src="https://www.fitandfoodtamil.com/cdn/shop/collections/Weight_Loss_Powders_2_400x.png?v=1729245800" alt="Weightloss"/>
+        <p>Weightloss</p>
+      </article>
+      <!-- clones for looping -->
+      <article class="our-care-item">
+        <img src="https://www.fitandfoodtamil.com/cdn/shop/collections/Weight_Gain_2_400x.png?v=1729245814" alt="Weight Gain Clone"/>
+        <p>Weight Gain</p>
+      </article>
+      <article class="our-care-item">
+        <img src="https://storage.googleapis.com/a1aa/image/cd3f2310-ef09-4c79-a3e8-bf209cff6a76.jpg" alt="Best Sellers Clone"/>
+        <p>Best Sellers</p>
+      </article>
     </div>
-  </section>
+  <button class="slider-btn next">&#10095;</button>
+  </div>
+</section>
+<div class="container">
+  <h2>Shop by Videos</h2>
+
+  <div class="carousel-wrapper">
+    <!-- Left Button -->
+    <button class="scroll-btn left" id="scrollPrev">❮</button>
+
+    <!-- Scrollable Carousel -->
+    <div class="carousel" id="videoCarousel">
+
+      <!-- Product 1 -->
+      <div class="card">
+        <video src="https://storage.googleapis.com/a1aa/video/abc-malt-powder.mp4" muted loop autoplay playsinline></video>
+        <div class="card-content">
+          <p class="card-title">ABC Malt Powder</p>
+          <p class="card-price">Rs. 365.00</p>
+          <button class="btn-add">Add to cart <i class="fas fa-caret-down"></i></button>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="card">
+        <video src="https://storage.googleapis.com/a1aa/video/karuppu-kavuni-kanji.mp4" muted loop autoplay playsinline></video>
+        <div class="card-content">
+          <p class="card-title">Karuppu Kavuni Kanji Mix</p>
+          <p class="card-price">Rs. 360.00</p>
+          <button class="btn-add">Add to cart <i class="fas fa-caret-down"></i></button>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="card">
+        <video src="https://storage.googleapis.com/a1aa/video/biotin-powder.mp4" muted loop autoplay playsinline></video>
+        <div class="card-content">
+          <p class="card-title">Biotin Powder</p>
+          <p class="card-price">Rs. 299.00</p>
+          <button class="btn-add">Add to cart <i class="fas fa-caret-down"></i></button>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="card">
+        <video src="https://storage.googleapis.com/a1aa/video/karupu-uluntu-kanji.mp4" muted loop autoplay playsinline></video>
+        <div class="card-content">
+          <p class="card-title">Karupu Uluntu Kanji</p>
+          <p class="card-price">Rs. 320.00</p>
+          <button class="btn-add">Add to cart <i class="fas fa-caret-down"></i></button>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="card">
+        <video src="https://storage.googleapis.com/a1aa/video/nalungu-maavu.mp4" muted loop autoplay playsinline></video>
+        <div class="card-content">
+          <p class="card-title">Nalungu Maavu</p>
+          <p class="card-price">Rs. 280.00</p>
+          <button class="btn-add">Add to cart <i class="fas fa-caret-down"></i></button>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="card">
+        <video src="https://storage.googleapis.com/a1aa/video/kuliyal-podi.mp4" muted loop autoplay playsinline></video>
+        <div class="card-content">
+          <p class="card-title">Kuliyal Podi</p>
+          <p class="card-price">Rs. 310.00</p>
+          <button class="btn-add">Add to cart <i class="fas fa-caret-down"></i></button>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="card">
+        <video src="https://storage.googleapis.com/a1aa/video/shikakai-powder.mp4" muted loop autoplay playsinline></video>
+        <div class="card-content">
+          <p class="card-title">Shikakai Powder</p>
+          <p class="card-price">Rs. 250.00</p>
+          <button class="btn-add">Add to cart <i class="fas fa-caret-down"></i></button>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="card">
+        <video src="https://storage.googleapis.com/a1aa/video/moringa-leaf-powder.mp4" muted loop autoplay playsinline></video>
+        <div class="card-content">
+          <p class="card-title">Moringa Leaf Powder</p>
+          <p class="card-price">Rs. 270.00</p>
+          <button class="btn-add">Add to cart <i class="fas fa-caret-down"></i></button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Button -->
+    <button class="scroll-btn right" id="scrollNext">❯</button>
+  </div>
+</div>
+<div class="middle-grid">
+  <!-- Skin Care -->
+  <div class="relative">
+    <video autoplay muted loop playsinline>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+    <div class="label-top-left">Skin Care</div>
+  </div>
+
+  <!-- Hair Care -->
+  <div class="relative">
+    <video autoplay muted loop playsinline>
+      <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+    <div class="label-top-left">Hair Care</div>
+  </div>
+
+  <!-- Weight Loss -->
+  <div class="relative">
+    <video autoplay muted loop playsinline>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+    <div class="label-top-left">Weight Loss</div>
+  </div>
+</div>
+
+<div class="section-header">
+  <h3>Skin Care Powders</h3>
+  <a href="#">View all</a>
+</div>
+
+<div class="product-list">
+  <div class="product-item">
+    <img src="https://storage.googleapis.com/a1aa/image/6b9539ed-88ea-466a-34fa-a3ef3d3bb824.jpg" alt="ABC Malt Powder" />
+    <p class="product-name">ABC Malt Powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>254 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://storage.googleapis.com/a1aa/image/54e4c1a9-8b6e-43a1-3eb8-730b3c48b0c7.jpg" alt="Premium Kuliyal Podi" />
+    <p class="product-name">Premium Kuliyal Podi</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>32 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://storage.googleapis.com/a1aa/image/030482db-5849-48c7-c1f8-b55e12415f64.jpg" alt="Nalungu Maavu" />
+    <p class="product-name">Nalungu Maavu</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>39 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://storage.googleapis.com/a1aa/image/5f492b10-fefd-45a2-91a8-e07d6cf7d11d.jpg" alt="Biotin Powder" />
+    <p class="product-name">Biotin powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>152 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/01_c3175527-856d-4892-b5cf-dc538386bafc_220x.jpg?v=1721027684" alt="Avarampoo rose bath powder" />
+    <p class="product-name">Avarampoo Rose bath powder</p>
+    <div class="reviews" style="margin-top: 20px;">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>45 reviews</span>
+    </div>
+    <p class="price" style="margin-top: 12px;">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+</div>
+<div class="section-header">
+  <h3>Hair Care Powders</h3>
+</div>
+
+<div class="product-list">
+  <div class="product-item">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/01_a22d8555-48b2-488e-8ac0-16bb41465439_220x.jpg?v=1721026819" alt="ABC Malt Powder" />
+    <p class="product-name">Biotin powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>254 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/01_0a94fd4e-be31-4d6d-8895-1777cb183258_220x.jpg?v=1721028273" alt="Premium Kuliyal Podi" />
+    <p class="product-name">Shikakai powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>32 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/01_5105535e-c131-46ad-9eca-e0d28482920d_220x.jpg?v=1721027717" alt="Nalungu Maavu" />
+    <p class="product-name">Curry leaves powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>39 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/01_81040537-516a-49ce-b17e-fa8c47e83ebe_220x.jpg?v=1721028237" alt="Biotin Powder" />
+    <p class="product-name">Premium Shikakai powder</p>
+    <div class="reviews" style="margin-top: 20px;">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>152 reviews</span>
+    </div>
+    <p class="price" style="margin-top: 14px;">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+
+  <div class="product-item">
+    <img src="https://www.fitandfoodtamil.com/cdn/shop/files/01_c3175527-856d-4892-b5cf-dc538386bafc_220x.jpg?v=1721027684" alt="Avarampoo rose bath powder" />
+    <p class="product-name">Moringa leaf powder</p>
+    <div class="reviews">
+      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+      <span>45 reviews</span>
+    </div>
+    <p class="price">From Rs :₹250</p>
+    <button class="btn">Add to Cart</button>
+  </div>
+</div>
 
   <section>
     <h2>Weight Loss Powders</h2>
@@ -1239,7 +954,7 @@
       clearTimeout(window.autoScrollTimeout);
       window.autoScrollTimeout = setTimeout(() => {
         startAutoScroll();
-      }, 3000);
+      }, 5000);
     }
 
     // Start auto scroll on page load
@@ -1279,8 +994,8 @@
 
       <!-- Middle -->
       <div class="footer-col">
-        <a href="#">Home</a>
-        <a href="#">Our Collections</a>
+        <a href="index.html">Home</a>
+        <a href="ourcollection.html">Our Collections</a>
         <a href="About.html">About Us</a>
         <a href="contact.html">Contact Us</a>
       </div>
@@ -1316,41 +1031,170 @@
   </a>
 
   <!-- JS -->
-  <script>
-    const slides = document.querySelectorAll(".slides img");
-  const buttons = document.querySelectorAll(".buttons button");
-  let currentIndex = 0;
-  let slideInterval;
+<script>
+const slides = document.querySelector('.slides');
+const slideImages = document.querySelectorAll('.slides img');
+const buttons = document.querySelectorAll('.buttons button');
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("active", i === index);
-      buttons[i].classList.toggle("active", i === index);
-    });
-    currentIndex = index;
-  }
+let currentIndex = 0;
+let slideInterval;
+const slideCount = slideImages.length - 1; // last one is clone
 
-  function nextSlide() {
-    let nextIndex = (currentIndex + 1) % slides.length;
-    showSlide(nextIndex);
-  }
+function goToSlide(index) {
+  slides.style.transition = "transform 0.8s ease-in-out";
+  currentIndex = index;
+  slides.style.transform = `translateX(${-index * 100}%)`;
 
-  // Auto-slide every 3 seconds
-  function startAutoSlide() {
-    slideInterval = setInterval(nextSlide, 3000);
-  }
+  updateButtons();
+}
 
-  // Restart auto-slide after manual click
+// update active button
+function updateButtons() {
   buttons.forEach((btn, i) => {
-    btn.addEventListener("click", () => {
-      showSlide(i);
-      clearInterval(slideInterval);
-      startAutoSlide();
-    });
+    btn.classList.toggle("active", i === currentIndex % slideCount);
+  });
+}
+
+function nextSlide() {
+  currentIndex++;
+  slides.style.transition = "transform 0.8s ease-in-out";
+  slides.style.transform = `translateX(${-currentIndex * 100}%)`;
+
+  if (currentIndex === slideCount) {
+    // wait for transition to finish before resetting instantly
+    setTimeout(() => {
+      slides.style.transition = "none"; 
+      slides.style.transform = "translateX(0)";
+      currentIndex = 0;
+      updateButtons();
+    }, 800); // match transition duration
+  }
+  updateButtons();
+}
+
+// auto slide every 5 sec
+function startAutoSlide() {
+  slideInterval = setInterval(nextSlide, 5000);
+}
+
+function stopAutoSlide() {
+  clearInterval(slideInterval);
+}
+
+// pause on hover
+const slider = document.querySelector('.slider');
+slider.addEventListener("mouseenter", stopAutoSlide);
+slider.addEventListener("mouseleave", startAutoSlide);
+
+// start
+startAutoSlide();
+updateButtons();
+
+const slider2 = document.getElementById("slider2");
+const wrapper2 = document.querySelector(".our-care");
+const prevBtn2 = document.querySelector(".prev");
+const nextBtn2 = document.querySelector(".next");
+
+// 1. Clone all slides
+let items2 = Array.from(slider2.querySelectorAll(".our-care-item"));
+items2.forEach(item => {
+  slider2.appendChild(item.cloneNode(true)); // append clone
+});
+items2.forEach(item => {
+  slider2.insertBefore(item.cloneNode(true), slider2.firstChild); // prepend clone
+});
+
+// 2. Update references
+let allSlides2 = slider2.querySelectorAll(".our-care-item");
+let index2 = items2.length; // start at the first REAL slide (after prepended clones)
+let step2 = items2[0].offsetWidth + 12;
+
+// Position correctly
+slider2.style.transform = `translateX(-${index2 * step2}px)`;
+
+// Resize handling
+window.addEventListener("resize", () => {
+  step2 = items2[0].offsetWidth + 12;
+  slider2.style.transition = "none";
+  slider2.style.transform = `translateX(-${index2 * step2}px)`;
+});
+
+function showSlide2() {
+  slider2.style.transition = "transform 0.6s ease-in-out";
+  slider2.style.transform = `translateX(-${index2 * step2}px)`;
+}
+
+function nextSlide2() {
+  index2++;
+  showSlide2();
+}
+
+function prevSlide2() {
+  index2--;
+  showSlide2();
+}
+
+// 3. Loop seamlessly
+slider2.addEventListener("transitionend", () => {
+  if (index2 >= allSlides2.length - items2.length) {
+    slider2.style.transition = "none";
+    index2 = items2.length; // reset to first real slide
+    slider2.style.transform = `translateX(-${index2 * step2}px)`;
+  }
+  if (index2 < items2.length) {
+    slider2.style.transition = "none";
+    index2 = allSlides2.length - items2.length - 1; // reset to last real slide
+    slider2.style.transform = `translateX(-${index2 * step2}px)`;
+  }
+});
+
+// 4. Auto slide
+let autoSlide2;
+function startAutoSlide2() {
+  stopAutoSlide2();
+  autoSlide2 = setInterval(nextSlide2, 2500);
+}
+function stopAutoSlide2() {
+  if (autoSlide2) clearInterval(autoSlide2);
+}
+startAutoSlide2();
+
+wrapper2.addEventListener("mouseenter", stopAutoSlide2);
+wrapper2.addEventListener("mouseleave", startAutoSlide2);
+
+nextBtn2.addEventListener("click", () => {
+  stopAutoSlide2();
+  nextSlide2();
+  startAutoSlide2();
+});
+prevBtn2.addEventListener("click", () => {
+  stopAutoSlide2();
+  prevSlide2();
+  startAutoSlide2();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const carousel = document.getElementById('videoCarousel');
+  if (!carousel) return; // prevent error if element not found
+
+  const cards = carousel.querySelectorAll('.card');
+  const gap = 16; // same as CSS gap
+  let cardWidth = cards[0].offsetWidth + gap;
+
+  // Recalculate width on resize
+  window.addEventListener("resize", () => {
+    cardWidth = cards[0].offsetWidth + gap;
   });
 
-  // Start auto-sliding
-  startAutoSlide();
+  document.getElementById('scrollNext').addEventListener('click', () => {
+    carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+  });
+
+  document.getElementById('scrollPrev').addEventListener('click', () => {
+    carousel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+  });
+});
+
 
     document.querySelector('.backtop')
       .addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
@@ -1380,9 +1224,7 @@
     // Quantity controls
     minusBtn.onclick = () => { if (qtyInput.value > 1) qtyInput.value--; };
     plusBtn.onclick = () => qtyInput.value++;
- 
-  </script>
-   <script>
+
   const cartBtn = document.getElementById('cart-btn');
   const cartSidebar = document.getElementById('cart-sidebar');
   const closeCart = document.getElementById('back-link');
