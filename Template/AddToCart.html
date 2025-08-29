@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../Static/About.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<a>
  <!-- Top Strip -->
   <div class="top-bar">
     FSSAI Licensed: 12422012002821 | NABL Approved Lab Tested Products | Quality & Safety Assured
@@ -412,14 +412,130 @@
   </main>
 <!--video-->
 
-  <video id="cornerVideo" class="floating-video" 
-    src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_yhdccd79cb1742017284807_low.mp4?v=1742017303" 
-    playsinline 
-    webkit-playsinline 
-    disablepictureinpicture
-    autoplay
-    muted
-  ></video>
+<!--Floating-->
+  <div id="videoWrapper" class="floating-video-wrapper">
+    <video id="cornerVideo" class="floating-video"
+      src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_yhdccd79cb1742017284807_low.mp4?v=1742017303"
+      playsinline
+      webkit-playsinline
+      autoplay
+      muted
+      loop
+    ></video>
+
+    <!-- Custom Mute/Unmute Button -->
+    <div id="muteOverlay" class="mute-overlay">
+      <span id="muteIcon">🔇</span>
+      <div id="muteText">Tap to unmute</div>
+    </div>
+  </div>
+
+
+
+<!-- Popup -->
+<div class="popup-overlay" id="popup">
+  <button class="popup-close" onclick="closePopup()">×</button>
+  <div class="popup-container">
+
+    <!-- Left: Video -->
+    <div class="popup-left">
+      <video id="myVideo" autoplay muted loop playsinline controls
+        style="width:100%; height:500px; border-radius:10px; cursor:pointer;">
+        <source src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_yhdccd79cb1742017284807_low.mp4?v=174201" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Right: Product -->
+    <div class="popup-right">
+      <h2>ABC Malt Powder</h2>
+      <div class="main-img" id="mainImg">
+        <img id="hero" src="../Assets/BestSeller/Abc malt powder.jpg" alt="ABC Malt Powder"/>
+      </div>
+      <div class="price">Rs. 365.00</div>
+
+      <div class="quantity-options">
+        <button onclick="selectQuantity(this)">100gms</button>
+        <button onclick="selectQuantity(this)">250gms</button>
+        <button onclick="selectQuantity(this)">500gms</button>
+        <button onclick="selectQuantity(this)">1kg</button>
+      </div>
+
+      <div class="buttons">
+        <button class="more-info" onclick="location.href='AddToCart.html'">More Info</button>
+        <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        <button id="miniCartBtn" class="icon">
+  <img src="../Assets/shopping-cart.png" alt="Cart" width="20px" height="20px">
+  <span id="cartCount" class="cart-badge">0</span>
+</button>
+
+      </div>
+
+      <div class="description">
+        <h3>Description</h3>
+        <p>
+          This blend is prepared with high quality karuppu kavuni Rice known as EMPEROR 's Rice noted for its various health advantages...
+        </p>
+      </div>
+      <p>You may like </p>
+
+      <div class="addtional product">
+        <div class="card">
+          <div class="img-container">
+            <img src="../Assets/BestSeller/karuppu.jpg" alt="Karuppu Kavuni Kanji Mix"/>
+          </div>
+          <h3>Karuppu Kavuni Kanji Mix</h3>
+          <div class="price">Rs.360.00</div>
+        </div>
+
+        <div class="card">
+          <div class="img-container">
+            <img src="../Assets/BestSeller/Biotin.jpg" alt="Biotin Powder"/>
+          </div>
+          <h3>Biotin Powder</h3>
+          <div class="price">Rs.299.00</div>
+        </div>
+
+        <div class="card">
+          <div class="img-container">
+            <img src="../Assets/BestSeller/Nalungu.jpg" alt="Nalungu Maavu"/>
+          </div>
+          <h3>Nalungu Maavu</h3>
+          <div class="price">Rs.350.00</div>
+        </div>
+
+        <div class="card">
+          <div class="img-container">
+            <img src="../Assets/BestSeller/Sprouted ragi.jpg" alt="Sprouted Ragi Choco Malt"/>
+          </div>
+          <h3>Sprouted Ragi Choco Malt</h3>
+          <div class="price">Rs.249.00</div>
+        </div>
+
+        <div class="card">
+          <div class="img-container">
+            <img src="../Assets/BestSeller/curry leaves.jpg" alt="Curry Leaves Powder"/>
+          </div>
+          <h3>Curry Leaves Powder</h3>
+          <div class="price">Rs.220.00</div>
+        </div>
+      </div>
+    </div>
+    <div id="mini-cart" class="mini-cart">
+  <div class="mini-cart-header">
+    <h3>Your cart</h3>
+   <button onclick="closeMiniCart()">×</button>
+  </div>
+  <div class="mini-cart-items" id="cart-items">
+    <!-- Items will be added here dynamically -->
+  </div>
+  <div class="mini-cart-footer">
+    <button id="checkout-btn">Checkout</button>
+  </div>
+</div>
+  </div>
+</div>
+
 
 
 <!-- Modal -->
@@ -480,7 +596,7 @@
       </div>
 
       <!-- Middle -->
-      <div class="footer-col">
+      <div' class="footer-col">
         <a href="#">Home</a>
         <a href="#">Our Collections</a>
         <a href="About.html">About Us</a>
@@ -657,29 +773,6 @@ thumbs.forEach(btn => {
   updateSubtotal();
 </script>
  <script>
-    const video = document.getElementById("cornerVideo");
-    let lastCheck = 0;
-
-    setInterval(() => {
-      if (!video.paused && !video.ended) {
-        const current = Math.floor(video.currentTime);
-
-        // Every 10s trigger animation
-        if (current > 0 && current % 10 === 0 && current !== lastCheck) {
-          lastCheck = current;
-
-          // Pause + animate hide
-          video.pause();
-          video.classList.add("hidden-video");
-
-          // After 3s, show again + resume
-          setTimeout(() => {
-            video.classList.remove("hidden-video");
-            video.play();
-          }, 3000);
-        }
-      }
-    }, 1000);
     document.querySelectorAll('.qty').forEach(qtyContainer => {
   const minusBtn = qtyContainer.querySelector('.minus-btn, #dec'); // Match minus buttons
   const plusBtn = qtyContainer.querySelector('.plus-btn, #inc');   // Match plus buttons
@@ -719,6 +812,145 @@ if (modalMinus && modalPlus && modalQtyInput) {
   });
 }
   </script>
+
+<script>
+  // Popup functions
+  function openPopup() {
+    document.getElementById('popup').style.display = 'flex';
+  }
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+  function selectQuantity(el) {
+    document.querySelectorAll('.quantity-options button').forEach(btn => btn.classList.remove('active'));
+    el.classList.add('active');
+  }
+
+
+
+  // Cart count
+let cartCount = 0;
+
+// Add item to mini-cart
+function addToCart() {
+  cartCount++;
+  
+  const cartBadge = document.getElementById("cartCount");
+  cartBadge.innerText = cartCount;
+  cartBadge.style.display = "inline-block";
+
+  const cartItems = document.getElementById("cart-items");
+  const newItem = document.createElement("div");
+  newItem.style.display = "flex";
+  newItem.style.justifyContent = "space-between";
+  newItem.style.marginBottom = "10px";
+
+  newItem.innerHTML = `
+    <span>ABC Malt Powder (250gms)</span>
+    <span>Rs. 365.00</span>
+  `;
+  
+  cartItems.appendChild(newItem);
+
+  openMiniCart();
+}
+
+// Open mini-cart
+function openMiniCart() {
+  document.getElementById("mini-cart").classList.add("open");
+}
+
+// Close mini-cart
+function closeMiniCart() {
+  document.getElementById("mini-cart").classList.remove("open");
+}
+
+// Hook mini-cart button
+document.getElementById("miniCartBtn").addEventListener("click", openMiniCart);
+
+
+  // Cart Logic
+
+
+  // Video autoplay + sound handling
+  const videos = document.getElementById("myVideo");
+  videos.play().then(() => {
+    videos.muted = false;
+  }).catch(() => {
+    const unmute = () => {
+      videos.muted = false;
+      videos.play();
+      document.removeEventListener("click", unmute);
+      document.removeEventListener("scroll", unmute);
+    };
+    document.addEventListener("click", unmute);
+    document.addEventListener("scroll", unmute);
+  });
+</script>
+<script>
+  const cornerVideo = document.getElementById("cornerVideo");
+  const wrapper = document.getElementById("videoWrapper");
+  const muteOverlay = document.getElementById("muteOverlay");
+  const muteIcon = document.getElementById("muteIcon");
+  const muteText = document.getElementById("muteText");
+  const popup = document.getElementById("popup");
+  const popupVideo = document.getElementById("myVideo");
+
+  // Open popup when floating video is clicked
+  wrapper.addEventListener("click", () => {
+    popup.style.display = "flex";
+    popupVideo.currentTime = cornerVideo.currentTime; // sync time
+    popupVideo.play();
+    cornerVideo.pause(); // pause corner video while popup is open
+  });
+
+  // Close popup function
+  function closePopup() {
+    popup.style.display = "none";
+    cornerVideo.currentTime = popupVideo.currentTime; // sync time back
+    cornerVideo.play();
+  }
+
+  // Mute/unmute floating video
+  muteOverlay.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent opening popup
+    if (cornerVideo.muted) {
+      cornerVideo.muted = false;
+      muteIcon.textContent = "🔊";
+      muteText.textContent = "Tap to mute";
+    } else {
+      cornerVideo.muted = true;
+      muteIcon.textContent = "🔇";
+      muteText.textContent = "Tap to unmute";
+    }
+  });
+
+  // Floating video hide/show every 10s
+let lastTrigger = 0;
+
+setInterval(() => {
+  if (!cornerVideo.paused && !cornerVideo.ended) {
+    const current = Math.floor(cornerVideo.currentTime);
+
+    if (current - lastTrigger >= 10) {  // trigger every 10s
+      lastTrigger = current;
+
+      // Hide with animation
+      wrapper.classList.add("hidden-video");
+      muteOverlay.classList.add("hidden-video");
+      cornerVideo.pause();
+
+      setTimeout(() => {
+        wrapper.classList.remove("hidden-video");
+        muteOverlay.classList.remove("hidden-video");
+        cornerVideo.play();
+      }, 3000); // show after 3s
+    }
+  }
+}, 500);
+
+</script>
+
 
 
 </body>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Popup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+
+    /* Overlay */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Container */
+    .popup-container {
+      background: #fff;
+      display: flex;
+      max-width: 1100px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+      position: relative;
+      transform: scale(0.9);
+      animation: popupIn 0.3s forwards;
+    }
+
+    @keyframes popupIn {
+      to { transform: scale(1); }
+    }
+
+    /* Close */
+    .popup-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: #333;
+      color: #fff;
+      border: none;
+      font-size: 18px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    /* Left video */
+    .popup-left {
+      width: 350px;
+      height: 500px;
+      background: #000;
+      flex-shrink: 0;
+      margin-top:20px;
+      margin-left:20px;
+    }
+    .popup-left video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Right content */
+    .popup-right {
+      flex: 1;
+      padding: 20px;
+      width: 400px;
+      height: 500px;
+      overflow-y: auto;
+    }
+    .popup-right h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    /* Quantity */
+    .quantity-options {
+      margin: 15px 0;
+    }
+    .quantity-options button {
+      padding: 8px 14px;
+      margin-right: 10px;
+      border: 1px solid #333;
+      background: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.2s;
+    }
+    .quantity-options button.active {
+      background: #333;
+      color: #fff;
+    }
+
+    /* Buttons */
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin: 15px 0;
+      align-items: center;
+    }
+    .buttons button {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    .more-info {
+      background: whitesmoke;
+      border:1px solid black;
+    }
+    .add-to-cart {
+      background: #000;
+      color: #fff;
+    }
+
+    /* Description */
+    .description {
+      margin-top: 20px;
+    }
+    .description p {
+      font-size: 14px;
+      line-height: 1.5;
+      border-bottom:1px solid #ccc;
+      padding-bottom:20px;
+    }
+
+    /* Additional products */
+    .addtional.product {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      min-height: 220px;
+    }
+    .card h3 {
+      font-size: 14px;
+      margin: 8px 0;
+      min-height: 40px;
+    }
+    .card .price {
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+      margin-top: auto;
+    }
+    .card .btn {
+      margin-top: 8px;
+      padding: 6px 10px;
+      font-size: 13px;
+      border: none;
+      border-radius: 5px;
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+    .card .btn:hover {
+      background: #444;
+    }
+    .img-container {
+      width: 100%;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .img-container img {
+      max-width: 100px;
+      max-height: 100px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    /* Cart icon + badge */
+    .icon{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f5f5f5;
+      width: 50px;
+      height: 50px;
+      margin-left: 6px;
+      margin-top:5px;
+      border-radius:5px;
+      position: relative;
+    }
+    .cart-badge {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: red;
+      color: white;
+      border-radius: 50%;
+      padding: 3px 7px;
+      font-size: 12px;
+      display: none;
+    }
+
+    /* Mini cart */
+    .mini-cart {
+      position: fixed;
+      top: 0;
+      right: -420px;
+      width: 420px;
+      height: 100%;
+      background: #fff;
+      box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+      transition: right 0.3s ease;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+    }
+    .mini-cart.open {
+      right: 0;
+    }
+    .mini-cart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    .mini-cart-items {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+    }
+    .mini-cart-footer {
+      padding: 15px;
+      border-top: 1px solid #ddd;
+    }
+    .mini-cart-footer button {
+      width: 100%;
+      padding: 12px;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Popup -->
+<div class="popup-overlay" id="popup">
+  <button class="popup-close" onclick="closePopup()">×</button>
+  <div class="popup-container">
+
+    <!-- Left: Video -->
+    <div class="popup-left">
+      <video id="myVideo" autoplay muted loop playsinline controls
+        style="width:100%; height:500px; border-radius:10px; cursor:pointer;">
+        <source src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_yhdccd79cb1742017284807_low.mp4?v=174201" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Right: Product -->
+    <div class="popup-right">
+      <h2>ABC Malt Powder</h2>
+      <div class="main-img" id="mainImg">
+        <img id="hero" src="../Assets/BestSeller/Abc malt powder.jpg" alt="ABC Malt Powder"/>
+      </div>
+      <div class="price">Rs. 365.00</div>
+
+      <div class="quantity-options">
+        <button onclick="selectQuantity(this)">100gms</button>
+        <button onclick="selectQuantity(this)">250gms</button>
+        <button onclick="selectQuantity(this)">500gms</button>
+        <button onclick="selectQuantity(this)">1kg</button>
+      </div>
+
+      <div class="buttons">
+        <button class="more-info" onclick="location.href='AddToCart.html'">More Info</button>
+        <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+        <button id="cart-btn" class="icon">
+          <img src="../Assets/shopping-cart.png" alt="Cart" width="20px" height="20px">
+          <span id="cartCount" class="cart-badge">0</span>
+        </button>
+      </div>
+
+      <div class="description">
+        <h3>Description</h3>
+        <p>
+          This blend is prepared with high quality karuppu kavuni Rice known as EMPEROR 's Rice noted for its various health advantages...
+        </p>
+      </div>
+      <p>You may like </p>
+
+      <div class="addtional product">
+        <div class="card">
+          <div class="img-container">
+            <img src="../Assets/BestSeller/karuppu.jpg" alt="Karuppu Kavuni Kanji Mix"/>
+          </div>
+          <h3>Karuppu Kavuni Kanji Mix</h3>
+          <div class="price">Rs.360.00</div>
+        </div>
+
+        <div class="card">
+          <div class="img-container">
+            <img src="../Assets/BestSeller/Biotin.jpg" alt="Biotin Powder"/>
+          </div>
+          <h3>Biotin Powder</h3>
+          <div class="price">Rs.299.00</div>
+        </div>
+
+        <div class="card">
+          <div class="img-container">
+            <img src="../Assets/BestSeller/Nalungu.jpg" alt="Nalungu Maavu"/>
+          </div>
+          <h3>Nalungu Maavu</h3>
+          <div class="price">Rs.350.00</div>
+        </div>
+
+        <div class="card">
+          <div class="img-container">
+            <img src="../Assets/BestSeller/Sprouted ragi.jpg" alt="Sprouted Ragi Choco Malt"/>
+          </div>
+          <h3>Sprouted Ragi Choco Malt</h3>
+          <div class="price">Rs.249.00</div>
+        </div>
+
+        <div class="card">
+          <div class="img-container">
+            <img src="../Assets/BestSeller/curry leaves.jpg" alt="Curry Leaves Powder"/>
+          </div>
+          <h3>Curry Leaves Powder</h3>
+          <div class="price">Rs.220.00</div>
+        </div>
+      </div>
+    </div>
+    <div id="mini-cart" class="mini-cart">
+  <div class="mini-cart-header">
+    <h3>Your cart</h3>
+    <button onclick="closeCart()">×</button>
+  </div>
+  <div class="mini-cart-items" id="cart-items">
+    <!-- Items will be added here dynamically -->
+  </div>
+  <div class="mini-cart-footer">
+    <button id="checkout-btn">Checkout</button>
+  </div>
+</div>
+  </div>
+</div>
+
+<!-- Mini Cart Panel -->
+
+
+<script>
+  // Popup functions
+  function openPopup() {
+    document.getElementById('popup').style.display = 'flex';
+  }
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+  function selectQuantity(el) {
+    document.querySelectorAll('.quantity-options button').forEach(btn => btn.classList.remove('active'));
+    el.classList.add('active');
+  }
+
+  // Cart Logic
+  let cartCount = 0;
+  function addToCart() {
+    cartCount++;
+    const cartBadge = document.getElementById("cartCount");
+    cartBadge.innerText = cartCount;
+    cartBadge.style.display = "inline-block";
+
+    const cartItems = document.getElementById("cart-items");
+    const newItem = document.createElement("div");
+    newItem.innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+        <span>ABC Malt Powder (250gms)</span>
+        <span>Rs. 365.00</span>
+      </div>
+    `;
+    cartItems.appendChild(newItem);
+
+    document.getElementById("mini-cart").classList.add("open");
+  }
+
+  // Open mini-cart
+  document.getElementById("cart-btn").addEventListener("click", function() {
+    document.getElementById("mini-cart").classList.add("open");
+  });
+
+  // Close mini-cart
+  function closeCart() {
+    document.getElementById("mini-cart").classList.remove("open");
+  }
+
+  // Video autoplay + sound handling
+  const video = document.getElementById("myVideo");
+  video.play().then(() => {
+    video.muted = false;
+  }).catch(() => {
+    const unmute = () => {
+      video.muted = false;
+      video.play();
+      document.removeEventListener("click", unmute);
+      document.removeEventListener("scroll", unmute);
+    };
+    document.addEventListener("click", unmute);
+    document.addEventListener("scroll", unmute);
+  });
+</script>
+</body>
+</html>

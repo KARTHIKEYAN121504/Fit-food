@@ -5,67 +5,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Floating Video with Animation</title>
   <style>
-    .floating-video {
+    .floating-video-wrapper {
       position: fixed;
       bottom: 50px;
-      right: 50px;
-      width: 250px;
+      right: 30px;
+      width: 150px;
       height: 260px;
       border-radius: 10px;
       z-index: 9999;
-
-      /* Animation defaults */
+      overflow: hidden;
       opacity: 1;
       transform: scale(1);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    .floating-video video{
-        border-radius: 10px;
-    }
 
-    /* Hidden state (animated shrink + fade out) */
-    .hidden-video {
+    .floating-video-wrapper.hidden-video {
       opacity: 0;
       transform: scale(0.3);
       pointer-events: none;
+    }
+
+    .floating-video {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .mute-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      font-size: 16px;
+      padding: 1px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      user-select: none;
+      transition: opacity 0.3s ease;
+      width: 100px;
+    }
+
+    .mute-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .mute-overlay span {
+      font-size: 18px;
+      margin-bottom: 4px;
     }
   </style>
 </head>
 <body>
 
-  <video id="cornerVideo" class="floating-video" 
-    src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_yhdccd79cb1742017284807_low.mp4?v=1742017303" 
-    playsinline 
-    webkit-playsinline 
-    disablepictureinpicture
-    autoplay
-    muted
-  ></video>
+  <div id="videoWrapper" class="floating-video-wrapper">
+    <video id="cornerVideo" class="floating-video"
+      src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_yhdccd79cb1742017284807_low.mp4?v=1742017303"
+      playsinline
+      webkit-playsinline
+      autoplay
+      muted
+      loop
+    ></video>
+
+    <!-- Custom Mute/Unmute Button -->
+    <div id="muteOverlay" class="mute-overlay">
+      <span id="muteIcon">🔇</span>
+      <div id="muteText">Tap to unmute</div>
+    </div>
+  </div>
 
   <script>
     const video = document.getElementById("cornerVideo");
-    let lastCheck = 0;
+    const wrapper = document.getElementById("videoWrapper");
+    const muteOverlay = document.getElementById("muteOverlay");
+    const muteIcon = document.getElementById("muteIcon");
+    const muteText = document.getElementById("muteText");
 
+    // Video hide/show every 10s
+    let lastCheck = 0;
     setInterval(() => {
       if (!video.paused && !video.ended) {
         const current = Math.floor(video.currentTime);
 
-        // Every 10s trigger animation
         if (current > 0 && current % 10 === 0 && current !== lastCheck) {
           lastCheck = current;
 
-          // Pause + animate hide
           video.pause();
-          video.classList.add("hidden-video");
+          wrapper.classList.add("hidden-video");
 
-          // After 3s, show again + resume
           setTimeout(() => {
-            video.classList.remove("hidden-video");
+            wrapper.classList.remove("hidden-video");
             video.play();
           }, 3000);
         }
       }
     }, 1000);
+
+    // Mute / unmute toggle
+    muteOverlay.addEventListener("click", () => {
+      if (video.muted) {
+        video.muted = false;
+        muteIcon.textContent = "🔊";
+        muteText.textContent = "Tap to mute";
+      } else {
+        video.muted = true;
+        muteIcon.textContent = "🔇";
+        muteText.textContent = "Tap to unmute";
+      }
+    });
   </script>
 
 </body>
