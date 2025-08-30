@@ -1574,72 +1574,118 @@ function openPanel(panelId) {
   document.getElementById(panelId).classList.add("active");
 }
 </script>
-<section class="newsletter-section" aria-label="Subscribe to newsletter">
-    <h3>Subscribe to our newsletter</h3>
-    <p>Promotions, new products and sales. Directly to your Inbox.</p>
-    <form class="newsletter-form" role="search" aria-label="Subscribe to newsletter form">
-      <input
-        type="email"
-        placeholder="Email address"
-        aria-label="Email address"
-        required
-      />
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
- <!-- Back to Top -->
-  <div class="backtop">Back to the top ▲</div>
+   <script>
+  const cartBtn = document.getElementById('cart-btn');
+  const cartSidebar = document.getElementById('cart-sidebar');
+  const closeCart = document.getElementById('back-link');
+  const subtotalEl = document.querySelector('.subtotal-price');
+  const productCountEl = document.getElementById('product-count');
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-inner">
-      <!-- Left -->
-      <div class="footer-col footer-left">
-        <img src="Assets/fit and foo logo.avif" alt="logo" class="footer-logo"/>
-        <div class="footer-text">
-          <p><strong>Fit and Food Tamil</strong><br>
-          TNHB Colony,<br>
-          Villapuram Housing Board,<br>
-          Madurai 625011.<br>
-          +91 9363599986</p>
-          <p>FSSAI: 12422012002821</p>
-        </div>
-      </div>
+  // Open Cart
+  cartBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    cartSidebar.classList.add('open');
+  });
 
-      <!-- Middle -->
-      <div class="footer-col">
-        <a href="index.html">Home</a>
-        <a href="Template/ourcollection.html">Our Collections</a>
-        <a href="Template/About.html">About Us</a>
-        <a href="Template/contact.html">Contact Us</a>
-      </div>
+  // Close Cart
+  closeCart.addEventListener('click', () => {
+    cartSidebar.classList.remove('open');
+  });
 
-      <!-- Right -->
-      <div class="footer-col">
-        <a href="Template/privacy.html">Privacy Policy</a>
-        <a href="Template/shippingpolicy.html"> Shipping policy</a>
-        <a href="Template/returnandrefund.html">Return & Refund Policy</a>
-        <a href="Template/termsandconditions.html">Terms & Conditions</a>
-      </div>
+  // Toggle Products Section
+  document.getElementById("products-header").addEventListener("click", function () {
+    document.querySelectorAll(".cart-item").forEach(item => {
+      item.style.display = (item.style.display === "none") ? "flex" : "none";
+    });
+  });
 
-      <!-- Socials -->
-      <div class="socials">
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-      </div>
-    </div>
+  // Update subtotal function
+  function updateSubtotal() {
+    let subtotal = 0;
+    let itemCount = 0;
 
-    <!-- Bottom strip -->
-    <div class="footer-bottom">
-      <div class="currency">India (INR ₹)</div>
-      <div>
-        Copyright © 2025 fitandfoodtamil<br>
-        Powered by Ekommerce360
-      </div>
-    </div>
-  </footer>
+    document.querySelectorAll(".cart-item").forEach(item => {
+      const qty = parseInt(item.querySelector(".qty").textContent);
+      const price = parseInt(item.getAttribute("data-price"));
+      const total = qty * price;
 
-  <!-- WhatsApp -->
-  <a class="whats" href="https://wa.me/919363599986" target="_blank" title="WhatsApp">
-    <img src="Assets/whatsapp image.png" alt="whats" />
-  </a>
+      item.querySelector(".item-total").textContent = total;
+      subtotal += total;
+      itemCount++;
+    });
+
+    subtotalEl.textContent = `Rs. ${subtotal}.00`;
+
+    // Update product count
+    if (itemCount > 0) {
+      productCountEl.textContent = `(${itemCount})`;
+      productCountEl.style.display = "inline";
+    } else {
+      productCountEl.style.display = "none";
+    }
+  }
+
+  // Quantity + / - / remove
+  document.querySelectorAll(".cart-item").forEach(item => {
+    const qtyEl = item.querySelector(".qty");
+    const plusBtn = item.querySelector(".plus");
+    const minusBtn = item.querySelector(".minus");
+    const removeBtn = item.querySelector(".remove");
+
+    plusBtn.addEventListener("click", () => {
+      let qty = parseInt(qtyEl.textContent);
+      qty++;
+      qtyEl.textContent = qty;
+      updateSubtotal();
+    });
+
+    minusBtn.addEventListener("click", () => {
+      let qty = parseInt(qtyEl.textContent);
+      if (qty > 1) {
+        qty--;
+        qtyEl.textContent = qty;
+        updateSubtotal();
+      }
+    });
+
+    removeBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      item.remove();
+      updateSubtotal();
+    });
+  });
+
+  // Initialize subtotal on load
+  updateSubtotal();
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration
+            easing: 'ease-in-out', // Easing type
+            once: false, // Whether animation should happen only once
+            mirror: true, // Whether elements should animate out while scrolling past them
+        });
+    </script>
+    <script>
+    function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+function toggleSearch() {
+  document.getElementById("mobileSearch").classList.toggle("active");
+}
+
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+function openPanel(panelId) {
+  // Hide all panels
+  document.querySelectorAll(".menu-panel").forEach(p => p.classList.remove("active"));
+  // Show requested one
+  document.getElementById(panelId).classList.add("active");
+}
+
+</script>
