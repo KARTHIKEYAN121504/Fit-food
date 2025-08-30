@@ -159,7 +159,7 @@
       <span>Subtotal:</span>
       <span class="subtotal-price">Rs. 360.00</span>
     </div>
-    <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+    <button class="checkout-btn" onclick="window.location.href='Template/checkout.html'">
   Checkout
 </button>
   </div>
@@ -172,7 +172,7 @@
     </div>
 
     <div class="cart-item" data-price="360">
-      <img src="../Assets/BestSeller/karuppu.jpg" alt="Product">
+      <img src="Assets/BestSeller/karuppu.jpg" alt="Product">
       <div class="item-info">
         <p class="item-name">Karuppu Kavuni Kanji Mix</p>
         <small class="item-weight">250gms</small>
@@ -1472,7 +1472,8 @@ document.querySelectorAll('.qty-addcart').forEach(container => {
     minusBtn.onclick = () => { if (qtyInput.value > 1) qtyInput.value--; };
     plusBtn.onclick = () => qtyInput.value++;
 
-  const cartBtn = document.getElementById('cart-btn');
+
+    const cartBtn = document.querySelector('.im2'); // works with class
   const cartSidebar = document.getElementById('cart-sidebar');
   const closeCart = document.getElementById('back-link');
   const subtotalEl = document.querySelector('.subtotal-price');
@@ -1574,90 +1575,6 @@ function openPanel(panelId) {
   document.getElementById(panelId).classList.add("active");
 }
 </script>
-   <script>
-  const cartBtn = document.getElementById('cart-btn');
-  const cartSidebar = document.getElementById('cart-sidebar');
-  const closeCart = document.getElementById('back-link');
-  const subtotalEl = document.querySelector('.subtotal-price');
-  const productCountEl = document.getElementById('product-count');
-
-  // Open Cart
-  cartBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    cartSidebar.classList.add('open');
-  });
-
-  // Close Cart
-  closeCart.addEventListener('click', () => {
-    cartSidebar.classList.remove('open');
-  });
-
-  // Toggle Products Section
-  document.getElementById("products-header").addEventListener("click", function () {
-    document.querySelectorAll(".cart-item").forEach(item => {
-      item.style.display = (item.style.display === "none") ? "flex" : "none";
-    });
-  });
-
-  // Update subtotal function
-  function updateSubtotal() {
-    let subtotal = 0;
-    let itemCount = 0;
-
-    document.querySelectorAll(".cart-item").forEach(item => {
-      const qty = parseInt(item.querySelector(".qty").textContent);
-      const price = parseInt(item.getAttribute("data-price"));
-      const total = qty * price;
-
-      item.querySelector(".item-total").textContent = total;
-      subtotal += total;
-      itemCount++;
-    });
-
-    subtotalEl.textContent = `Rs. ${subtotal}.00`;
-
-    // Update product count
-    if (itemCount > 0) {
-      productCountEl.textContent = `(${itemCount})`;
-      productCountEl.style.display = "inline";
-    } else {
-      productCountEl.style.display = "none";
-    }
-  }
-
-  // Quantity + / - / remove
-  document.querySelectorAll(".cart-item").forEach(item => {
-    const qtyEl = item.querySelector(".qty");
-    const plusBtn = item.querySelector(".plus");
-    const minusBtn = item.querySelector(".minus");
-    const removeBtn = item.querySelector(".remove");
-
-    plusBtn.addEventListener("click", () => {
-      let qty = parseInt(qtyEl.textContent);
-      qty++;
-      qtyEl.textContent = qty;
-      updateSubtotal();
-    });
-
-    minusBtn.addEventListener("click", () => {
-      let qty = parseInt(qtyEl.textContent);
-      if (qty > 1) {
-        qty--;
-        qtyEl.textContent = qty;
-        updateSubtotal();
-      }
-    });
-
-    removeBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      item.remove();
-      updateSubtotal();
-    });
-  });
-
-  // Initialize subtotal on load
-  updateSubtotal();
-</script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
         // Initialize AOS
@@ -1689,3 +1606,106 @@ function openPanel(panelId) {
 }
 
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cartBtn = document.querySelector('.im2');   // Button with class
+  const cartSidebar = document.getElementById('cart-sidebar');
+  const closeCart = document.getElementById('back-link');
+  const subtotalEl = document.querySelector('.subtotal-price');
+  const productCountEl = document.getElementById('product-count');
+
+  if (cartBtn) {
+    // Open Cart
+    cartBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      cartSidebar.classList.add('open');
+    });
+  }
+
+  if (closeCart) {
+    // Close Cart
+    closeCart.addEventListener('click', () => {
+      cartSidebar.classList.remove('open');
+    });
+  }
+
+  // Toggle Products Section
+  const productsHeader = document.getElementById("products-header");
+  if (productsHeader) {
+    productsHeader.addEventListener("click", function () {
+      document.querySelectorAll(".cart-item").forEach(item => {
+        item.style.display = (item.style.display === "none") ? "flex" : "none";
+      });
+    });
+  }
+
+  // Update subtotal function
+  function updateSubtotal() {
+    let subtotal = 0;
+    let itemCount = 0;
+
+    document.querySelectorAll(".cart-item").forEach(item => {
+      const qty = parseInt(item.querySelector(".qty").textContent) || 0;
+      const price = parseInt(item.getAttribute("data-price")) || 0;
+      const total = qty * price;
+
+      item.querySelector(".item-total").textContent = total;
+      subtotal += total;
+      itemCount++;
+    });
+
+    if (subtotalEl) {
+      subtotalEl.textContent = `Rs. ${subtotal}.00`;
+    }
+
+    if (productCountEl) {
+      if (itemCount > 0) {
+        productCountEl.textContent = `(${itemCount})`;
+        productCountEl.style.display = "inline";
+      } else {
+        productCountEl.style.display = "none";
+      }
+    }
+  }
+
+  // Quantity + / - / remove
+  document.querySelectorAll(".cart-item").forEach(item => {
+    const qtyEl = item.querySelector(".qty");
+    const plusBtn = item.querySelector(".plus");
+    const minusBtn = item.querySelector(".minus");
+    const removeBtn = item.querySelector(".remove");
+
+    if (plusBtn) {
+      plusBtn.addEventListener("click", () => {
+        let qty = parseInt(qtyEl.textContent) || 0;
+        qty++;
+        qtyEl.textContent = qty;
+        updateSubtotal();
+      });
+    }
+
+    if (minusBtn) {
+      minusBtn.addEventListener("click", () => {
+        let qty = parseInt(qtyEl.textContent) || 0;
+        if (qty > 1) {
+          qty--;
+          qtyEl.textContent = qty;
+          updateSubtotal();
+        }
+      });
+    }
+
+    if (removeBtn) {
+      removeBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        item.remove();
+        updateSubtotal();
+      });
+    }
+  });
+
+  // Initialize subtotal on load
+  updateSubtotal();
+});
+</script>
+
