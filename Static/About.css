@@ -851,7 +851,9 @@ cursor: pointer;
   }
 
   .logo {
-    height: 90px;
+    height: 50px;
+    margin: 0px;
+    margin-top:30px;
   }
 
   /* 👇 spacing between icons only in mobile */
@@ -1041,5 +1043,56 @@ cursor: pointer;
   align-items: center;
   justify-content: center;
 }
+ .im{
+      display: none;
+    }
+    .site-header{
+
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      width:320px;
+    }
+    .icon{
+      width: 40px;
+      height: 40px;
+      margin-left: 0px;
+      margin-top:20px;
+      background-color: white;
+
+    }
+    .top-bar{
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      width:320px;
+    }
+    .search-wrap{
+      text-align: center;
+      margin-left:100px;
+      padding-left:20px;
+      width:320px;
+    }
+    footer{
+      width:auto;
+      padding:auto;
+    }
+    .backtop{
+      width:auto;
+      padding:auto;
+      text-align: center;}
+      header{
+        width:auto;
+        padding: AUTO;
+      }
+      .top-bar{
+        width:auto;
+      }
+       .site-header{
+        width: auto;
+      }
 }
 
+html {
+  scroll-behavior: smooth;
+}

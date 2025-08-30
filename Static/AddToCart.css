@@ -1175,6 +1175,12 @@
       font-size: 16px;
       cursor: pointer;
     }
+    .icon{
+      margin-left:0px;
+      margin-top:10px;
+      margin-right:0px;
+      background-color: white;
+    }
   .floating-video-wrapper {
   position: fixed;
   bottom: 50px;
@@ -1733,11 +1739,20 @@
     align-items: center;  /* vertically center */
     justify-content: center; /* horizontally center */
     z-index: 9999;
-    margin: 20px;
+    margin: 10px;
     margin-top:30px;
     padding: 0;
   }
+.myVideo{
+  width:100vw !important;
+  height:100vh !important;
+   margin: 10px;
+    margin-top:30px;
+    margin-right:20px;
+    padding: 0;
+    
 
+}
   .popup-container {
     width: 100%;
     height: 100%;
@@ -2022,5 +2037,69 @@ height:500px;
     padding: 14px;
     font-size: 1rem;
     border-radius: 8px;
+
   }
+  .im{
+      display: none;
+    }
+      .main-img{
+        width:300px;
+      }
+      section h2{
+        font-size:10px;
+        text-align: center;
+      width:250px;
+    margin:2px;}
+    *{
+      margin-left:0px;
+      margin-right:-0px;
+      margin-top:0px;
+    }
+    .container1{
+      padding:0px;
+      margin:0px;
+      width: 250px;
+    }
+    footer{
+      padding:0px;
+      margin:0px;
+      width:auto;
+    }
+    .backtop{
+      width:auto;
+    } 
+    header{
+      width:auto;
+    }
+    .top-bar{
+      width: auto;
+    }
+    .header-icons{
+      margin-top:25px;
+    }
+    .hi{
+      margin-left:10px;
+    }
+    .main-img{
+      margin-left:0px;
+    }
+    .card-change{
+      min-height:300px;
+      padding:10px;
+    }
+    .card-changes img{
+      width:200px;
+      height:200px;
+    }
+    .product-main-img{
+      width:300px;
+      height:300px;
+    }
+    header{
+        width:auto;
+        padding: auto;
+      }
+      .site-header{
+        width: auto;
+      }
 }
