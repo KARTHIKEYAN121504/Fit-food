@@ -139,15 +139,15 @@
     .products-grid {
       width: 90%;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 0px;
       margin: auto;
     }
-    @media (min-width: 640px) {
-      .products-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
+/* Keep your existing desktop CSS untouched */
+
+/* Only adjust mobile view */
+
+
     .product-card {
       width: 250px;
       margin: auto;
@@ -195,21 +195,41 @@
     .product-button {
       position: relative;
       top: 40px;
-      background-color: #4a8a00;
+      background-color: #4CAF50;
       color: white;
       font-size: 12px;
       padding: 14px 12px;
       border-radius: 4px;
       width: 100%;
       border: none;
-      transition: background-color 0.2s ease;
+      transition:0.2s ease;
     }
     .product-button:hover,
     .product-button:focus {
-      background-color: #3a6a00;
+      background-color: #4CAF50;
       outline: none;
     }
+    @media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    width: 100%;
+    gap: 12px;
+  }
 
+  .product-card {
+    height: max-content;
+    width: 100%; /* let it take full grid cell */
+    top: 0;      /* reset offset */
+  }
+
+  .product-name,
+  .product-reviews,
+  .product-price,
+  .product-button {
+    position: static; /* reset offsets for clean stacking */
+    margin-top: 6px;
+  }
+}
     /* Welcome banner */
     .welcome-banner {
       position: relative;
@@ -446,25 +466,27 @@ h2 {
   }
 }
 .middle-grid {
-  width: 100%;
+  width: 90%;
+  margin: auto;
   position: relative;
   top: 100px;
   display: grid;
-  grid-template-columns: repeat(3, 330px); /* fixed 3 per row */
-  justify-content: center; /* center the whole grid */
-  gap: 20px; /* control the space between videos */
-  padding: 40px 60px; /* space from page edges */
-  
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* flexible grid */
+  gap: 5px;
+  padding: 20px; /* smaller padding for mobile */
 }
 
 .relative {
   position: relative;
-  width: 330px; /* lock width */
+  width: 100%; /* take full column width */
+  max-width: 330px; /* don’t stretch too large on desktop */
+  margin: 0 auto; /* center each box */
 }
 
 .relative video {
-  width: 330px;
-  height: 400px;
+  width: 100%;
+  height: 450px; /* keeps aspect ratio */
+  max-height: 400px;
   object-fit: cover;
   display: block;
 }
@@ -472,13 +494,33 @@ h2 {
 .label-top-left {
   position: absolute;
   top: 8px;
-  left: 35%;
+  left: 50%;
+  transform: translateX(-50%); /* center horizontally */
   background: rgba(236, 155, 4, 0.966);
   color: #fff;
   padding: 8px 16px;
   font-size: 14px;
   border-radius: 4px;
 }
+
+/* 📱 Mobile optimization */
+@media (max-width: 768px) {
+  .middle-grid {
+    grid-template-columns: 1fr; /* single column */
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .relative video {
+    max-height: 300px;
+  }
+
+  .label-top-left {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
 
 .section-header {
   margin-top: 90px;
@@ -575,6 +617,109 @@ h2 {
 
 .product-item .btn:hover {
   background: #218838; /* darker green on hover */
+}
+.product-item {
+  flex: 0 0 auto;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  min-height: 340px;   /* ✅ fixed height for all cards */
+  max-height: 340px;   /* ✅ prevents uneven growth */
+  overflow: hidden;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ✅ Product name limited to 2 lines */
+.product-name {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  margin: 8px 0 4px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;   /* ✅ max 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Reviews */
+.reviews {
+  font-size: 12px;
+  color: #555;
+  margin: 4px 0;
+  text-align: center;
+}
+
+.reviews i {
+  color: #f5c518;
+  margin-right: 2px;
+}
+
+/* Price */
+.price {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 6px 0;
+  text-align: center;
+}
+
+/* Button fixed at bottom */
+.product-item .btn {
+  margin-top: auto;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.product-item .btn:hover {
+  background: #218838;
+}
+
+/* 📱 Mobile view 2-in-row, equal height */
+@media (max-width: 768px) {
+  .product-item {
+    width: calc(50% - 10px);
+    flex: 0 0 calc(50% - 10px);
+    min-height: 300px; 
+    max-height: 300px;  /* ✅ lock height in mobile */
+    padding: 8px;
+  }
+
+  .product-name {
+    font-size: 11px;
+    margin: 6px 0 2px;
+  }
+
+  .price {
+    font-size: 13px;
+    margin: 4px 0;
+  }
+
+  .reviews {
+    font-size: 11px;
+    margin: 2px 0;
+  }
+  .product-list{
+    justify-content: start;
+  }
 }
 
 
@@ -750,6 +895,45 @@ h2 {
 .thumbnails img:hover,
 .thumbnails img.active {
   border: 2px solid #4caf50;
+}
+/* make all 4 goodness items fit and icons resized on small screens */
+@media (max-width: 768px) {
+  .goodness-list {
+    display: flex;
+    flex-wrap: nowrap;          /* keep all items in one row */
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;             /* optional small side padding */
+    gap: 10px;
+    position: relative;
+    right: 12px;
+  }
+
+  .goodness-item {
+    flex: 0 0 auto;              /* exactly 4 items per row */
+    max-width: 25%;
+    box-sizing: border-box;
+    padding: 6px 4px;  
+    font-size: 8px;
+    line-height: 1.1;
+    white-space: normal;         /* small inner padding */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  /* Stronger rule to override inline width/height attributes */
+  .goodness-item img {
+    width: 100%;                /* fill the item width */
+    max-width: 56px;           /* LIMIT the icon size so they don't become huge */
+    height: auto !important;    /* preserve aspect ratio */
+    object-fit: contain;
+    display: block;
+    margin: 0  auto 6px;
+  }
 }
 
 /* Right side: product details */
