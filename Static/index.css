@@ -645,10 +645,9 @@ h2 {
   font-size: 12px;
   font-weight: 500;
   text-align: center;
-  margin: 8px 0 4px;
-
+  margin: 0 0 4px;
   display: -webkit-box;
-  -webkit-line-clamp: 2;   /* ✅ max 2 lines */
+  -moz-webkit-line-clamp: 2;   /* ✅ max 2 lines */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -658,7 +657,7 @@ h2 {
 .reviews {
   font-size: 12px;
   color: #555;
-  margin: 4px 0;
+  margin: 14px 0;
   text-align: center;
 }
 
@@ -698,13 +697,13 @@ h2 {
   .product-item {
     width: calc(50% - 10px);
     flex: 0 0 calc(50% - 10px);
-    min-height: 300px; 
-    max-height: 300px;  /* ✅ lock height in mobile */
+    min-height: 310px; 
+    max-height: 310px;  /* ✅ lock height in mobile */
     padding: 8px;
   }
 
   .product-name {
-    font-size: 11px;
+    font-size: 14px;
     margin: 6px 0 2px;
   }
 
