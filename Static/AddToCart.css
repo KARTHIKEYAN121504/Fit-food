@@ -1245,7 +1245,9 @@
     .mini{display:flex;gap:.75rem;align-items:center}
     .mini img{width:44px;height:44px;border-radius:8px;object-fit:cover}
     .claim{margin-top:.8rem}
-
+.section{
+  display: none;
+}
 
 
 /* ... (Your existing desktop CSS) ... */
