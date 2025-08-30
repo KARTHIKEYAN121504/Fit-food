@@ -1595,6 +1595,9 @@ h2 {
     margin:0px;
     padding:0px;
   }
+  .header-icons{
+    margin-top:20px;
+  }
 }
 html, body {
   overflow-x: hidden;   /* removes unwanted horizontal scroll */
