@@ -757,3 +757,96 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
+    
+@media (max-width: 768px) {
+  .modal {
+    display: flex;
+    align-items: center;   /* vertical center */
+    justify-content: center; /* horizontal center */
+    padding: 20px;         /* in case content touches edges */
+  }
+
+  .modal-content {
+    width: 300px;          /* fixed width */
+    max-height: 90vh;      /* never exceed viewport height */
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;      /* scroll only if content overflows */
+  }
+.modal {
+  display: none;  /* 🔒 hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* overlay */
+  z-index: 1000;
+}
+
+.modal.show {
+  display: flex; /* 👁️ visible only when .show is added */
+  align-items: center;
+  justify-content: center;
+}
+
+  /* 🚫 Hide left side (image + thumbs) */
+  .modal-left {
+    display: none;
+  }
+
+  .modal-right {
+    width: 100%;
+    flex: 1;
+  }
+
+  .modal-right h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .modal-price {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .select-box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .qty-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .qty-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .add-cart,
+  .buy-now {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .full-details {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+  }
+}
