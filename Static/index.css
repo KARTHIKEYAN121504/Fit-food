@@ -217,7 +217,8 @@
   }
 
   .product-card {
-    height: max-content;
+    min-height: max-content;
+    max-height: 350px;
     width: 100%; /* let it take full grid cell */
     top: 0;      /* reset offset */
   }
