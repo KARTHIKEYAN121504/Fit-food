@@ -1234,6 +1234,20 @@
       opacity: 0;
       pointer-events: none;
     }
+
+    .fbt{margin-top:1.5rem}
+    .fbt h3{font-size:1.1rem;margin-bottom:.75rem}
+    .cards{display:grid;gap:.50rem}
+    .card{display:grid;grid-template-columns:44px 1fr 120px;align-items:center;gap:.5rem;border:1px solid #eef2f7;border-radius:14px;padding:.6rem .75rem;background:#fff;max-height:50px}
+    .card:hover{box-shadow:0 8px 24px rgba(16,24,40,.08)}
+    .tick{width:20px;height:20px;border-radius:6px;border:2px solid #d1d5db;display:grid;place-items:center;cursor:pointer}
+    .tick.active{background:#4caf50;border-color:#4caf50;color:#fff}
+    .mini{display:flex;gap:.75rem;align-items:center}
+    .mini img{width:44px;height:44px;border-radius:8px;object-fit:cover}
+    .claim{margin-top:.8rem}
+
+
+
 /* ... (Your existing desktop CSS) ... */
 
 @media (max-width: 768px) {
@@ -2291,4 +2305,115 @@ border-bottom-right-radius: 4px;
   margin:0px;
   padding:0px;
 }
+}
+
+
+
+ /* Modal */
+    .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 1000; justify-content: center; align-items: center; }
+    .modal-content { background: #fff; width: 90%; max-width: 950px; border-radius: 4px; display: flex; position: relative; padding: 30px; gap: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+    .close { position: absolute; right: 16px; top: 16px; font-size: 22px; cursor: pointer; color: #666; }
+
+    /* Left - Product Image */
+    .modal-left { flex: 1; display: flex; flex-direction: column; align-items: center; }
+    .modal-left img { width: 100%; max-width: 380px; border-radius: 4px; }
+    .thumbs { margin-top: 14px; display: flex; gap: 8px; }
+    .thumbs img { width: 60px; height: 60px; object-fit: contain; border: 1px solid #ddd; border-radius: 4px; cursor: pointer; }
+
+    /* Right - Product Details */
+    .modal-right { flex: 1.2; display: flex; flex-direction: column; gap: 14px; }
+    .modal-right h2 { margin: 0; font-size: 24px; font-weight: 600; }
+    .modal-price { font-size: 20px; font-weight: 600; color: #111; }
+  
+@media (max-width: 768px) {
+  .modal {
+    display: flex;
+    align-items: center;   /* vertical center */
+    justify-content: center; /* horizontal center */
+    padding: 20px;         /* in case content touches edges */
+  }
+
+  .modal-content {
+    width: 300px;          /* fixed width */
+    max-height: 90vh;      /* never exceed viewport height */
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;      /* scroll only if content overflows */
+  }
+.modal {
+  display: none;  /* 🔒 hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* overlay */
+  z-index: 1000;
+}
+
+.modal.show {
+  display: flex; /* 👁️ visible only when .show is added */
+  align-items: center;
+  justify-content: center;
+}
+
+  /* 🚫 Hide left side (image + thumbs) */
+  .modal-left {
+    display: none;
+  }
+
+  .modal-right {
+    width: 100%;
+    flex: 1;
+  }
+
+  .modal-right h2 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .modal-price {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .select-box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .qty-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .qty-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .add-cart,
+  .buy-now {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .full-details {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+  }
 }

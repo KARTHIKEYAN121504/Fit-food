@@ -228,7 +228,7 @@
 
         <div class="cta">
           <button class="btn btn-outline">Add to cart</button>
-          <button class="btn btn-primary">Buy it now</button>
+          <button class="btn btn-primary" onclick="window.location.href='Check.html'">Buy it now</button>
         </div>
 
         <div class="feature-note">
@@ -376,10 +376,6 @@ Fit and Food</h2></pre>
         <div class="grid-change">
 
     <div class="card-change">
-      <div class="img-container">
-        <img class="product main-img" src="../Assets/BestSeller/Abc malt powder.jpg" alt="ABC Malt Powder"/>
-        <img class="product hover-img" src="..\Assets\BestSeller\abc2.jpg" alt="ABC Malt Powder Benefits"/>
-      </div>
       <h3>ABC Malt Powder</h3>
       <div class="stars-change">★★★★★ <small>254 reviews</small></div>
       <div class="price-change">From Rs. <strong>365.00</strong></div>
@@ -387,10 +383,6 @@ Fit and Food</h2></pre>
     </div>
 
     <div class="card-change">
-      <div class="img-container">
-        <img class="product main-img" src="../Assets/BestSeller/karuppu.jpg" alt="Karuppu Kavuni Kanji Mix"/>
-        <img class="product hover-img" src="../Assets/BestSeller/Karuppu2.jpg" alt="Karuppu Kavuni Benefits"/>
-      </div>
       <h3>Karuppu Kavuni Kanji Mix</h3>
       <div class="stars-change">★★★★★ <small>219 reviews</small></div>
       <div class="price-change">From Rs. <strong>360.00</strong></div>
@@ -398,10 +390,6 @@ Fit and Food</h2></pre>
     </div>
 
     <div class="card-change">
-      <div class="img-container">
-        <img class="product main-img" src="../Assets/BestSeller/Biotin.jpg" alt="Biotin Powder"/>
-        <img class="product hover-img" src="../Assets/BestSeller/Biotin2.jpg" alt="Biotin Powder Benefits"/>
-      </div>
       <h3>Biotin Powder</h3>
       <div class="stars-change">★★★★★ <small>152 reviews</small></div>
       <div class="price-change">From Rs. <strong>299.00</strong></div>
@@ -409,10 +397,6 @@ Fit and Food</h2></pre>
     </div>
 
     <div class="card-change">
-      <div class="img-container">
-        <img class="product main-img" src="../Assets/BestSeller/Nalungu.jpg" alt="Nalungu Maavu"/>
-        <img class="product hover-img" src="..\Assets\BestSeller\nalungu2.jpg" alt="Nalungu Maavu Benefits"/>
-      </div>
       <h3>Nalungu Maavu</h3>
       <div class="stars-change">★★★★★ <small>39 reviews</small></div>
       <div class="price-change">From Rs. <strong>350.00</strong></div>
@@ -429,10 +413,6 @@ Fit and Food</h2></pre>
              <div class="grid-change">
 
     <div class="card-change">
-      <div class="img-container">
-        <img class="product main-img" src="../Assets/BestSeller/Abc malt powder.jpg" alt="ABC Malt Powder"/>
-        <img class="product hover-img" src="..\Assets\BestSeller\abc2.jpg" alt="ABC Malt Powder Benefits"/>
-      </div>
       <h3>ABC Malt Powder</h3>
       <div class="stars-change">★★★★★ <small>254 reviews</small></div>
       <div class="price-change">From Rs. <strong>365.00</strong></div>
@@ -440,10 +420,6 @@ Fit and Food</h2></pre>
     </div>
 
     <div class="card-change">
-      <div class="img-container">
-        <img class="product main-img" src="../Assets/BestSeller/karuppu.jpg" alt="Karuppu Kavuni Kanji Mix"/>
-        <img class="product hover-img" src="../Assets/BestSeller/Karuppu2.jpg" alt="Karuppu Kavuni Benefits"/>
-      </div>
       <h3>Karuppu Kavuni Kanji Mix</h3>
       <div class="stars-change">★★★★★ <small>219 reviews</small></div>
       <div class="price-change">From Rs. <strong>360.00</strong></div>
@@ -451,10 +427,6 @@ Fit and Food</h2></pre>
     </div>
 
     <div class="card-change">
-      <div class="img-container">
-        <img class="product main-img" src="../Assets/BestSeller/Biotin.jpg" alt="Biotin Powder"/>
-        <img class="product hover-img" src="../Assets/BestSeller/Biotin2.jpg" alt="Biotin Powder Benefits"/>
-      </div>
       <h3>Biotin Powder</h3>
       <div class="stars-change">★★★★★ <small>152 reviews</small></div>
       <div class="price-change">From Rs. <strong>299.00</strong></div>
@@ -462,10 +434,6 @@ Fit and Food</h2></pre>
     </div>
 
     <div class="card-change">
-      <div class="img-container">
-        <img class="product main-img" src="../Assets/BestSeller/Nalungu.jpg" alt="Nalungu Maavu"/>
-        <img class="product hover-img" src="..\Assets\BestSeller\nalungu2.jpg" alt="Nalungu Maavu Benefits"/>
-      </div>
       <h3>Nalungu Maavu</h3>
       <div class="stars-change">★★★★★ <small>39 reviews</small></div>
       <div class="price-change">From Rs. <strong>350.00</strong></div>
@@ -473,6 +441,45 @@ Fit and Food</h2></pre>
     </div>
     </section>
   </main>
+
+  <!-- Modal -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      
+      <!-- Left -->
+      <div class="modal-left">
+        <img id="modalImg" src="" alt="Product">
+        <div class="thumbs" id="thumbs"></div>
+      </div>
+
+      <!-- Right -->
+      <div class="modal-right">
+        <h2 id="modalTitle">Product Name</h2>
+        <div class="modal-price">Rs. <span id="modalPrice">0.00</span></div>
+        
+        <label for="sizeSelect">Quantity</label>
+        <select id="sizeSelect" class="select-box">
+          <option>100gms</option>
+          <option>250gms</option>
+          <option>500gms</option>
+        </select>
+        
+        <div class="qty-row">
+          <div class="qty-control">
+            <button id="minusBtn">-</button>
+            <input type="number" id="qtyInput" value="1" min="1">
+            <button id="plusBtn">+</button>
+          </div>
+          <button class="add-cart">Add to cart</button>
+        </div>
+        
+        <button class="buy-now" onclick="window.location.href='Check.html'">Buy it now</button>
+        <a class="full-details" href="AddToCart.html"><u>Full details</u></a>
+      </div>
+    </div>
+  </div>
+
 <!--video-->
 
 <!--Floating-->
@@ -633,7 +640,7 @@ Fit and Food</h2></pre>
           <button class="add-cart">Add to cart</button>
         </div>
         
-        <button class="buy-now">Buy it now</button>
+        <button class="buy-now" onclick="window.location.href='Check.html'">Buy it now</button>
         <a class="full-details" href="#"><u>Full details</u></a>
       </div>
     </div>
@@ -1049,7 +1056,47 @@ function openPanel(panelId) {
 }
 
 </script>
+<script>
+  const modals = document.getElementById("productModal");
+  const closeBtn = document.querySelector(".close");
+  const qtyInputs = document.getElementById("qtyInput");
+  const minusBtn = document.getElementById("minusBtn");
+  const plusBtn = document.getElementById("plusBtn");
 
+  // Open modal on "Show options"
+  document.querySelectorAll('.btn-change').forEach((btn) => {
+    btn.addEventListener("click", () => {
+      let card = btn.closest(".card-change"); // ✅ match your card class
 
-</body>
-</html>
+      if (card) {
+        document.getElementById("modalTitle").innerText =
+          card.querySelector("h3").innerText;
+
+        document.getElementById("modalPrice").innerText =
+          card.querySelector(".price-change strong").innerText;
+
+        document.getElementById("modalImg").src =
+          card.querySelector(".main-img").src;
+      }
+
+      modals.style.display = "flex"; // ✅ show modal
+    });
+  });
+
+  // Close modal
+  closeBtn.onclick = () => (modals.style.display = "none");
+  window.onclick = (e) => {
+    if (e.target == modals) modals.style.display = "none";
+  };
+
+  // Quantity controls
+  minusBtn.onclick = () => {
+    if (qtyInputs.value > 1) qtyInputs.value--;
+  };
+  plusBtn.onclick = () => qtyInputs.value++;
+
+  // Escape key closes modal
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") modals.style.display = "none";
+  });
+</script>
