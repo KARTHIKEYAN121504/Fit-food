@@ -481,24 +481,27 @@ Fit and Food</h2></pre>
   </div>
 
 <!--video-->
-
 <!--Floating-->
-  <div id="videoWrapper" class="floating-video-wrapper">
-    <video id="cornerVideo" class="floating-video"
-      src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_yhdccd79cb1742017284807_low.mp4?v=1742017303"
-      playsinline
-      webkit-playsinline
-      autoplay
-      muted
-      loop
-    ></video>
+ <div id="videoWrapper" class="floating-video-wrapper">
 
-    <!-- Custom Mute/Unmute Button -->
-    <div id="muteOverlay" class="mute-overlay">
-      <span id="muteIcon">🔇</span>
-      <div id="muteText">Tap to unmute</div>
-    </div>
+  <!-- Close Button -->
+  <button class="floating-close" onclick="closeFloatingVideo()">×</button>
+
+  <video id="cornerVideo" class="floating-video"
+    src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_yhdccd79cb1742017284807_low.mp4?v=1742017303"
+    playsinline
+    webkit-playsinline
+    autoplay
+    muted
+    loop
+  ></video>
+
+  <!-- Custom Mute/Unmute Button -->
+  <div id="muteOverlay" class="mute-overlay">
+    <span id="muteIcon">🔇</span>
+    <div id="muteText">Tap to unmute</div>
   </div>
+</div>
 
 
 
@@ -1056,4 +1059,10 @@ function openPanel(panelId) {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") modals.style.display = "none";
   });
+</script>
+<script>
+function closeFloatingVideo() {
+  const videoWrapper = document.getElementById("videoWrapper");
+  videoWrapper.style.display = "none";
+}
 </script>
