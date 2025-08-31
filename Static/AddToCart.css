@@ -2518,5 +2518,26 @@ border-bottom-right-radius: 4px;
       .site-header{
         width: auto;
       }
+      .bar-fill{
+        width: 100px  ;
+        text-align:left;
+      }
 
+}
+@media (max-width: 768px) {
+  .distribution div {
+    justify-content: flex-start;
+    gap: 6px;
+    font-size: 13px;
+  }
+
+  .bar {
+    flex: none;
+    width: 120px;   /* fixed width for alignment */
+    margin: 0 6px;
+    margin-top:10px;
+  }
+  .bar-fill {
+    height: 17px;
+  }
 }
