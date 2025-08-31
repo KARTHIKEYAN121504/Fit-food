@@ -485,7 +485,8 @@ Fit and Food</h2></pre>
  <div id="videoWrapper" class="floating-video-wrapper">
 
   <!-- Close Button -->
-  <button class="floating-close" onclick="closeFloatingVideo()">×</button>
+ <button class="floating-close" onclick="closeFloatingVideo(event)">×</button>
+
 
   <video id="cornerVideo" class="floating-video"
     src="https://cdn.shopify.com/s/files/1/0868/2297/7824/files/reelUp_yhdccd79cb1742017284807_low.mp4?v=1742017303"
@@ -1061,8 +1062,10 @@ function openPanel(panelId) {
   });
 </script>
 <script>
-function closeFloatingVideo() {
+function closeFloatingVideo(event) {
+  event.stopPropagation(); // prevent opening popup
   const videoWrapper = document.getElementById("videoWrapper");
   videoWrapper.style.display = "none";
 }
+
 </script>
