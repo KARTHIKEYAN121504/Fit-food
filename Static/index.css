@@ -4,7 +4,17 @@
     padding: 0px !important;
     overflow-x: hidden;
    }
-   
+:root {
+  --button-bg: #4CAF50;
+  --button-hover: #43a047;
+  --star-color: #f5c518;
+  --chat-bar: #eaecc59f;
+  --chatbox-text-icon:#4b5563;
+  --review-count:#22c55e;
+  --video-caption-bg: rgba(236, 155, 4, 0.966);
+  --video-text:  #fff;
+}
+
 /* Slider container */
 .slider {
   position: relative;
@@ -99,12 +109,11 @@
 
     /* Chat with us bar */
     .chat-bar {
-      background-color: #eaecc59f;
+      background-color: var(--chat-bar);
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 8px;
-      color: #5e634b;
       font-size: 16px;
       margin: 0px 0 24px;
       padding: 20px;
@@ -112,9 +121,10 @@
     }
     .chat-bar i {
       font-size: 32px;
-      color: #4b5563;
+      color: var(--chatbox-text-icon);
     }
     .chat-bar p {
+      color:var(--chatbox-text-icon);
       margin: 5px 0;
       line-height: 1.1;
     }
@@ -178,11 +188,12 @@
       align-items: center;
       gap: 4px;
       font-size: 10px;
-      color: #22c55e; /* green-500 */
+      color: var(--review-count); /* green-500 */
       margin-bottom: 4px;
  
     }
     .product-reviews i {
+      color: var(--star-color); /*main*/
       font-size: 10px;
     }
     .product-price {
@@ -195,7 +206,7 @@
     .product-button {
       position: relative;
       top: 40px;
-      background-color: #4CAF50;
+      background-color: var(--button-bg); /*main*/
       color: white;
       font-size: 12px;
       padding: 14px 12px;
@@ -206,7 +217,7 @@
     }
     .product-button:hover,
     .product-button:focus {
-      background-color: #4CAF50;
+      background-color: var(--button-hover);
       outline: none;
     }
     @media (max-width: 768px) {
@@ -400,8 +411,7 @@ h2 {
 
 .card-price {
   font-size: 14px;
-  font-weight: 500;
-  color: #444;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
@@ -413,7 +423,7 @@ h2 {
   right: 10px;
   margin: 0 auto;
   padding: 10px 20px;
-  background-color: #4CAF50; /* green theme */
+  background-color: var(--button-bg); /*main */
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -425,7 +435,7 @@ h2 {
 }
 
 .btn-add:hover {
-  background-color: #43a047;
+  background-color: var(--button-hover);
 }
 
 /* Scroll buttons */
@@ -497,8 +507,8 @@ h2 {
   top: 8px;
   left: 50%;
   transform: translateX(-50%); /* center horizontally */
-  background: rgba(236, 155, 4, 0.966);
-  color: #fff;
+  background: var(--video-caption-bg);
+  color: var(--video-text);
   padding: 8px 16px;
   font-size: 14px;
   border-radius: 4px;
@@ -605,9 +615,9 @@ h2 {
 /* Button inside product */
 .product-item .btn {
   display: block;
-  width: 100%;          /* same width as image */
+  width: 100%;         
   padding: 10px;
-  background: #28a745;  /* green background */
+  background:var(--button-bg);  /* main */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -617,7 +627,7 @@ h2 {
 }
 
 .product-item .btn:hover {
-  background: #218838; /* darker green on hover */
+  background: var(--button-hover); /*main*/
 }
 .product-item {
   flex: 0 0 auto;
@@ -663,7 +673,7 @@ h2 {
 }
 
 .reviews i {
-  color: #f5c518;
+  color: var(--star-color);
   margin-right: 2px;
 }
 
@@ -675,23 +685,7 @@ h2 {
   text-align: center;
 }
 
-/* Button fixed at bottom */
-.product-item .btn {
-  margin-top: auto;
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background: #28a745;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  cursor: pointer;
-}
 
-.product-item .btn:hover {
-  background: #218838;
-}
 
 /* 📱 Mobile view 2-in-row, equal height */
 @media (max-width: 768px) {
@@ -793,13 +787,13 @@ h2 {
       background-color: rgba(255 255 255 / 0.7);
       border-radius: 9999px;
       padding: 0.75rem;
-      color: #16a34a;
+      color: #4CAF50;
       border: none;
       cursor: pointer;
       transition: color 0.3s ease;
     }
     .play-button:hover {
-      color: #15803d;
+      color: #43a047;
     }
     .video-caption {
       position: absolute;
@@ -989,14 +983,6 @@ h2 {
   margin-top: 10px;
 }
 
-.qty-btn {
-  background-color: #eee;
-  border: 1px solid #ccc;
-  padding: 6px 12px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 4px;
-}
 
 .qty-input {
   width: 40px;
@@ -1005,9 +991,25 @@ h2 {
   border-radius: 4px;
   padding: 4px 0;
 }
-
+.qty-btn {
+  background-color: var(--button-bg); /*main*/
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.qty-btn:hover {
+  background-color:var(--button-hover);/*main*/
+}
 .add-cart {
-  background-color: #28a745;
+  background-color: var(--button-bg); /*main*/
   color: #fff;
   border: none;
   padding: 8px 16px;
@@ -1018,7 +1020,7 @@ h2 {
 }
 
 .add-cart:hover {
-  background-color: #218838;
+  background-color: #43a047;
 }
 
 /* Full details link */
@@ -1163,7 +1165,7 @@ h2 {
     .stars {
       display: flex;
       gap: 0.125rem;
-      color: #16a34a;
+      color: #f5c518;
       font-size: 0.75rem;
       font-weight: 600;
       margin-top: 0.25rem;
@@ -1196,20 +1198,7 @@ h2 {
       gap: 0.5rem;
       align-items: center;
     }
-    .qty-btn {
-      background-color: #4ade80;
-      color: white;
-      width: 2rem;
-      height: 2rem;
-      border: none;
-      font-size: 1.25rem;
-      font-weight: 700;
-      cursor: pointer;
-      user-select: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+
     .qty-btn:first-child {
       border-radius: 0.375rem 0 0 0.375rem;
     }
@@ -1228,20 +1217,7 @@ h2 {
       pointer-events: none;
       user-select: none;
     }
-    button.add-cart {
-      background-color: #16a34a;
-      color: white;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.5rem 1rem;
-      border-radius: 0.375rem;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-    button.add-cart:hover {
-      background-color: #15803d;
-    }
+
     .full-details-link {
       font-size: 0.75rem;
       color: #4b5563;
@@ -1310,7 +1286,7 @@ h2 {
       gap: 0.25rem;
       font-size: 0.75rem;
       font-weight: 600;
-      color: #16a34a;
+      color: #f5c518;
       margin-bottom: 0.25rem;
     }
     .reviews-count-small {
@@ -1351,7 +1327,7 @@ h2 {
       gap: 0.25rem;
       font-size: 0.75rem;
       font-weight: 600;
-      color: #16a34a;
+      color: var(--star-color);
       margin-bottom: 0.25rem;
     }
     .review-title {
