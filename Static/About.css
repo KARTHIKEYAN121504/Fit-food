@@ -1,9 +1,9 @@
 :root {
-  --primary-green: #4CAF00;          /* Main green */
-  --primary-hover-green: #3ca123;    /* Hover green */
-  --accent-yellow: #e7b34a;          /* Accent for borders & buttons */
-  --secondary-yellow: #eeb94d;       /* Secondary yellow for footer/back-to-top */
-  --footer-bg: #eab341;              /* Footer background */
+  --primary-green: #4CAF00;          
+  --primary-hover-green: #3ca123;   
+  --accent-yellow: #e7b34a;         
+  --secondary-yellow: #eeb94d;     
+  --footer-bg: #eab341;              
   --white: #ffffff;
   --black: #000000;
   --dark-gray: #333333;
