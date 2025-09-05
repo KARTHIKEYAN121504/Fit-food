@@ -1,92 +1,99 @@
+:root {
+    /* Define color variables */
+    --primary-color: #4CAF50;
+    --primary-hover-color: #45a049;
+    --background-color: #f5f5f5;
+    --body-background-color: #f6f6f6;
+    --text-color: #333;
+    --border-color: rgb(198, 198, 198);
+    --white-color: white;
+}
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f6f6f6;
-  display: block;
-  justify-content: center; /* keep it horizontally centered */
-  align-items: flex-start; /* move it to the top */
-  min-height: 70vh; /* make body at least full height */
-  padding-top:0px !important; 
-  margin-top:0px !important;/* add some spacing from top */
-}
-.outer
-{
     margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  display: flex;
-  justify-content: center; /* keep it horizontally centered */
-  align-items: center; /* move it to the top */
-  min-height: 70vh; /* make body at least full height */
-  padding:0px;
-  padding-top: 0px !important;
-
+    font-family: Arial, sans-serif;
+    background-color: var(--body-background-color);
+    display: block;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 70vh;
+    padding-top: 0px !important;
+    margin-top: 0px !important;
 }
 
+.outer {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 0px;
+    padding-top: 0px !important;
+}
 
-    .login-container {
-      background-color:#f5f5f5;
-      padding: 40px;
-      border-radius: 8px;
-      width: 550px;
-      text-align: left;
-      
-    }
+.login-container {
+    background-color: var(--background-color);
+    padding: 40px;
+    border-radius: 8px;
+    width: 550px;
+    text-align: left;
+}
 
-    .login-container h2 {
-      margin-bottom: 20px;
-      font-size: 24px;
-    }
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
 
-    .login-container label {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 14px;
-    }
+.login-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
 
-    .login-container input {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border: 0.5px solid rgb(198, 198, 198);
-      background-color: #f5f5f5;
-      border-radius: 4px;
-      font-size: 14px;
-    }
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 0.5px solid var(--border-color);
+    background-color: var(--background-color);
+    border-radius: 4px;
+    font-size: 14px;
+}
 
-    .login-container a {
-      font-size: 16px;
-      color: #333;
-      text-decoration: underline;
-      display: block;
-      margin-bottom: 20px;
-    }
+.login-container a {
+    font-size: 16px;
+    color: var(--text-color);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 20px;
+}
 
-    .login-container button {
-      width: 100px;
-      padding: 12px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-    }
+.login-container button {
+    width: 100px;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
 
-    .login-container button:hover {
-      background-color: #45a049;
-    }
- .login-container .signup-link a {
-      color: #333;
-      text-decoration: none;
-      font-size: 16px;
- }
-    .login-container .signup-link {
-      margin-top: 20px;
-      font-size: 16px;
-      display:flex;
-      text-decoration: underline;
-      
-    }
+.login-container button:hover {
+    background-color: var(--primary-hover-color);
+}
 
-   
+.login-container .signup-link a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.login-container .signup-link {
+    margin-top: 20px;
+    font-size: 16px;
+    display: flex;
+    text-decoration: underline;
+}
