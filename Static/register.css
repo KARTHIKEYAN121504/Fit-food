@@ -1,6 +1,19 @@
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
+:root{
+  --body-bg: #f5f5f5;
+  --container-bg: #f5f5f5;
+  --h2-color: #222;
+  --p-color:#555;
+  --submit-btn-bg: #4caf50; 
+  --submit-btn-color: white; 
+  --submit-btn-hover-bg: #59bd5e;
+  --cancel-btn-color: #333;
+  --bun-span-color: #333;
+  --font-family: Arial, sans-serif;
+}  
+  
+  body {
+      font-family: var(--font-family);
+      background:var(--body-bg);
       margin: 0;
       padding: 0;
     }
@@ -9,7 +22,7 @@
       max-width: 500px;
       margin: 80px auto;
       margin-top:0px;
-      background: #f5f5f5;
+      background:var(--container-bg);
       padding: 30px;
       padding-top:0px;
       border-radius: 10px;
@@ -18,11 +31,11 @@
 
     h2 {
       margin-bottom: 15px;
-      color: #222;
+      color: var(--h2-color);
     }
 
     #p {
-      color: #555;
+      color: var(--p-color);
       margin-bottom: 20px;
     }
 
@@ -35,19 +48,19 @@
     }
 
     .submit-btn {
-      background: #4caf50;
-      color: white;
+      background: var(--submit-btn-bg);
+      color: var(--submit-btn-color);
       height: 40px;
     }
 
     .submit-btn:hover {
-      background: #4caf50;
+      background: var(--submit-btn-hover-bg);
     }
 
     .cancel-btn {
       margin-left: 3px;
       background: transparent;
-      color: #333;
+      color: var(--cancel-btn-color);
       text-decoration: underline;
       cursor: pointer;
     }
@@ -60,7 +73,7 @@
     .bun span{
       margin-top: 10px !important;
       font-size: 16px;
-      color: #333;
+      color: var(--bun-span-color);
     }
     .bun a{
         margin-top: 10px;
