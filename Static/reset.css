@@ -51,7 +51,7 @@
 
     .submit-btn {
       background:var(--primary-green);
-      color: white;
+      color: var(--white);
     }
 
     .submit-btn:hover {
